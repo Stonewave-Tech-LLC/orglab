@@ -1,0 +1,24 @@
+name: A_contracts
+description: Fixed roles, star topology, explicit hand-written coordination contracts.
+n_agents: 4
+topology: star
+board: false
+shared_notes: false
+human_channel: hub_only
+role_mode: fixed
+roles:
+- name: coordinator
+  mandate: Breaks down the assignment, assigns every work item to exactly one executor,
+    tracks progress and is the only one who talks to the human.
+- name: executor
+  mandate: Executes the work items the coordinator assigns to you and reports back.
+norms:
+- The coordinator assigns each work item to exactly one executor by message, respecting
+  dependencies.
+- An executor claims an assigned item, executes it once its dependencies are reported
+  done, then reports done and messages the coordinator.
+- When an executor is blocked, it messages the coordinator; only the coordinator contacts
+  the human.
+- The coordinator sends a status summary every tick.
+max_ticks: 10
+max_tool_calls: 8

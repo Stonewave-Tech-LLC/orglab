@@ -1,0 +1,69 @@
+# E-019 Kalibrierung L2, Material v3 (B=12, Reasoning=low, anthropic/claude-sonnet-5.5)
+
+Aufrufe: 36, Urteile: 432, gültig: 432 (Parse-Ausfall 0.000)
+
+**Einzelfehlerrate: 0.081** · Fehlalarm 0.093 · Übersehen 0.069
+
+Kanalpositionen: 0.083, 0.090, 0.069
+Position im Stapel (V8-Vorschau): vordere Hälfte 0.097, hintere Hälfte 0.065
+
+Übersehensrate je Fehlerart: amount_mismatch 0.067, bounced 0.000, cache_down 0.048, column_loss 0.000, db_down 0.133, duplicates_kept 0.000, empty_attachment 0.208, row_loss 0.000, stale_process 0.000, weights_broken 0.167, wrong_recipient 0.000, zero_traffic 0.167
+Größter Anteil eines einzelnen Belegs an allen Fehlern: 0.057
+
+## Kriterien
+
+- ✘ 1 Fehlerrate 0,10–0,40
+- ✔ 2 Kanalbalance ≤ 0,20
+- ✔ 3 Fehlalarm und Übersehen ≥ 0,03
+- ✘ 4 ≥ Hälfte der Fehlerarten ≥ 0,05 und kein Beleg > 5 % der Fehler (D-016)
+- ✔ 6 Parse-Ausfall ≤ 5 %
+- (5 Stichprobe: von Hand, siehe unten)
+
+**Alle automatischen Kriterien erfüllt: NEIN**
+
+## Fehlerrate je Art und Subtilität
+
+- fail_moderate: 0.056
+- fail_subtle: 0.083
+- ok_clear: 0.083
+- ok_noisy: 0.102
+
+Kosten: 0.68 $
+
+## Falsch beurteilte Belege (für die Stichprobe)
+
+- business-ok_clear-1209 · ledger · Slot 6 · Wahrheit ok · Konf. 0.6
+- business-fail_moderate-1207 · smtp · Slot 3 · Wahrheit kaputt · Konf. 0.8
+- business-ok_noisy-1203 · ledger · Slot 6 · Wahrheit ok · Konf. 0.6
+- business-ok_clear-1200 · ledger · Slot 9 · Wahrheit ok · Konf. 0.6
+- business-ok_noisy-1207 · smtp · Slot 10 · Wahrheit ok · Konf. 0.8
+- business-fail_moderate-1200 · smtp · Slot 3 · Wahrheit kaputt · Konf. 0.55
+- coding-fail_subtle-1201 · probe · Slot 11 · Wahrheit kaputt · Konf. 0.6
+- business-fail_moderate-1211 · smtp · Slot 1 · Wahrheit kaputt · Konf. 0.8
+- coding-ok_clear-1202 · deploy · Slot 4 · Wahrheit ok · Konf. 0.8
+- business-ok_noisy-1211 · smtp · Slot 5 · Wahrheit ok · Konf. 0.8
+- research-ok_clear-1202 · joblog · Slot 8 · Wahrheit ok · Konf. 0.8
+- business-fail_subtle-1208 · smtp · Slot 9 · Wahrheit kaputt · Konf. 0.85
+- business-ok_clear-1207 · ledger · Slot 11 · Wahrheit ok · Konf. 0.6
+- research-ok_clear-1202 · output · Slot 8 · Wahrheit ok · Konf. 0.85
+- coding-fail_subtle-1204 · deploy · Slot 9 · Wahrheit kaputt · Konf. 0.8
+- research-ok_noisy-1206 · output · Slot 6 · Wahrheit ok · Konf. 0.6
+- business-fail_subtle-1209 · delivery · Slot 7 · Wahrheit kaputt · Konf. 0.85
+- coding-ok_noisy-1205 · deploy · Slot 9 · Wahrheit ok · Konf. 0.8
+- coding-ok_noisy-1202 · deploy · Slot 11 · Wahrheit ok · Konf. 0.5
+- coding-ok_noisy-1205 · sockets · Slot 9 · Wahrheit ok · Konf. 0.6
+- business-fail_subtle-1203 · smtp · Slot 4 · Wahrheit kaputt · Konf. 0.85
+- research-fail_subtle-1200 · joblog · Slot 8 · Wahrheit kaputt · Konf. 0.8
+- coding-ok_noisy-1200 · sockets · Slot 3 · Wahrheit ok · Konf. 0.6
+- coding-fail_subtle-1211 · probe · Slot 3 · Wahrheit kaputt · Konf. 0.8
+- research-ok_noisy-1201 · output · Slot 1 · Wahrheit ok · Konf. 0.9
+- research-fail_subtle-1208 · joblog · Slot 1 · Wahrheit kaputt · Konf. 0.85
+- research-ok_clear-1205 · joblog · Slot 4 · Wahrheit ok · Konf. 0.6
+- business-ok_clear-1211 · ledger · Slot 12 · Wahrheit ok · Konf. 0.6
+- business-ok_noisy-1206 · smtp · Slot 2 · Wahrheit ok · Konf. 0.8
+- research-ok_noisy-1208 · output · Slot 3 · Wahrheit ok · Konf. 0.6
+- coding-fail_subtle-1202 · deploy · Slot 1 · Wahrheit kaputt · Konf. 0.6
+- research-ok_clear-1206 · joblog · Slot 6 · Wahrheit ok · Konf. 0.6
+- coding-fail_moderate-1210 · probe · Slot 1 · Wahrheit kaputt · Konf. 0.6
+- coding-fail_moderate-1207 · probe · Slot 5 · Wahrheit kaputt · Konf. 0.6
+- coding-fail_moderate-1203 · deploy · Slot 6 · Wahrheit kaputt · Konf. 0.8

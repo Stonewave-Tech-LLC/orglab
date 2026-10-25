@@ -1,0 +1,351 @@
+{
+  "iteration": 4,
+  "start": {
+    "name": "B_minimal_tight",
+    "description": "No roles, no rules, full mesh, scarce attention budget.",
+    "n_agents": 4,
+    "topology": "mesh",
+    "board": false,
+    "shared_notes": false,
+    "human_channel": "anyone",
+    "role_mode": "none",
+    "roles": [],
+    "norms": [],
+    "max_ticks": 8,
+    "max_tool_calls": 4
+  },
+  "current": {
+    "name": "B_minimal_tight",
+    "description": "No roles, no rules, full mesh, scarce attention budget.",
+    "n_agents": 4,
+    "topology": "mesh",
+    "board": false,
+    "shared_notes": false,
+    "human_channel": "anyone",
+    "role_mode": "none",
+    "roles": [],
+    "norms": [],
+    "max_ticks": 8,
+    "max_tool_calls": 4
+  },
+  "history": [
+    {
+      "iteration": 1,
+      "kind": "invariant",
+      "rationale": "This targets the general weakness that verification results stay private and done claims rest on stale or borrowed evidence. A shared board makes ownership and status visible, which cuts the long plan-proposal messages and shows which items are still unverified. Three rules cover the rest. First, done needs your own passing check made after your last change. Second, a failure you find is sent straight to the owner and the people who depend on that item. Third, checking time goes to unverified items, not to repeat checks. This applies to any work where a success signal can differ from the real result.",
+      "config_hash": "ebb483f8332d",
+      "diff": {
+        "board": {
+          "from": false,
+          "to": true
+        },
+        "description": {
+          "from": "No roles, no rules, full mesh, scarce attention budget.",
+          "to": "Shared board for ownership and status; done means a fresh personal check passed; failures go straight to those affected; checking effort goes to unverified items."
+        },
+        "norms": {
+          "from": [],
+          "to": [
+            "An execute/action success signal is not evidence. Report an item done only if your own inspect_item, made after the item's last execute, shows it truly works. If you or anyone re-executes it later, it is not done until it is inspected again.",
+            "If any inspect shows a failure, immediately message the item's owner and the owners of every item that depends on it, quoting the failure. Treat that item and its dependents as not done until a new inspect passes.",
+            "Use the board instead of long plan messages. Spend spare calls inspecting items that nobody has verified since their last execute; never re-inspect an item that is already verified and unchanged."
+          ]
+        }
+      },
+      "gate": {
+        "n_pairs": 10,
+        "base_mean": 0.88125,
+        "cand_mean": 0.875,
+        "mean_diff": -0.00625,
+        "p": 1.0,
+        "token_ratio": 1.0972929487285816,
+        "base_false_done_rate": 0.10298493173493173,
+        "cand_false_done_rate": 0.11059523809523811,
+        "passed": false
+      },
+      "accepted": false
+    },
+    {
+      "iteration": 1,
+      "kind": "specific",
+      "rationale": "In these coding and business assignments, items form dependency chains and the first execute often gives a false ✓ (an orphaned process, a bounced mail). In the traces, dependents ran before their roots truly worked (a2 had to flag P8 running before P7), and a phantom root stayed broken with no escalation. This config gates every execute on passing inspects of its dependencies. It treats a failed inspect as fix, re-execute, re-inspect, and sends the problem to the human if the item still fails after one retry. It also requires re-checking downstream items once a root has been redone, and sets the order of work as roots first, then chains.",
+      "config_hash": "abe2eedbb250",
+      "diff": {
+        "board": {
+          "from": false,
+          "to": true
+        },
+        "description": {
+          "from": "No roles, no rules, full mesh, scarce attention budget.",
+          "to": "Shared board; execute only on verified dependencies; a failed inspect leads to re-execute, then escalation; downstream items are re-checked after a root is redone."
+        },
+        "norms": {
+          "from": [],
+          "to": [
+            "Before executing an item, inspect each of its dependencies. Execute it only if every dependency's inspect passes now; otherwise work on something else and tell the dependency's owner what is blocking you.",
+            "After every execute, inspect the item before doing anything else with it. If the inspect fails, read the failure, re-execute once, and inspect again. If it still fails, contact_human with the inspect text instead of reporting done.",
+            "When a dependency is re-executed after a failure, the owners of items built on it must re-inspect those items (and re-execute them if needed) before treating them as done.",
+            "Work in dependency order: roots first, then their chains. A done report always rests on an inspect pass made after both the item and all of its dependencies were last executed."
+          ]
+        }
+      },
+      "gate": {
+        "n_pairs": 10,
+        "base_mean": 0.88125,
+        "cand_mean": 0.84375,
+        "mean_diff": -0.0375,
+        "p": 0.2842715728427157,
+        "token_ratio": 1.0309021845505666,
+        "base_false_done_rate": 0.10298493173493173,
+        "cand_false_done_rate": 0.13466575091575092,
+        "passed": false
+      },
+      "accepted": false
+    },
+    {
+      "iteration": 2,
+      "kind": "invariant",
+      "rationale": "This is a general anti-duplication and anti-hoarding mechanism: each piece of verification work has exactly one responsible person, and nobody holds work they cannot do now. The evidence is a0 repeatedly inspecting unexecuted items owned by others (2002), four agents inspecting P8 (2004), a3 idle while a0 held P8/P12 (2002), and broadcasts sent to all peers. This differs from the rejected proposals: there is no board, and instead of adding checks it removes duplicate checks and redirects capacity to unowned work.",
+      "config_hash": "43dfab87219e",
+      "diff": {
+        "description": {
+          "from": "No roles, no rules, full mesh, scarce attention budget.",
+          "to": "Each item has one owner who alone verifies it; claim only what you can act on now; send status only to whoever depends on it."
+        },
+        "norms": {
+          "from": [],
+          "to": [
+            "The owner of an item is the only one who checks it: execute, then inspect it yourself, and re-do it if the check fails before reporting done. Do not inspect items owned by others; trust the owner's message and spend your calls on your own or unclaimed work.",
+            "Claim only items you can execute this tick or the next. If you hold an item you cannot act on, release it, or hand it to whoever says they are idle.",
+            "Send a status update only to the agents whose work depends on it, once, when the status changes. Do not broadcast routine progress."
+          ]
+        }
+      },
+      "gate": {
+        "n_pairs": 10,
+        "base_mean": 0.9375,
+        "cand_mean": 0.8625,
+        "mean_diff": -0.075,
+        "p": 0.015398460153984602,
+        "token_ratio": 0.8778352820906014,
+        "base_false_done_rate": 0.051071428571428566,
+        "cand_false_done_rate": 0.1093864468864469,
+        "passed": false
+      },
+      "accepted": false
+    },
+    {
+      "iteration": 2,
+      "kind": "specific",
+      "rationale": "Business assignments are dependency chains whose root items can silently bounce: the status flag is set but nothing was delivered. In seed 2004, roots P1, P4 and P8 bounced, and P8's failure surfaced only at tick 8, which left no time for the dependents. Losses come from late discovery of root failures and from dependents waiting on polling. This config front-loads the roots and makes their owners push a verified unblock directly to the dependent owner, replacing everyone's polling inspections. It adds no board and no generic re-check layer, which is what made the rejected specific proposal costly.",
+      "config_hash": "106097edfcb6",
+      "diff": {
+        "description": {
+          "from": "No roles, no rules, full mesh, scarce attention budget.",
+          "to": "Execute dependency roots first and check them the very next tick; root owners push a verified unblock directly to dependent owners; no polling."
+        },
+        "norms": {
+          "from": [],
+          "to": [
+            "Items that others depend on go first: execute them in tick 1, and inspect them yourself in the next tick before doing anything else. If the check fails, re-execute immediately; if it fails twice, contact the human.",
+            "When your item is verified working, message the owner of each item that depends on it directly: 'X verified, you can run Y'. Dependent owners wait for that message instead of inspecting other people's items.",
+            "Do not claim dependent items early. Whoever is idle when an unblock message arrives takes the dependent item, then executes and checks it themselves."
+          ]
+        }
+      },
+      "gate": {
+        "n_pairs": 10,
+        "base_mean": 0.9375,
+        "cand_mean": 0.9,
+        "mean_diff": -0.0375,
+        "p": 0.19058094190580943,
+        "token_ratio": 0.9391093220880455,
+        "base_false_done_rate": 0.051071428571428566,
+        "cand_false_done_rate": 0.11277888777888778,
+        "passed": false
+      },
+      "accepted": false
+    },
+    {
+      "iteration": 3,
+      "kind": "invariant",
+      "rationale": "This targets a weakness found in any kind of work: a failure is noticed, but whoever owns it doesn't repair it, nobody else takes it over, and work is reported done on old evidence. It adds three rules and no new tools. A known failure must be fixed first or released with a message to the people waiting on it. Agents check other people's items only after those are reported done or the owner has gone quiet. A report of done must rest on a fresh check of the item and its direct dependencies. Unlike rejected proposal [2], it does not stop anyone from checking; it only changes when checking is worth the effort. Unlike rejected proposal [1], it adds no board and adds the rule to release stuck work.",
+      "config_hash": "ba0bc1ce329b",
+      "diff": {
+        "description": {
+          "from": "No roles, no rules, full mesh, scarce attention budget.",
+          "to": "Full mesh, no roles. Known failures are fixed first or handed off openly; checking effort goes where it can change the outcome; done rests on a fresh check of the item and what it depends on."
+        },
+        "norms": {
+          "from": [],
+          "to": [
+            "If a check shows something you own is not working, fixing it is your first action next tick. If you cannot fix it now, release it and tell everyone waiting on it so someone else can take it over; a known failure must never sit with no one working on it.",
+            "Check other people's work only once they have reported it done or have been silent about it for a tick; otherwise ask or wait. Spend your limited actions on your own items and on what they depend on.",
+            "Report something done only right after a check that passed in that same tick, covering both the item and the items it directly depends on. If a dependency is broken, say so to its owner and do not report done."
+          ]
+        }
+      },
+      "gate": {
+        "n_pairs": 10,
+        "base_mean": 0.9,
+        "cand_mean": 0.9,
+        "mean_diff": 0.0,
+        "p": 1.0,
+        "token_ratio": 1.104835823947382,
+        "base_false_done_rate": 0.11232142857142857,
+        "cand_false_done_rate": 0.1036122211122211,
+        "passed": false
+      },
+      "accepted": false
+    },
+    {
+      "iteration": 3,
+      "kind": "specific",
+      "rationale": "In this kind of work, running an item shows a success message even when the action silently bounced, so the inspect result is the only reliable evidence, and many items wait on a few root items. In the traces, every agent inspected the same root again and again because there was nowhere to record a result once. Shared notes become a log of check results: each inspect result is written once and others read it instead of inspecting again. This differs from the rejected board, which showed status as reported by owners, not actual check results. It also adds a rule to check your own item again after a dependency is redone, which addresses work built on broken items (rate 0.3 in measurement).",
+      "config_hash": "ce56769c6131",
+      "diff": {
+        "description": {
+          "from": "No roles, no rules, full mesh, scarce attention budget.",
+          "to": "Full mesh, no roles. Shared notes act as a log of check results: every inspect result is written once, everyone reads it instead of re-inspecting, and redone dependencies trigger a recheck downstream."
+        },
+        "norms": {
+          "from": [],
+          "to": [
+            "The success message from running an item is not proof that it worked. After every execute, inspect that same item before doing anything else. If the inspect fails, run it again in the same tick if you have actions left.",
+            "Write every inspect result in the notes as 'Px VERIFIED' or 'Px FAILED' with the tick number. Before inspecting someone else's item, read the notes; inspect it yourself only if it has no entry or its entry is older than its last execution.",
+            "If an item you depend on shows FAILED or was run again, inspect your own item again before reporting it done, and write the new result in the notes."
+          ]
+        },
+        "shared_notes": {
+          "from": false,
+          "to": true
+        }
+      },
+      "gate": {
+        "n_pairs": 10,
+        "base_mean": 0.9,
+        "cand_mean": 0.88125,
+        "mean_diff": -0.01875,
+        "p": 0.52994700529947,
+        "token_ratio": 1.0764734949818529,
+        "base_false_done_rate": 0.11232142857142857,
+        "cand_false_done_rate": 0.10194444444444443,
+        "passed": false
+      },
+      "accepted": false
+    },
+    {
+      "iteration": 4,
+      "kind": "invariant",
+      "rationale": "This is a structural fix, not more rules, and it doesn't revisit any rejected idea. The board, owner-only checking, notes logs and 'fix known failures first' have all been tried; star topology and roles have not. Under a star with a0 as coordinator there is one source of truth for who owns what: workers send one message to the hub instead of copying three teammates, which saves their calls for execute and inspect. The hub's single job is to make sure every known failure has exactly one named fixer who has confirmed taking it. That gap appears in both traces (P1 in 4002, P9 in 4000). This weakness (competing plans, no one holding failures, broadcast overhead) shows up in any multi-agent work, not just this domain. Both norms are general: one defines done using fresh evidence, the other sets how failures are handed off.",
+      "config_hash": "bccea4fb5837",
+      "diff": {
+        "description": {
+          "from": "No roles, no rules, full mesh, scarce attention budget.",
+          "to": "Star with a0 as coordinator who holds the single view of ownership and open failures; workers execute, check and report their own items and talk only to the hub."
+        },
+        "human_channel": {
+          "from": "anyone",
+          "to": "hub_only"
+        },
+        "norms": {
+          "from": [],
+          "to": [
+            "An item is done only if its most recent inspect, made after its most recent execute, says it works. A success message from execute is not evidence that it works.",
+            "If you find a problem in someone else's item, tell the coordinator once, with the evidence. Only the fixer the coordinator names acts on it, and that fixer confirms when it is checked and working."
+          ]
+        },
+        "role_mode": {
+          "from": "none",
+          "to": "fixed"
+        },
+        "roles": {
+          "from": [],
+          "to": [
+            {
+              "name": "coordinator",
+              "mandate": "Hand out items once at the start, with dependency roots first. Keep the only authoritative list of who owns what is still open. When a failure is reported, name exactly one fixer and get their confirmation. Use spare calls to do items yourself, not to repeat status. Escalate to the human only for something no one on the team can fix."
+            },
+            {
+              "name": "worker",
+              "mandate": "Do your assigned items yourself: execute, inspect, and report done. Send the coordinator one short message per tick, and only when something changed: an item verified, an item failed, or you are free for more work."
+            }
+          ]
+        },
+        "topology": {
+          "from": "mesh",
+          "to": "star"
+        }
+      },
+      "gate": {
+        "n_pairs": 10,
+        "base_mean": 0.9,
+        "cand_mean": 0.89375,
+        "mean_diff": -0.00625,
+        "p": 1.0,
+        "token_ratio": 0.9926836382492585,
+        "base_false_done_rate": 0.11470238095238094,
+        "cand_false_done_rate": 0.0870970695970696,
+        "passed": false
+      },
+      "accepted": false
+    },
+    {
+      "iteration": 4,
+      "kind": "specific",
+      "rationale": "This targets the specific setup in this domain. The execute signal ('status set to sent') says nothing about whether delivery actually happened, re-executing fixes a bounce, items depend on each other, and the budget is 4 calls per tick over 8 ticks. Unlike the rejected proposals (which used a board, notes, roots-first ordering or owner-only checking), this is about how a tick is spent. Each item gets an execute → inspect → report cycle inside one tick, so no false done slips through between ticks. Messages are limited to one per tick, sent to the one agent whose next action changes, which cuts the broadcast cost seen in the traces. Dependent items wait for a 'verified' message from the root's owner, which targets built_on_phantom = 0.5. The last two ticks are reserved for a sweep, because both weak runs ended with failed items still sitting unverified at max_ticks.",
+      "config_hash": "10167cbcfc86",
+      "diff": {
+        "description": {
+          "from": "No roles, no rules, full mesh, scarce attention budget.",
+          "to": "Full mesh, no roles. Each item's execute, inspect and report happen in one tick; messaging is kept to a minimum; dependents wait for a verified root; the last two ticks are a verification sweep."
+        },
+        "norms": {
+          "from": [],
+          "to": [
+            "Handle an item in one tick: execute, then inspect it right away, then report done if it is verified. If the inspect fails, re-execute and inspect again before touching anything else.",
+            "Send at most one message per tick, to the one agent whose next action it changes (an unblock, a failure in their item, a handover). Never copy everyone on status updates.",
+            "Execute an item that depends on another only after that item's owner has told you its inspect says verified.",
+            "From tick 7 on, don't claim new items. Spend your calls inspecting items you executed that aren't verified yet, and re-executing the ones that failed."
+          ]
+        }
+      },
+      "gate": {
+        "n_pairs": 10,
+        "base_mean": 0.9,
+        "cand_mean": 0.84375,
+        "mean_diff": -0.05625,
+        "p": 0.17578242175782421,
+        "token_ratio": 0.8547584709371101,
+        "base_false_done_rate": 0.11470238095238094,
+        "cand_false_done_rate": 0.07349358974358974,
+        "passed": false
+      },
+      "accepted": false
+    }
+  ],
+  "library": [],
+  "holdout": [],
+  "no_improve": 4,
+  "started": "2026-10-21T00:56:28",
+  "settings": {
+    "scenario": "phantom_stress",
+    "train": [
+      "coding",
+      "business"
+    ],
+    "holdout": [
+      "research"
+    ],
+    "seeds_per_probe": 5,
+    "backend": {
+      "kind": "agent_sdk",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium"
+    },
+    "alpha": 0.1,
+    "min_effect": 0.02,
+    "token_guard": 3.0,
+    "editor_model": "claude-opus-5-5"
+  }
+}

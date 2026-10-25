@@ -1,0 +1,22 @@
+name: B_minimal_tight~i6i
+description: Full mesh, no roles. A shared board makes ownership and reported status
+  visible; each agent closes one item (execute, verify, report) before opening the
+  next.
+n_agents: 4
+topology: mesh
+board: true
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- 'Finish before you start: take an item all the way through execute, inspect, and
+  report_done (or release it) before executing another. Never end a tick holding an
+  item that was executed but not yet inspected or reported.'
+- The board is the team's status. A dependency is ready when the board shows it reported
+  done, so do not inspect other agents' items or send messages to ask about status.
+  Message only to hand off work or flag a failure you cannot fix.
+- From tick 6 on, reporting already-verified items comes first; start new items only
+  with the calls left after that.
+max_ticks: 8
+max_tool_calls: 4

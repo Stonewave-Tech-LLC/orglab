@@ -1,0 +1,28 @@
+{
+ "model": "openai/gpt-6.1-sol",
+ "time": "2026-10-23 15:13",
+ "usage": {
+  "prompt_tokens": 6176,
+  "completion_tokens": 3282,
+  "total_tokens": 9458,
+  "cost": 0.0482585,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 6173,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0482585,
+   "upstream_inference_prompt_cost": 0.0154385,
+   "upstream_inference_completions_cost": 0.03282
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 433,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "raw_tail": "  \"v1_ci95\": ci1,\n        \"v1_label\": label(ci1, q1, 0.10, len(complete_seeds)),\n        \"v2_estimate\": estimate2,\n        \"v2_ci95\": ci2,\n        \"v2_label\": label(ci2, q2, 0.05, len(complete_seeds)),\n        \"v3_estimate\": estimate3,\n        \"v3_ci95\": ci3,\n        \"miss_rate\": rates(miss_counts),\n        \"false_alarm_rate\": rates(false_alarm_counts),\n        \"choices\": CHOICES,\n    }\n    print(json.dumps(result, ensure_ascii=False, allow_nan=False))\n\n\nif __name__ == \"__main__\":\n    main()\n```"
+}

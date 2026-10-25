@@ -1,0 +1,66 @@
+[E-017] 360 Urteile geplant, offen 360 | heute 0.59 $ von 50.00 $
+[E-017] 100/360 | heute 0.77 $
+[E-017] 200/360 | heute 0.94 $
+[E-017] 300/360 | heute 1.12 $
+[E-017] fertig, 360 neue Urteile, heute 1.26 $
+# E-017 Kalibrierung, Iteration 2 (anthropic/claude-sonnet-5.5)
+
+Urteile: 360, gültig: 360, unparsbar/Fehler: 0
+
+**Einzelfehlerrate gesamt: 0.031** (Ziel 0,10–0,40)
+
+## Nach Kanal
+
+| Domäne | Kanal | n | Fehlerrate |
+|---|---|---|---|
+| coding | deploy | 40 | 0.125 |
+| coding | probe | 40 | 0.050 |
+| coding | sockets | 40 | 0.025 |
+| business | smtp | 40 | 0.000 |
+| business | delivery | 40 | 0.000 |
+| business | ledger | 40 | 0.000 |
+| research | joblog | 40 | 0.050 |
+| research | output | 40 | 0.025 |
+| research | validation | 40 | 0.000 |
+
+Kanalbalance (Position = Kanalindex, über Domänen): 0.025, 0.025, 0.042 → Spanne 0.017 (Ziel ≤ 0,20, also ±0,10)
+Spanne über alle 9 Kanäle: 0.125 (nur deskriptiv)
+
+## Nach Art und Subtilität
+
+| Art | subtlety | n | Fehlerrate |
+|---|---|---|---|
+| fail_moderate | 1 | 90 | 0.011 |
+| fail_subtle | 2 | 51 | 0.098 |
+| fail_subtle | 3 | 39 | 0.103 |
+| ok_clear | 1 | 90 | 0.011 |
+| ok_noisy | 2 | 57 | 0.000 |
+| ok_noisy | 3 | 33 | 0.000 |
+
+Ok-Belege (Fehlalarm): 0.006 · Fail-Belege (übersehen): 0.056 (beide Ziel ≥ 0,03)
+
+## Nach Fehlerart
+
+- bounced: 0.000
+- db_down: 0.242
+- none: 0.006
+- row_loss: 0.000
+- stale_process: 0.000
+- weights_broken: 0.051
+- wrong_recipient: 0.000
+
+Kosten: 0.66 $
+
+## Falsch beurteilte Urteile (für die Stichprobenprüfung, Kriterium 4)
+
+- coding-fail_moderate-1005 · sockets · Wahrheit kaputt · Konf. 0.6 · 'h active Redis connections; the lack of Postgres connections is a minor concern, since the pool may be lazy or the frontend may not use the database directly."}'
+- coding-fail_subtle-1000 · deploy · Wahrheit kaputt · Konf. 0.8 · 'lling-api online, and the app log shows config loaded, DB pool ready and listening on :3000, though no external health check was shown and uptime was only 4s."}'
+- coding-fail_subtle-1003 · probe · Wahrheit kaputt · Konf. 0.72 · 'with db and cache passing; the 302 to /login is normal. The odd db_pool reading (active 0, waiting 20) is a minor concern, but it was taken 14s after startup."}'
+- coding-fail_subtle-1002 · deploy · Wahrheit kaputt · Konf. 0.8 · ' pm2 shows the process online, and the app log shows config loaded, DB pool ready, and listening on the configured port 5000; the slow query warning is minor."}'
+- coding-fail_subtle-1003 · deploy · Wahrheit kaputt · Konf. 0.8 · 'rocess online, and the app log shows config loaded, DB pool ready, and listening on the configured port 3000; the only warning is a benign deprecation notice."}'
+- coding-fail_subtle-1005 · deploy · Wahrheit kaputt · Konf. 0.8 · ' pool ready, and listening on :8080; the slow query and deprecation warnings are non-fatal, though no explicit health check or version confirmation was shown."}'
+- coding-fail_subtle-1005 · probe · Wahrheit kaputt · Konf. 0.62 · 'th returns ok with db and cache passing after a warm-up timeout, but the db_pool showing 20 waiting with 0 active is anomalous and slightly lowers confidence."}'
+- coding-fail_subtle-1006 · deploy · Wahrheit kaputt · Konf. 0.8 · 'nnected, the db pool is ready, and the app is listening on :8080 matching the configured port; the only caveat is a short uptime and no explicit health check."}'
+- research-ok_clear-1008 · output · Wahrheit ok · Konf. 0.5 · 'utput shows 292 rows removed (10,009 to 9,717) with unique respondent_ids and weights still mean 1.00, but nothing confirms that only duplicates were dropped."}'
+- research-fail_subtle-1007 · joblog · Wahrheit kaputt · Konf. 0.6 · 'duplicates were dropped (167) and other anomalies were left unchanged, as scoped, though the int64 weight dtype is slightly odd for mean-1 normalised weights."}'
+- research-fail_subtle-1009 · joblog · Wahrheit kaputt · Konf. 0.8 · 'b read 16,337 rows, dropped 179 duplicate respondents, wrote the parquet, and left other data unchanged as required; the int64 weight dtype is a minor oddity."}'

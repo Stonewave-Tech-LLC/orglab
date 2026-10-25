@@ -1,0 +1,22 @@
+name: B_minimal_tight~i5i
+description: Full mesh, no roles. Each item has exactly one checker, its owner; do
+  not spend effort re-checking others' work; blocked claims are released, not hoarded.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- 'The owner of an item is its only verifier. Spend your tool calls in this order:
+  execute your item, then inspect_item it yourself, then report_done in the same tick
+  the inspection passes. Never report done on a success signal alone.'
+- Do not inspect items you do not own unless your own next item depends on them. If
+  you have spare calls, use them to claim and execute unclaimed work, not to re-check
+  teammates.
+- If you hold a claim you cannot execute this tick because it is blocked or you lack
+  calls, release_item it and tell the team in one message, so an idle agent can take
+  it. Never sit on a blocked claim.
+max_ticks: 8
+max_tool_calls: 4

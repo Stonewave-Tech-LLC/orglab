@@ -1,0 +1,80 @@
+[sweep] k0: 20 Runs, davon 0 schon fertig, 20 offen
+[sweep] 1/20 B_minimal/coding/seed 0: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~74 min übrig)
+[sweep] 2/20 B_minimal/coding/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~36 min übrig)
+[sweep] 3/20 B_minimal/coding/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~38 min übrig)
+[sweep] 4/20 B_minimal/coding/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~28 min übrig)
+[sweep] 5/20 B_minimal/coding/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~33 min übrig)
+[sweep] 6/20 B_minimal/business/seed 0: {'end_reason': 'quiescent', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~29 min übrig)
+[sweep] 7/20 B_minimal/business/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~24 min übrig)
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 1 min, Versuch 1/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 1 min, Versuch 1/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 2 min, Versuch 2/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 2 min, Versuch 2/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 4 min, Versuch 3/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 4 min, Versuch 3/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 8 min, Versuch 4/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 8 min, Versuch 4/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 16 min, Versuch 5/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 16 min, Versuch 5/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 32 min, Versuch 6/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 32 min, Versuch 6/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 60 min, Versuch 7/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 60 min, Versuch 7/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 60 min, Versuch 8/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 11:20am (Europe/Vienna)); Pause 60 min, Versuch 8/8
+[sweep] k0: 20 Runs, davon 7 schon fertig, 13 offen
+[sweep] 1/13 B_minimal/business/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~38 min übrig)
+[sweep] 2/13 B_minimal/business/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~18 min übrig)
+[sweep] 3/13 B_minimal/business/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~11 min übrig)
+[sweep] 4/13 B_verify_bureaucracy/coding/seed 0: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~13 min übrig)
+[sweep] 5/13 B_verify_bureaucracy/coding/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~11 min übrig)
+[sweep] 6/13 B_verify_bureaucracy/coding/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~9 min übrig)
+[sweep] 7/13 B_verify_bureaucracy/coding/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~8 min übrig)
+[sweep] 8/13 B_verify_bureaucracy/coding/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~7 min übrig)
+[sweep] 9/13 B_verify_bureaucracy/business/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~5 min übrig)
+[sweep] 10/13 B_verify_bureaucracy/business/seed 0: {'end_reason': 'quiescent', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~4 min übrig)
+[sweep] 11/13 B_verify_bureaucracy/business/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~2 min übrig)
+[sweep] 12/13 B_verify_bureaucracy/business/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~1 min übrig)
+[sweep] 13/13 B_verify_bureaucracy/business/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~0 min übrig)
+[sweep] k1: 20 Runs, davon 0 schon fertig, 20 offen
+[sweep] 1/20 B_minimal/coding/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~62 min übrig)
+[sweep] 2/20 B_minimal/coding/seed 0: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~40 min übrig)
+[sweep] 3/20 B_minimal/coding/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~26 min übrig)
+[sweep] 4/20 B_minimal/coding/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~25 min übrig)
+[sweep] 5/20 B_minimal/coding/seed 4: {'end_reason': 'quiescent', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~24 min übrig)
+[sweep] 6/20 B_minimal/business/seed 0: {'end_reason': 'quiescent', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~19 min übrig)
+[sweep] 7/20 B_minimal/business/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~17 min übrig)
+[sweep] 8/20 B_minimal/business/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~16 min übrig)
+[sweep] 9/20 B_minimal/business/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~14 min übrig)
+[sweep] 10/20 B_minimal/business/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~12 min übrig)
+[sweep] 11/20 B_verify_bureaucracy/coding/seed 0: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~11 min übrig)
+[sweep] 12/20 B_verify_bureaucracy/coding/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~9 min übrig)
+[sweep] 13/20 B_verify_bureaucracy/coding/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~10 min übrig)
+[sweep] 14/20 B_verify_bureaucracy/coding/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~8 min übrig)
+[sweep] 15/20 B_verify_bureaucracy/coding/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~6 min übrig)
+[sweep] 16/20 B_verify_bureaucracy/business/seed 1: {'end_reason': 'quiescent', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~5 min übrig)
+[sweep] 17/20 B_verify_bureaucracy/business/seed 0: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~4 min übrig)
+[sweep] 18/20 B_verify_bureaucracy/business/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~3 min übrig)
+[sweep] 19/20 B_verify_bureaucracy/business/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~1 min übrig)
+[sweep] 20/20 B_verify_bureaucracy/business/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~0 min übrig)
+[sweep] k2: 20 Runs, davon 0 schon fertig, 20 offen
+[sweep] 1/20 B_minimal/coding/seed 0: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~54 min übrig)
+[sweep] 2/20 B_minimal/coding/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~47 min übrig)
+[sweep] 3/20 B_minimal/coding/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~31 min übrig)
+[sweep] 4/20 B_minimal/coding/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~26 min übrig)
+[sweep] 5/20 B_minimal/business/seed 0: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~26 min übrig)
+[sweep] 6/20 B_minimal/coding/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~21 min übrig)
+[sweep] 7/20 B_minimal/business/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~18 min übrig)
+[sweep] 8/20 B_minimal/business/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~18 min übrig)
+[sweep] 9/20 B_minimal/business/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~16 min übrig)
+[sweep] 10/20 B_minimal/business/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~14 min übrig)
+[sweep] 11/20 B_verify_bureaucracy/coding/seed 0: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~12 min übrig)
+[sweep] 12/20 B_verify_bureaucracy/coding/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~11 min übrig)
+[sweep] 13/20 B_verify_bureaucracy/coding/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~9 min übrig)
+[sweep] 14/20 B_verify_bureaucracy/coding/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~8 min übrig)
+[sweep] 15/20 B_verify_bureaucracy/coding/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~7 min übrig)
+[sweep] 16/20 B_verify_bureaucracy/business/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~5 min übrig)
+[sweep] 17/20 B_verify_bureaucracy/business/seed 0: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~4 min übrig)
+[sweep] 18/20 B_verify_bureaucracy/business/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~3 min übrig)
+[sweep] 19/20 B_verify_bureaucracy/business/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~1 min übrig)
+[sweep] 20/20 B_verify_bureaucracy/business/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~0 min übrig)

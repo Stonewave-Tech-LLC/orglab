@@ -1,0 +1,30 @@
+name: B_minimal_tight~i2s
+description: 'Star with a0 as executing sequencer: spokes report only to a0, a0 orders
+  dependency chains and record conflicts; everyone executes and self-verifies.'
+n_agents: 4
+topology: star
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: fixed
+roles:
+- name: sequencer
+  mandate: Execute items yourself, and also own the ordering. In tick 1 send each
+    spoke a short list of items to run, roots first. When a spoke reports that an
+    item reverses or overwrites another, decide which runs last and tell the affected
+    owner to re-execute. In the last two ticks, direct spokes to any failed or unexecuted
+    item.
+- name: executor
+  mandate: Claim and execute the items the sequencer assigned, roots first. Inspect
+    each item once after executing, report it done if verified, and re-execute it
+    at once if it failed. Tell the sequencer only about failures, overwrites, or when
+    you are idle.
+norms:
+- Claim only what you execute this tick, and release anything you cannot act on now.
+  Inspect your own item once after executing and report it done only if verified.
+  Do not re-inspect verified items unless a later execute could have overwritten them.
+- If an item's inspection says it was reversed or overwritten by another item, tell
+  the sequencer in one message. The item that must survive is re-executed after the
+  overwriting one, by its owner, in the same or next tick.
+max_ticks: 8
+max_tool_calls: 4

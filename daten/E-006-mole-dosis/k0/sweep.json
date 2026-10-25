@@ -1,0 +1,25 @@
+{
+  "scenario": "mole_0",
+  "configs": [
+    "B_minimal",
+    "B_verify_bureaucracy"
+  ],
+  "domains": [
+    "coding",
+    "business"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "backend": {
+    "kind": "agent_sdk",
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+  },
+  "concurrency": 3,
+  "finished": "2026-10-21T11:39:11"
+}

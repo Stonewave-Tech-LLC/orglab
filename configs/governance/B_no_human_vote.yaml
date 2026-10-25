@@ -1,0 +1,14 @@
+# Teil 2 §6.1: vollautonom ohne Menschen.
+name: B_no_human_vote
+description: B_minimal without human; team can reassign items by vote (quorum 2).
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: none
+role_mode: none
+roles: []
+norms: []
+max_ticks: 10
+max_tool_calls: 8
+reassign_quorum: 2

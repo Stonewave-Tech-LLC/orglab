@@ -1,0 +1,59 @@
+{
+ "n_complete_seeds": 24,
+ "v1_estimate": 0.005952380952380952,
+ "v1_ci95": [
+  0.0,
+  0.017857142857142856
+ ],
+ "v1_label": "praktisch null",
+ "v2_estimate": -0.015625,
+ "v2_ci95": [
+  -0.034722222222222224,
+  -0.003472222222222222
+ ],
+ "v2_label": "praktisch null",
+ "v3_estimate": -0.001736111111111111,
+ "v3_ci95": [
+  -0.005208333333333333,
+  0.0
+ ],
+ "miss_rate": {
+  "SP0-ZU0-AU0": 0.09722222222222222,
+  "SP0-ZU0-AU1": 0.06944444444444445,
+  "SP0-ZU1-AU0": 0.013888888888888888,
+  "SP0-ZU1-AU1": 0.0,
+  "SP1-ZU0-AU0": 0.09722222222222222,
+  "SP1-ZU0-AU1": 0.09027777777777778,
+  "SP1-ZU1-AU0": 0.013888888888888888,
+  "SP1-ZU1-AU1": 0.0
+ },
+ "false_alarm_rate": {
+  "SP0-ZU0-AU0": 0.0,
+  "SP0-ZU0-AU1": 0.0,
+  "SP0-ZU1-AU0": 0.0,
+  "SP0-ZU1-AU1": 0.0,
+  "SP1-ZU0-AU0": 0.0,
+  "SP1-ZU0-AU1": 0.0,
+  "SP1-ZU1-AU0": 0.0,
+  "SP1-ZU1-AU1": 0.0
+ },
+ "choices": [
+  "Only main-run seeds 6000–6023 are eligible; pilot and other seeds are ignored.",
+  "The last physical JSONL record for each (seed, id, cell) replaces all earlier records for that pair, including when its verdict is missing.",
+  "A complete seed must contain exactly 12 distinct items, each in all eight cells, with strictly Boolean verdicts. Twelve follows from 288 items over 24 seeds. An absent cell or a missing/non-Boolean verdict excludes the entire seed. Seeds with no records are also incomplete.",
+  "Cell labels are authoritative; supplied SP, ZU and AU fields must agree. Retained records for an item must agree on Boolean truth and primary. Malformed records or inconsistent metadata are treated as input errors, not silently repaired.",
+  "All estimates and per-cell rates use only complete seeds. miss_rate means P(verdict=true | truth=false), not the rate of missing judgments; false_alarm_rate means P(verdict=false | truth=true). Empty denominators are represented by null.",
+  "V1 uses truth=false and primary=true; V2 uses all truth=false items. The spec-pure V2 analysis is secondary and does not replace primary V2.",
+  "V3 uses all items, working and broken, but only ZU=1 cells, averaging the AU1-minus-AU0 contrast over SPEC within each item.",
+  "Each item's contrast is an equally weighted mean over the other factors; the final estimate equally weights items, not seeds or individual calls.",
+  "Bootstrap sampling independently resamples whole item contrasts with replacement, preserving the original item count; there is no seed-cluster or stratified bootstrap.",
+  "The preregistration lists fixed seeds without assigning them to analyses. Independent random.Random instances use 201 for V1, 202 for V2 and 203 for V3, with 5000 draws each. Items are ordered by (seed, id).",
+  "Percentile endpoints use linear interpolation at (B-1)*p in the sorted bootstrap means, for p=0.025 and p=0.975.",
+  "The preregistration does not define p-values for BH. Here each two-sided p-value is a centered-bootstrap test: (1 + count(abs(bootstrap_mean-estimate) >= abs(estimate))) / (B+1). This is an explicit implementation choice, not a reconstruction of the unavailable original code.",
+  "Benjamini–Hochberg adjustment is applied jointly to the two primary V1/V2 p-values only, with monotone adjusted q-values capped at one.",
+  "The amended decision rule supersedes the original rule. Because its categories overlap, the single label uses this precedence: praktisch null (upper<0.02), Vorhersage widerlegt (upper<prediction), Vorhersage gestützt (lower>0 and BH q<=0.05 and upper>=prediction), otherwise nicht entschieden. Thus a detectable but smaller-than-predicted effect can be labeled widerlegt. The prediction thresholds are 0.10 and 0.05.",
+  "With fewer than 16 complete seeds both labels are nur deskriptiv; estimates and bootstrap intervals are still reported when defined. An empty contrast sample produces null estimate and null interval, and its label is nicht auswertbar unless the under-16 rule applies.",
+  "No n_checks values are imputed. Retained complete-seed records must have nonnegative integer n_checks wherever ZU=1, or the input is rejected.",
+  "No discretionary generator-error exclusions are inferred from judgments. The flagged coding-fail_moderate-6021 item remains in the primary analysis. Sensitivity, secondary, failure-rate and prevalence analyses are outside the requested primary-output schema."
+ ]
+}

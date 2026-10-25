@@ -1,0 +1,84 @@
+[sweep] E-004-owner-only-replikation: 60 Runs, davon 0 schon fertig, 60 offen
+[sweep] 1/60 B_minimal_tight/coding/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.08333333333333333} (~162 min übrig)
+[sweep] 2/60 B_minimal_tight/coding/seed 100: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.125} (~86 min übrig)
+[sweep] 3/60 B_minimal_tight/coding/seed 102: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~113 min übrig)
+[sweep] 4/60 B_minimal_tight/coding/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.08333333333333333} (~87 min übrig)
+[sweep] 5/60 B_minimal_tight/coding/seed 104: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.13333333333333333} (~103 min übrig)
+[sweep] 6/60 B_minimal_tight/coding/seed 105: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.14285714285714285} (~88 min übrig)
+[sweep] 7/60 B_minimal_tight/coding/seed 106: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~92 min übrig)
+[sweep] 8/60 B_minimal_tight/coding/seed 107: {'end_reason': 'max_ticks', 'true_completion': 0.8125, 'false_done_rate': 0.18181818181818182} (~84 min übrig)
+[sweep] 9/60 B_minimal_tight/coding/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.75, 'false_done_rate': 0.25} (~95 min übrig)
+[sweep] 10/60 B_minimal_tight/coding/seed 108: {'end_reason': 'max_ticks', 'true_completion': 0.75, 'false_done_rate': 0.2} (~85 min übrig)
+[sweep] 11/60 B_minimal_tight/business/seed 100: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~88 min übrig)
+[sweep] 12/60 B_minimal_tight/business/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.0625} (~82 min übrig)
+[sweep] 13/60 B_minimal_tight/business/seed 102: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.125} (~81 min übrig)
+[sweep] 14/60 B_minimal_tight/business/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.0625} (~77 min übrig)
+[sweep] 15/60 B_minimal_tight/business/seed 104: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.125} (~77 min übrig)
+[sweep] 16/60 B_minimal_tight/business/seed 105: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.125} (~74 min übrig)
+[sweep] 17/60 B_minimal_tight/business/seed 106: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.0} (~72 min übrig)
+[sweep] 18/60 B_minimal_tight/business/seed 107: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~70 min übrig)
+[sweep] 19/60 B_minimal_tight/business/seed 108: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.08333333333333333} (~67 min übrig)
+[sweep] 20/60 B_minimal_tight/business/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.1} (~65 min übrig)
+[sweep] 21/60 B_minimal_tight/research/seed 100: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.0} (~63 min übrig)
+[sweep] 22/60 B_minimal_tight/research/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.0625} (~62 min übrig)
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 1 min, Versuch 1/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 1 min, Versuch 1/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 2 min, Versuch 2/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 2 min, Versuch 2/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 4 min, Versuch 3/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 4 min, Versuch 3/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 8 min, Versuch 4/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 8 min, Versuch 4/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 16 min, Versuch 5/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 16 min, Versuch 5/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 32 min, Versuch 6/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 32 min, Versuch 6/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 60 min, Versuch 7/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 60 min, Versuch 7/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 60 min, Versuch 8/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 60 min, Versuch 8/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 60 min, Versuch 9/8
+[sweep] 23/60 B_minimal_tight/research/seed 102: {'crash': "BackendFailure: result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)"} (~354 min übrig)
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)); Pause 60 min, Versuch 9/8
+[sweep] 24/60 B_minimal_tight/research/seed 103: {'crash': "BackendFailure: result:success: You've hit your session limit · resets 6:10am (Europe/Vienna)"} (~330 min übrig)
+[sweep] 25/60 B_minimal_tight/research/seed 105: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.06666666666666667} (~396 min übrig)
+[sweep] 26/60 B_minimal_tight/research/seed 104: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.0625} (~370 min übrig)
+[sweep] 27/60 B_minimal_tight/research/seed 106: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.0625} (~349 min übrig)
+[sweep] 28/60 B_minimal_tight/research/seed 107: {'end_reason': 'max_ticks', 'true_completion': 0.8125, 'false_done_rate': 0.1875} (~327 min übrig)
+[sweep] 29/60 B_minimal_tight/research/seed 108: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.0} (~309 min übrig)
+[sweep] 30/60 B_minimal_tight/research/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.0625} (~289 min übrig)
+[sweep] 31/60 B_tight_owner_only/coding/seed 100: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.0625} (~273 min übrig)
+[sweep] 32/60 B_tight_owner_only/coding/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.07692307692307693} (~255 min übrig)
+[sweep] 33/60 B_tight_owner_only/coding/seed 102: {'end_reason': 'max_ticks', 'true_completion': 0.625, 'false_done_rate': 0.375} (~240 min übrig)
+[sweep] 34/60 B_tight_owner_only/coding/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.07142857142857142} (~225 min übrig)
+[sweep] 35/60 B_tight_owner_only/coding/seed 104: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.13333333333333333} (~212 min übrig)
+[sweep] 36/60 B_tight_owner_only/coding/seed 105: {'end_reason': 'max_ticks', 'true_completion': 0.75, 'false_done_rate': 0.18181818181818182} (~198 min übrig)
+[sweep] 37/60 B_tight_owner_only/coding/seed 106: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~186 min übrig)
+[sweep] 38/60 B_tight_owner_only/coding/seed 107: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.0625} (~174 min übrig)
+[sweep] 39/60 B_tight_owner_only/coding/seed 108: {'end_reason': 'max_ticks', 'true_completion': 0.8125, 'false_done_rate': 0.07692307692307693} (~163 min übrig)
+[sweep] 40/60 B_tight_owner_only/coding/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.75, 'false_done_rate': 0.25} (~151 min übrig)
+[sweep] 41/60 B_tight_owner_only/business/seed 100: {'end_reason': 'quiescent', 'true_completion': 0.9375, 'false_done_rate': 0.0625} (~141 min übrig)
+[sweep] 42/60 B_tight_owner_only/business/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.0625} (~131 min übrig)
+[sweep] 43/60 B_tight_owner_only/business/seed 102: {'end_reason': 'max_ticks', 'true_completion': 0.8125, 'false_done_rate': 0.16666666666666666} (~121 min übrig)
+[sweep] 44/60 B_tight_owner_only/business/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.125} (~112 min übrig)
+[sweep] 45/60 B_tight_owner_only/business/seed 104: {'end_reason': 'max_ticks', 'true_completion': 0.6875, 'false_done_rate': 0.0} (~103 min übrig)
+[sweep] 46/60 B_tight_owner_only/business/seed 105: {'end_reason': 'max_ticks', 'true_completion': 0.625, 'false_done_rate': 0.2857142857142857} (~95 min übrig)
+[sweep] 47/60 B_tight_owner_only/business/seed 106: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.07142857142857142} (~87 min übrig)
+[sweep] 48/60 B_tight_owner_only/business/seed 107: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~78 min übrig)
+[sweep] 49/60 B_tight_owner_only/business/seed 108: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.0625} (~71 min übrig)
+[sweep] 50/60 B_tight_owner_only/business/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.07142857142857142} (~63 min übrig)
+[sweep] 51/60 B_tight_owner_only/research/seed 101: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~56 min übrig)
+[sweep] 52/60 B_tight_owner_only/research/seed 100: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.07692307692307693} (~49 min übrig)
+[sweep] 53/60 B_tight_owner_only/research/seed 102: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.0} (~42 min übrig)
+[sweep] 54/60 B_tight_owner_only/research/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.13333333333333333} (~36 min übrig)
+[sweep] 55/60 B_tight_owner_only/research/seed 104: {'end_reason': 'max_ticks', 'true_completion': 0.75, 'false_done_rate': 0.08333333333333333} (~29 min übrig)
+[sweep] 56/60 B_tight_owner_only/research/seed 105: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.0} (~23 min übrig)
+[sweep] 57/60 B_tight_owner_only/research/seed 106: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.125} (~17 min übrig)
+[sweep] 58/60 B_tight_owner_only/research/seed 107: {'end_reason': 'max_ticks', 'true_completion': 0.8125, 'false_done_rate': 0.1875} (~11 min übrig)
+[sweep] 59/60 B_tight_owner_only/research/seed 108: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.0} (~6 min übrig)
+[sweep] 60/60 B_tight_owner_only/research/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.875, 'false_done_rate': 0.08333333333333333} (~0 min übrig)
+[sweep] E-004-owner-only-replikation: 60 Runs, davon 58 schon fertig, 2 offen
+[sweep] 1/2 B_minimal_tight/research/seed 102: {'end_reason': 'max_ticks', 'true_completion': 0.9375, 'false_done_rate': 0.07142857142857142} (~3 min übrig)
+[sweep] 2/2 B_minimal_tight/research/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.625, 'false_done_rate': 0.375} (~0 min übrig)
+[sweep] E-004-owner-only-replikation: 60 Runs, davon 59 schon fertig, 1 offen
+[sweep] 1/1 B_minimal_tight/research/seed 101: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~0 min übrig)

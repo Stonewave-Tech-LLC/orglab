@@ -1,0 +1,28 @@
+{
+ "model": "google/gemini-4-argon",
+ "time": "2026-10-23 16:57",
+ "usage": {
+  "prompt_tokens": 9575,
+  "completion_tokens": 3575,
+  "total_tokens": 13150,
+  "cost": 0.0549,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0549,
+   "upstream_inference_prompt_cost": 0.01915,
+   "upstream_inference_completions_cost": 0.03575
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "raw_tail": "out = {\n        \"n_complete_seeds\": n_complete_seeds,\n        \"v1_estimate\": v1_est,\n        \"v1_ci95\": v1_ci,\n        \"v1_label\": v1_label,\n        \"v2_estimate\": v2_est,\n        \"v2_ci95\": v2_ci,\n        \"v2_label\": v2_label,\n        \"v3_estimate\": v3_est,\n        \"v3_ci95\": v3_ci,\n        \"miss_rate\": miss_rate,\n        \"false_alarm_rate\": false_alarm_rate,\n        \"choices\": choices\n    }\n    \n    print(json.dumps(out, ensure_ascii=False, indent=2))\n\nif __name__ == \"__main__\":\n    main()\n```"
+}

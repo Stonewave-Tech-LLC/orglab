@@ -1,0 +1,28 @@
+{
+ "model": "openai/gpt-6.1-sol",
+ "time": "2026-10-23 21:23",
+ "usage": {
+  "prompt_tokens": 6399,
+  "completion_tokens": 5652,
+  "total_tokens": 12051,
+  "cost": 0.072516,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 6396,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.072516,
+   "upstream_inference_prompt_cost": 0.015996,
+   "upstream_inference_completions_cost": 0.05652
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 1674,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "raw_tail": "ive_reasons\n        )\n    for name in (\"V1\", \"C1\", \"C2\", \"F1\"):\n        result[\"sonnet_\" + name.lower()] = mean(sonnet[name])\n    result[\"choices\"] = choices\n\n    print(json.dumps(result, ensure_ascii=False, allow_nan=False))\n\n\nif __name__ == \"__main__\":\n    try:\n        main()\n    except (OSError, ValueError, TypeError, KeyError) as exc:\n        # Invalid/missing inputs abort rather than silently changing analysis.\n        sys.stderr.write(\"Analysis aborted: %s\\n\" % exc)\n        sys.exit(1)\n```"
+}

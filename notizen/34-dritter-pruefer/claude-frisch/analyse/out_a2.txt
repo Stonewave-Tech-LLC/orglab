@@ -1,0 +1,426 @@
+
+===== Satz 6000: Vorgehen je Zelle =====
+S SP0-ZU0-AU0: acc=0.951 sens=0.903 spec=1.000 lookup=0.858 rightsec=0.247 conf=0.866 tools=1.50 tok=724
+S SP0-ZU0-AU1: acc=0.965 sens=0.931 spec=1.000 lookup=0.812 rightsec=0.215 conf=0.857 tools=1.48 tok=740
+S SP0-ZU1-AU0: acc=0.993 sens=0.986 spec=1.000 lookup=1.000 rightsec=0.292 conf=0.898 tools=4.01 tok=850
+S SP0-ZU1-AU1: acc=1.000 sens=1.000 spec=1.000 lookup=0.997 rightsec=0.288 conf=0.900 tools=4.00 tok=855
+S SP1-ZU0-AU0: acc=0.951 sens=0.903 spec=1.000 lookup=0.948 rightsec=0.292 conf=0.863 tools=1.91 tok=703
+S SP1-ZU0-AU1: acc=0.955 sens=0.910 spec=1.000 lookup=0.941 rightsec=0.292 conf=0.859 tools=2.00 tok=731
+S SP1-ZU1-AU0: acc=0.993 sens=0.986 spec=1.000 lookup=1.000 rightsec=0.292 conf=0.877 tools=4.00 tok=856
+S SP1-ZU1-AU1: acc=1.000 sens=1.000 spec=1.000 lookup=1.000 rightsec=0.292 conf=0.881 tools=4.00 tok=847
+H SP0-ZU0-AU0: acc=0.924 sens=0.938 spec=0.910 lookup=0.615 rightsec=0.191 conf=0.806 tools=1.23 tok=1230
+H SP0-ZU0-AU1: acc=0.903 sens=0.958 spec=0.847 lookup=0.535 rightsec=0.122 conf=0.781 tools=1.16 tok=1295
+H SP0-ZU1-AU0: acc=0.997 sens=0.993 spec=1.000 lookup=0.448 rightsec=0.184 conf=0.845 tools=3.46 tok=1172
+H SP0-ZU1-AU1: acc=0.979 sens=1.000 spec=0.958 lookup=0.181 rightsec=0.076 conf=0.844 tools=3.18 tok=1117
+H SP1-ZU0-AU0: acc=0.917 sens=0.924 spec=0.910 lookup=0.872 rightsec=0.288 conf=0.797 tools=2.00 tok=1248
+H SP1-ZU0-AU1: acc=0.896 sens=0.944 spec=0.847 lookup=0.858 rightsec=0.288 conf=0.789 tools=2.08 tok=1282
+H SP1-ZU1-AU0: acc=0.833 sens=0.674 spec=0.993 lookup=0.514 rightsec=0.170 conf=0.829 tools=3.59 tok=1062
+H SP1-ZU1-AU1: acc=0.833 sens=0.681 spec=0.986 lookup=0.382 rightsec=0.142 conf=0.843 tools=3.48 tok=1050
+
+===== Satz 6000: Haupteffekte (Stufe1 - Stufe0) =====
+S   SP  acc_pp               -0.3 [  -0.7;    0.1]
+S   SP  acc_lo              -0.110 [ -0.311;   0.060]
+S   SP  sens_pp              -0.5 [  -1.4;    0.2]
+S   SP  sens_lo             -0.113 [ -0.319;   0.061]
+S   SP  spec_pp               0.0 [   0.0;    0.0]
+S   SP  spec_lo              0.000 [  0.000;   0.000]
+S   SP  pworks_pp             0.3 [  -0.1;    0.7]
+S   SP  looked_up             5.6 [   4.3;    6.9]
+S   SP  right_section         3.1 [   2.2;    4.3]
+S   SP  confidence          -0.010 [ -0.013;  -0.008]
+S   SP  n_tool_calls         0.230 [  0.188;   0.272]
+S   SP  completion_tokens   -7.927 [-17.003;   1.544]
+S   ZU  acc_pp                4.1 [   2.3;    6.1]
+S   ZU  acc_lo               2.479 [  1.584;   4.777]
+S   ZU  sens_pp               8.2 [   4.5;   12.2]
+S   ZU  sens_lo              2.523 [  1.623;   4.830]
+S   ZU  spec_pp               0.0 [   0.0;    0.0]
+S   ZU  spec_lo              0.000 [  0.000;   0.000]
+S   ZU  pworks_pp            -4.1 [  -6.1;   -2.2]
+S   ZU  looked_up            10.9 [   8.7;   13.5]
+S   ZU  right_section         3.0 [   2.0;    4.1]
+S   ZU  confidence           0.028 [  0.022;   0.034]
+S   ZU  n_tool_calls         2.279 [  2.219;   2.349]
+S   ZU  completion_tokens  127.484 [110.405; 145.799]
+S   AU  acc_pp                0.8 [   0.2;    1.6]
+S   AU  acc_lo               0.332 [  0.088;   0.697]
+S   AU  sens_pp               1.6 [   0.3;    3.3]
+S   AU  sens_lo              0.341 [  0.091;   0.715]
+S   AU  spec_pp               0.0 [   0.0;    0.0]
+S   AU  spec_lo              0.000 [  0.000;   0.000]
+S   AU  pworks_pp            -0.8 [  -1.6;   -0.2]
+S   AU  looked_up            -1.4 [  -2.3;   -0.6]
+S   AU  right_section        -0.9 [  -1.6;   -0.3]
+S   AU  confidence          -0.002 [ -0.004;   0.001]
+S   AU  n_tool_calls         0.015 [ -0.009;   0.038]
+S   AU  completion_tokens   10.120 [  2.568;  16.925]
+H   SP  acc_pp               -8.1 [ -10.0;   -6.2]
+H   SP  acc_lo              -1.051 [ -1.318;  -0.803]
+H   SP  sens_pp             -16.7 [ -20.1;  -13.7]
+H   SP  sens_lo             -2.107 [ -2.779;  -1.662]
+H   SP  spec_pp               0.5 [  -1.6;    2.8]
+H   SP  spec_lo              0.081 [ -0.261;   0.425]
+H   SP  pworks_pp             8.6 [   6.6;   10.6]
+H   SP  looked_up            21.2 [  18.2;   24.6]
+H   SP  right_section         7.9 [   5.9;    9.9]
+H   SP  confidence          -0.005 [ -0.012;   0.001]
+H   SP  n_tool_calls         0.529 [  0.469;   0.595]
+H   SP  completion_tokens  -43.032 [-62.095; -23.533]
+H   ZU  acc_pp                0.1 [  -2.5;    3.0]
+H   ZU  acc_lo               0.011 [ -0.312;   0.364]
+H   ZU  sens_pp             -10.4 [ -14.8;   -5.7]
+H   ZU  sens_lo             -1.125 [ -1.850;  -0.565]
+H   ZU  spec_pp              10.6 [   6.9;   14.4]
+H   ZU  spec_lo              2.118 [  1.491;   2.930]
+H   ZU  pworks_pp            10.6 [   7.7;   13.2]
+H   ZU  looked_up           -33.9 [ -37.0;  -30.6]
+H   ZU  right_section        -7.9 [ -10.3;   -5.8]
+H   ZU  confidence           0.048 [  0.040;   0.056]
+H   ZU  n_tool_calls         1.806 [  1.735;   1.884]
+H   ZU  completion_tokens  -163.688 [-196.314; -135.348]
+H   AU  acc_pp               -1.5 [  -3.0;    0.0]
+H   AU  acc_lo              -0.180 [ -0.358;   0.000]
+H   AU  sens_pp               1.4 [  -0.5;    3.5]
+H   AU  sens_lo              0.140 [ -0.048;   0.352]
+H   AU  spec_pp              -4.3 [  -6.6;   -2.3]
+H   AU  spec_lo             -0.693 [ -1.067;  -0.359]
+H   AU  pworks_pp            -2.8 [  -4.3;   -1.4]
+H   AU  looked_up           -12.3 [ -14.8;   -9.6]
+H   AU  right_section        -5.1 [  -6.8;   -3.4]
+H   AU  confidence          -0.004 [ -0.010;   0.001]
+H   AU  n_tool_calls        -0.095 [ -0.147;  -0.044]
+H   AU  completion_tokens    8.234 [ -7.790;  24.161]
+S-H SP  acc_lo               0.941 [  0.659;   1.240]
+S-H SP  sens_lo              1.995 [  1.547;   2.647]
+S-H SP  spec_lo             -0.081 [ -0.421;   0.261]
+S-H ZU  acc_lo               2.469 [  1.559;   4.715]
+S-H ZU  sens_lo              3.648 [  2.761;   5.903]
+S-H ZU  spec_lo             -2.118 [ -2.922;  -1.487]
+S-H AU  acc_lo               0.512 [  0.242;   0.885]
+S-H AU  sens_lo              0.201 [ -0.071;   0.547]
+S-H AU  spec_lo              0.693 [  0.361;   1.070]
+
+===== Satz 6000: Wechselwirkungen (Richtigkeit) =====
+S|SPxZU|lo               0.121 [ -0.052;   0.357]
+S|SPxZU|pp                0.5 [  -0.2;    1.4]
+S|SP|bei ZU=0 pp         -0.5 [  -1.4;    0.2]
+S|SP|bei ZU=1 pp          0.0 [   0.0;    0.0]
+S|SPxAU|lo              -0.257 [ -0.647;  -0.027]
+S|SPxAU|pp               -0.5 [  -1.2;    0.0]
+S|SP|bei AU=0 pp          0.0 [  -0.5;    0.5]
+S|SP|bei AU=1 pp         -0.5 [  -1.0;    0.0]
+S|ZUxAU|lo               2.002 [ -0.202;   2.814]
+S|ZUxAU|pp               -0.2 [  -1.0;    0.7]
+S|ZU|bei AU=0 pp          4.2 [   2.3;    6.2]
+S|ZU|bei AU=1 pp          4.0 [   2.1;    5.9]
+H|SPxZU|lo              -2.641 [ -3.547;  -2.007]
+H|SPxZU|pp              -14.8 [ -18.2;  -11.1]
+H|SP|bei ZU=0 pp         -0.7 [  -2.8;    1.4]
+H|SP|bei ZU=1 pp        -15.5 [ -18.4;  -12.5]
+H|SPxAU|lo               0.313 [ -0.112;   0.735]
+H|SPxAU|pp                0.9 [  -1.7;    3.6]
+H|SP|bei AU=0 pp         -8.5 [ -10.8;   -6.2]
+H|SP|bei AU=1 pp         -7.6 [  -9.9;   -5.2]
+H|ZUxAU|lo               0.147 [ -0.200;   0.474]
+H|ZUxAU|pp                1.2 [  -1.7;    3.8]
+H|ZU|bei AU=0 pp         -0.5 [  -3.3;    2.4]
+H|ZU|bei AU=1 pp          0.7 [  -2.4;    4.2]
+
+===== Satz 6000: Moderatoren (Richtigkeit; pp und logit) =====
+--- Modell S
+kind=ok_clear                  acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+kind=ok_noisy                  acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+kind=fail_moderate             acc= 96.0 | SP:  -0.3pp [ -1.0; +0.0] lo -0.09 | ZU:  +8.0pp [ +2.8;+13.5] lo +3.93 | AU:  +0.3pp [ +0.0; +1.0] lo +0.09 
+kind=fail_subtle               acc= 94.4 | SP:  -0.7pp [ -2.8; +0.7] lo -0.13 | ZU:  +8.3pp [ +3.8;+13.5] lo +1.93 | AU:  +2.8pp [ +0.3; +6.2] lo +0.52 
+dom=coding|ok                  acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+dom=coding|fail                acc= 85.7 | SP:  -1.6pp [ -4.7; +1.0] lo -0.13 | ZU: +24.5pp [+14.1;+34.9] lo +2.72 | AU:  +4.7pp [ +1.0; +9.9] lo +0.38 
+dom=business|ok                acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+dom=business|fail              acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+dom=research|ok                acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+dom=research|fail              acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fail&primary                   acc= 96.1 | SP:  -0.6pp [ -1.9; +0.0] lo -0.15 | ZU:  +7.7pp [ +2.7;+13.2] lo +4.05 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fail&nonprimary                acc= 94.0 | SP:  -0.4pp [ -2.0; +0.9] lo -0.07 | ZU:  +8.7pp [ +3.5;+15.2] lo +1.83 | AU:  +3.8pp [ +0.7; +7.7] lo +0.66 
+fail&subtl=1                   acc= 96.0 | SP:  -0.3pp [ -1.0; +0.0] lo -0.09 | ZU:  +8.0pp [ +2.8;+13.5] lo +3.93 | AU:  +0.3pp [ +0.0; +1.0] lo +0.09 
+fail&subtl=2                   acc= 92.9 | SP:  +0.0pp [ -1.7; +1.7] lo +0.00 | ZU: +11.9pp [ +3.6;+20.8] lo +2.33 | AU:  +3.6pp [ +0.0; +9.0] lo +0.53 
+fail&subtl=3                   acc= 96.7 | SP:  -1.7pp [ -5.2; +0.0] lo -0.47 | ZU:  +3.3pp [ +0.0; +8.0] lo +0.99 | AU:  +1.7pp [ +0.0; +5.2] lo +0.47 
+fault=amount_mismatch          acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=bounced                  acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=cache_partial            acc= 97.9 | SP:  -4.2pp [-13.6; +0.0] lo -1.65 | ZU:  +4.2pp [ +0.0;+13.6] lo +1.65 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=column_loss              acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=db_down                  acc= 69.8 | SP:  -2.1pp [-10.0; +5.0] lo -0.10 | ZU: +43.7pp [+20.8;+68.8] lo +2.37 | AU: +18.8pp [ +4.2;+40.6] lo +0.89 
+fault=duplicates_partial       acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=low_traffic              acc= 75.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU: +50.0pp [+22.2;+78.6] lo +4.57 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=row_loss                 acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=stale_process            acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=weights_misscaled        acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=wrong_contact            acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=wrong_terms              acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+--- Modell H
+kind=ok_clear                  acc= 96.7 | SP:  +2.4pp [ +0.7; +4.5] lo +0.76 | ZU:  +5.2pp [ +1.7; +9.0] lo +2.00 | AU:  -2.4pp [ -5.2; -0.3] lo -0.76 
+kind=ok_noisy                  acc= 89.6 | SP:  -1.4pp [ -5.2; +2.4] lo -0.15 | ZU: +16.0pp [ +9.4;+22.6] lo +2.14 | AU:  -6.2pp [-10.1; -2.4] lo -0.68 
+kind=fail_moderate             acc= 88.7 | SP: -15.6pp [-20.5;-11.5] lo -1.84 | ZU: -10.1pp [-17.0; -3.5] lo -1.06 | AU:  +0.3pp [ -2.4; +3.5] lo +0.03 
+kind=fail_subtle               acc= 89.1 | SP: -17.7pp [-22.2;-12.5] lo -2.38 | ZU: -10.8pp [-14.9; -5.6] lo -1.18 | AU:  +2.4pp [ +0.0; +5.2] lo +0.25 
+dom=coding|ok                  acc= 87.5 | SP:  +4.2pp [ +0.0; +7.8] lo +0.38 | ZU: +25.0pp [+16.7;+33.3] lo +4.86 | AU:  -6.2pp [-10.4; -1.6] lo -0.57 
+dom=coding|fail                acc= 79.4 | SP: -25.5pp [-31.8;-19.3] lo -1.75 | ZU:  -7.8pp [-17.2; +2.6] lo -0.48 | AU:  +1.6pp [ -3.6; +6.2] lo +0.09 
+dom=business|ok                acc= 94.8 | SP:  -4.2pp [ -8.3; -0.5] lo -0.85 | ZU:  +9.4pp [ +3.1;+16.1] lo +2.66 | AU:  -2.1pp [ -5.2; +0.5] lo -0.41 
+dom=business|fail              acc= 88.0 | SP: -24.0pp [-31.2;-16.7] lo -4.81 | ZU: -22.9pp [-29.2;-15.6] lo -3.67 | AU:  +2.1pp [ +0.5; +4.2] lo +0.19 
+dom=research|ok                acc= 97.1 | SP:  +1.6pp [ -1.6; +5.2] lo +0.53 | ZU:  -2.6pp [ -5.7; +0.5] lo -0.91 | AU:  -4.7pp [ -8.3; -1.6] lo -1.99 
+dom=research|fail              acc= 99.2 | SP:  -0.5pp [ -2.1; +1.0] lo -0.52 | ZU:  -0.5pp [ -2.1; +1.0] lo -0.52 | AU:  +0.5pp [ -1.0; +2.1] lo +0.52 
+fail&primary                   acc= 84.2 | SP: -25.0pp [-28.7;-20.9] lo -2.42 | ZU: -17.3pp [-22.4;-11.2] lo -1.42 | AU:  +0.6pp [ -2.4; +3.7] lo +0.04 
+fail&nonprimary                acc= 95.4 | SP:  -5.0pp [ -8.6; -2.0] lo -1.21 | ZU:  -0.8pp [ -5.9; +4.1] lo -0.18 | AU:  +2.5pp [ +0.4; +4.9] lo +0.56 
+fail&subtl=1                   acc= 88.7 | SP: -15.6pp [-20.5;-11.5] lo -1.84 | ZU: -10.1pp [-17.0; -3.5] lo -1.06 | AU:  +0.3pp [ -2.4; +3.5] lo +0.03 
+fail&subtl=2                   acc= 87.2 | SP: -18.5pp [-25.0;-11.8] lo -1.96 | ZU: -11.3pp [-18.4; -3.7] lo -1.05 | AU:  +1.8pp [ -1.7; +5.7] lo +0.16 
+fail&subtl=3                   acc= 91.7 | SP: -16.7pp [-25.0; -8.3] lo -3.90 | ZU: -10.0pp [-15.0; -4.5] lo -1.41 | AU:  +3.3pp [ -0.8; +7.0] lo +0.42 
+fault=amount_mismatch          acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=bounced                  acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=cache_partial            acc= 80.2 | SP: -39.6pp [-48.1;-30.6] lo -4.16 | ZU: -35.4pp [-42.3;-28.6] lo -2.96 | AU: -10.4pp [-20.0; +0.0] lo -0.64 
+fault=column_loss              acc= 99.0 | SP:  -2.1pp [ -6.2; +0.0] lo -1.12 | ZU:  +2.1pp [ +0.0; +6.2] lo +1.12 | AU:  +2.1pp [ +0.0; +6.2] lo +1.12 
+fault=db_down                  acc= 77.1 | SP: -25.0pp [-38.5;-13.3] lo -1.48 | ZU:  -4.2pp [-27.8;+22.9] lo -0.23 | AU: +12.5pp [ +2.1;+25.0] lo +0.69 
+fault=duplicates_partial       acc= 99.0 | SP:  +2.1pp [ +0.0; +6.6] lo +1.12 | ZU:  -2.1pp [ -6.6; +0.0] lo -1.12 | AU:  +2.1pp [ +0.0; +6.6] lo +1.12 
+fault=low_traffic              acc= 60.4 | SP: -37.5pp [-48.3;-27.1] lo -1.63 | ZU:  +8.3pp [-17.5;+37.5] lo +0.34 | AU:  +4.2pp [ -9.4;+17.6] lo +0.17 
+fault=row_loss                 acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=stale_process            acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=weights_misscaled        acc= 99.0 | SP:  -2.1pp [ -6.2; +0.0] lo -1.12 | ZU:  -2.1pp [ -6.2; +0.0] lo -1.12 | AU:  -2.1pp [ -6.2; +0.0] lo -1.12 
+fault=wrong_contact            acc= 77.1 | SP: -45.8pp [-50.0;-39.3] lo -4.41 | ZU: -45.8pp [-50.0;-39.3] lo -4.41 | AU:  +4.2pp [ +0.0;+10.7] lo +0.23 
+fault=wrong_terms              acc= 75.0 | SP: -50.0pp [-56.8;-44.6] lo -4.57 | ZU: -45.8pp [-50.0;-39.6] lo -3.37 | AU:  +4.2pp [ +0.0;+10.4] lo +0.22 
+
+===== Satz 6000: H-SP primary-Fehler nach SP und Nachschlagen =====
+S SP=0 primary=True  rightsec=True  n= 300 acc=0.960
+S SP=0 primary=True  rightsec=False n=  36 acc=1.000
+S SP=0 primary=True  lookup=True  n= 300 acc=0.960
+S SP=0 primary=True  lookup=False n=  36 acc=1.000
+S SP=0 primary=False rightsec=False n= 240 acc=0.942
+S SP=0 primary=False lookup=True  n= 180 acc=0.922
+S SP=0 primary=False lookup=False n=  60 acc=1.000
+S SP=1 primary=True  rightsec=True  n= 336 acc=0.958
+S SP=1 primary=True  lookup=True  n= 336 acc=0.958
+S SP=1 primary=False rightsec=False n= 240 acc=0.938
+S SP=1 primary=False lookup=True  n= 208 acc=0.928
+S SP=1 primary=False lookup=False n=  32 acc=1.000
+H SP=0 primary=True  rightsec=True  n= 165 acc=0.952
+H SP=0 primary=True  rightsec=False n= 171 acc=0.982
+H SP=0 primary=True  lookup=True  n= 165 acc=0.952
+H SP=0 primary=True  lookup=False n= 171 acc=0.982
+H SP=0 primary=False rightsec=False n= 240 acc=0.979
+H SP=0 primary=False lookup=True  n=  62 acc=0.919
+H SP=0 primary=False lookup=False n= 178 acc=1.000
+H SP=1 primary=True  rightsec=True  n= 256 acc=0.930
+H SP=1 primary=True  rightsec=False n=  80 acc=0.037
+H SP=1 primary=True  lookup=True  n= 257 acc=0.926
+H SP=1 primary=True  lookup=False n=  79 acc=0.038
+H SP=1 primary=False rightsec=False n= 240 acc=0.929
+H SP=1 primary=False lookup=True  n=  80 acc=0.875
+H SP=1 primary=False lookup=False n= 160 acc=0.956
+
+===== Satz 7000: Vorgehen je Zelle =====
+S SP0-ZU0-AU0: acc=0.955 sens=0.910 spec=1.000 lookup=0.851 rightsec=0.250 conf=0.867 tools=1.55 tok=720
+S SP0-ZU0-AU1: acc=0.955 sens=0.910 spec=1.000 lookup=0.816 rightsec=0.229 conf=0.855 tools=1.48 tok=742
+S SP0-ZU1-AU0: acc=0.990 sens=0.986 spec=0.993 lookup=1.000 rightsec=0.292 conf=0.899 tools=4.01 tok=852
+S SP0-ZU1-AU1: acc=0.993 sens=0.993 spec=0.993 lookup=0.993 rightsec=0.288 conf=0.891 tools=4.00 tok=858
+S SP1-ZU0-AU0: acc=0.948 sens=0.896 spec=1.000 lookup=0.955 rightsec=0.292 conf=0.863 tools=1.92 tok=715
+S SP1-ZU0-AU1: acc=0.944 sens=0.896 spec=0.993 lookup=0.934 rightsec=0.292 conf=0.858 tools=2.00 tok=734
+S SP1-ZU1-AU0: acc=0.983 sens=0.965 spec=1.000 lookup=1.000 rightsec=0.292 conf=0.876 tools=4.00 tok=855
+S SP1-ZU1-AU1: acc=0.993 sens=0.986 spec=1.000 lookup=0.997 rightsec=0.292 conf=0.876 tools=3.99 tok=843
+H SP0-ZU0-AU0: acc=0.924 sens=0.910 spec=0.938 lookup=0.628 rightsec=0.198 conf=0.800 tools=1.31 tok=1241
+H SP0-ZU0-AU1: acc=0.878 sens=0.944 spec=0.812 lookup=0.576 rightsec=0.160 conf=0.791 tools=1.28 tok=1277
+H SP0-ZU1-AU0: acc=0.976 sens=0.965 spec=0.986 lookup=0.451 rightsec=0.184 conf=0.844 tools=3.47 tok=1168
+H SP0-ZU1-AU1: acc=0.986 sens=0.993 spec=0.979 lookup=0.194 rightsec=0.083 conf=0.841 tools=3.20 tok=1121
+H SP1-ZU0-AU0: acc=0.896 sens=0.910 spec=0.882 lookup=0.889 rightsec=0.292 conf=0.791 tools=2.06 tok=1252
+H SP1-ZU0-AU1: acc=0.892 sens=0.931 spec=0.854 lookup=0.840 rightsec=0.271 conf=0.791 tools=2.00 tok=1258
+H SP1-ZU1-AU0: acc=0.830 sens=0.660 spec=1.000 lookup=0.441 rightsec=0.156 conf=0.835 tools=3.51 tok=1025
+H SP1-ZU1-AU1: acc=0.844 sens=0.694 spec=0.993 lookup=0.375 rightsec=0.146 conf=0.848 tools=3.48 tok=1024
+
+===== Satz 7000: Haupteffekte (Stufe1 - Stufe0) =====
+S   SP  acc_pp               -0.6 [  -1.3;   -0.1]
+S   SP  acc_lo              -0.207 [ -0.452;  -0.028]
+S   SP  sens_pp              -1.4 [  -2.6;   -0.3]
+S   SP  sens_lo             -0.255 [ -0.490;  -0.079]
+S   SP  spec_pp               0.2 [   0.0;    0.5]
+S   SP  spec_lo              0.513 [  0.000;   0.624]
+S   SP  pworks_pp             0.7 [   0.3;    1.2]
+S   SP  looked_up             5.6 [   4.2;    7.2]
+S   SP  right_section         2.7 [   1.6;    3.8]
+S   SP  confidence          -0.008 [ -0.011;  -0.004]
+S   SP  n_tool_calls         0.215 [  0.174;   0.258]
+S   SP  completion_tokens   -6.317 [-15.823;   3.064]
+S   ZU  acc_pp                3.9 [   1.9;    6.0]
+S   ZU  acc_lo               1.566 [  0.828;   2.668]
+S   ZU  sens_pp               8.0 [   4.0;   12.2]
+S   ZU  sens_lo              1.768 [  0.933;   3.127]
+S   ZU  spec_pp              -0.2 [  -0.5;    0.0]
+S   ZU  spec_lo             -0.513 [ -0.624;   0.000]
+S   ZU  pworks_pp            -4.1 [  -6.3;   -2.1]
+S   ZU  looked_up            10.9 [   8.6;   13.5]
+S   ZU  right_section         2.5 [   1.6;    3.6]
+S   ZU  confidence           0.026 [  0.020;   0.032]
+S   ZU  n_tool_calls         2.260 [  2.195;   2.327]
+S   ZU  completion_tokens  123.982 [106.501; 141.053]
+S   AU  acc_pp                0.3 [  -0.3;    0.8]
+S   AU  acc_lo               0.088 [ -0.086;   0.280]
+S   AU  sens_pp               0.7 [  -0.2;    1.7]
+S   AU  sens_lo              0.127 [ -0.047;   0.310]
+S   AU  spec_pp              -0.2 [  -0.5;    0.0]
+S   AU  spec_lo             -0.513 [ -0.624;   0.000]
+S   AU  pworks_pp            -0.5 [  -1.0;    0.0]
+S   AU  looked_up            -1.6 [  -2.5;   -0.8]
+S   AU  right_section        -0.6 [  -1.2;    0.0]
+S   AU  confidence          -0.005 [ -0.007;  -0.003]
+S   AU  n_tool_calls        -0.003 [ -0.029;   0.023]
+S   AU  completion_tokens    9.067 [  2.121;  15.416]
+H   SP  acc_pp               -7.6 [  -9.5;   -5.6]
+H   SP  acc_lo              -0.903 [ -1.162;  -0.695]
+H   SP  sens_pp             -15.5 [ -19.1;  -12.0]
+H   SP  sens_lo             -1.620 [ -2.116;  -1.281]
+H   SP  spec_pp               0.3 [  -1.4;    2.1]
+H   SP  spec_lo              0.053 [ -0.204;   0.357]
+H   SP  pworks_pp             7.9 [   6.0;    9.9]
+H   SP  looked_up            17.4 [  14.7;   20.1]
+H   SP  right_section         6.0 [   4.1;    7.8]
+H   SP  confidence          -0.005 [ -0.011;   0.002]
+H   SP  n_tool_calls         0.448 [  0.390;   0.506]
+H   SP  completion_tokens  -62.282 [-81.299; -42.028]
+H   ZU  acc_pp                1.1 [  -1.7;    3.9]
+H   ZU  acc_lo               0.129 [ -0.223;   0.420]
+H   ZU  sens_pp              -9.5 [ -13.5;   -5.4]
+H   ZU  sens_lo             -0.914 [ -1.481;  -0.470]
+H   ZU  spec_pp              11.8 [   7.6;   16.0]
+H   ZU  spec_lo              2.566 [  1.830;   3.689]
+H   ZU  pworks_pp            10.8 [   7.7;   13.6]
+H   ZU  looked_up           -36.8 [ -39.8;  -33.5]
+H   ZU  right_section        -8.8 [ -10.9;   -6.5]
+H   ZU  confidence           0.050 [  0.041;   0.058]
+H   ZU  n_tool_calls         1.755 [  1.678;   1.832]
+H   ZU  completion_tokens  -172.291 [-201.573; -139.032]
+H   AU  acc_pp               -0.6 [  -1.9;    1.0]
+H   AU  acc_lo              -0.069 [ -0.219;   0.108]
+H   AU  sens_pp               3.0 [   0.7;    5.4]
+H   AU  sens_lo              0.271 [  0.062;   0.526]
+H   AU  spec_pp              -4.2 [  -5.7;   -2.4]
+H   AU  spec_lo             -0.656 [ -0.952;  -0.407]
+H   AU  pworks_pp            -3.6 [  -5.0;   -2.3]
+H   AU  looked_up           -10.6 [ -13.2;   -7.8]
+H   AU  right_section        -4.3 [  -6.1;   -2.5]
+H   AU  confidence          -0.002 [ -0.007;   0.004]
+H   AU  n_tool_calls        -0.094 [ -0.146;  -0.044]
+H   AU  completion_tokens   -1.770 [-18.798;  15.986]
+S-H SP  acc_lo               0.697 [  0.388;   0.984]
+S-H SP  sens_lo              1.366 [  0.974;   1.876]
+S-H SP  spec_lo              0.459 [ -0.249;   0.718]
+S-H ZU  acc_lo               1.438 [  0.740;   2.647]
+S-H ZU  sens_lo              2.681 [  2.011;   4.033]
+S-H ZU  spec_lo             -3.078 [ -3.943;  -2.086]
+S-H AU  acc_lo               0.158 [ -0.056;   0.383]
+S-H AU  sens_lo             -0.144 [ -0.408;   0.110]
+S-H AU  spec_lo              0.143 [ -0.095;   0.876]
+
+===== Satz 7000: Wechselwirkungen (Richtigkeit) =====
+S|SPxZU|lo              -0.132 [ -1.148;   0.837]
+S|SPxZU|pp                0.5 [  -0.5;    1.9]
+S|SP|bei ZU=0 pp         -0.9 [  -1.9;   -0.2]
+S|SP|bei ZU=1 pp         -0.3 [  -1.2;    0.5]
+S|SPxAU|lo               0.042 [ -0.345;   0.396]
+S|SPxAU|pp                0.2 [  -0.9;    1.2]
+S|SP|bei AU=0 pp         -0.7 [  -1.7;    0.2]
+S|SP|bei AU=1 pp         -0.5 [  -1.2;    0.2]
+S|ZUxAU|lo               0.679 [ -0.145;   2.352]
+S|ZUxAU|pp                0.9 [  -0.2;    2.1]
+S|ZU|bei AU=0 pp          3.5 [   1.6;    6.1]
+S|ZU|bei AU=1 pp          4.3 [   2.4;    6.6]
+H|SPxZU|lo              -2.190 [ -2.906;  -1.668]
+H|SPxZU|pp              -13.7 [ -17.4;  -10.1]
+H|SP|bei ZU=0 pp         -0.7 [  -2.6;    1.2]
+H|SP|bei ZU=1 pp        -14.4 [ -17.7;  -10.9]
+H|SPxAU|lo               0.355 [ -0.040;   0.756]
+H|SPxAU|pp                2.3 [  -0.7;    5.2]
+H|SP|bei AU=0 pp         -8.7 [ -10.9;   -6.1]
+H|SP|bei AU=1 pp         -6.4 [  -8.9;   -4.2]
+H|ZUxAU|lo               0.409 [  0.104;   0.767]
+H|ZUxAU|pp                3.6 [   1.0;    6.4]
+H|ZU|bei AU=0 pp         -0.7 [  -3.8;    2.6]
+H|ZU|bei AU=1 pp          3.0 [   0.0;    6.2]
+
+===== Satz 7000: Moderatoren (Richtigkeit; pp und logit) =====
+--- Modell S
+kind=ok_clear                  acc= 99.5 | SP:  +0.3pp [ +0.0; +1.0] lo +0.51 | ZU:  -0.3pp [ -1.0; +0.0] lo -0.51 | AU:  -0.3pp [ -1.0; +0.0] lo -0.51 
+kind=ok_noisy                  acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+kind=fail_moderate             acc= 94.8 | SP:  -1.4pp [ -3.5; +0.0] lo -0.27 | ZU:  +8.3pp [ +3.1;+14.9] lo +2.15 | AU:  -0.7pp [ -1.7; +0.0] lo -0.14 
+kind=fail_subtle               acc= 93.8 | SP:  -1.4pp [ -2.8; -0.3] lo -0.23 | ZU:  +7.6pp [ +1.4;+14.6] lo +1.45 | AU:  +2.1pp [ +0.7; +4.2] lo +0.35 
+dom=coding|ok                  acc= 99.2 | SP:  +0.5pp [ +0.0; +1.6] lo +0.52 | ZU:  -0.5pp [ -1.6; +0.0] lo -0.52 | AU:  -0.5pp [ -1.6; +0.0] lo -0.52 
+dom=coding|fail                acc= 84.1 | SP:  -2.6pp [ -4.7; -0.5] lo -0.19 | ZU: +24.5pp [+11.5;+39.1] lo +2.28 | AU:  +2.6pp [ +0.0; +5.7] lo +0.19 
+dom=business|ok                acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+dom=business|fail              acc= 98.7 | SP:  -1.6pp [ -4.7; +0.0] lo -1.11 | ZU:  -0.5pp [ -1.6; +0.0] lo -0.34 | AU:  -0.5pp [ -1.6; +0.0] lo -0.34 
+dom=research|ok                acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+dom=research|fail              acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fail&primary                   acc= 95.4 | SP:  -0.3pp [ -1.0; +0.0] lo -0.07 | ZU:  +9.2pp [ +4.7;+15.6] lo +4.24 | AU:  +0.3pp [ +0.0; +1.0] lo +0.07 
+fail&nonprimary                acc= 92.7 | SP:  -2.9pp [ -6.2; -0.5] lo -0.43 | ZU:  +6.2pp [ -0.9;+13.4] lo +0.95 | AU:  +1.3pp [ -1.1; +3.4] lo +0.18 
+fail&subtl=1                   acc= 94.8 | SP:  -1.4pp [ -3.5; +0.0] lo -0.27 | ZU:  +8.3pp [ +3.1;+14.9] lo +2.15 | AU:  -0.7pp [ -1.7; +0.0] lo -0.14 
+fail&subtl=2                   acc= 95.9 | SP:  -1.4pp [ -3.3; +0.0] lo -0.32 | ZU:  +6.8pp [ -0.6;+15.1] lo +2.11 | AU:  +1.4pp [ +0.0; +3.3] lo +0.32 
+fail&subtl=3                   acc= 91.4 | SP:  -1.4pp [ -3.7; +0.0] lo -0.18 | ZU:  +8.6pp [ -1.9;+19.9] lo +1.14 | AU:  +2.9pp [ +0.0; +6.5] lo +0.35 
+fault=amount_mismatch          acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=bounced                  acc= 94.8 | SP:  -6.2pp [-20.5; +0.0] lo -1.16 | ZU:  -2.1pp [ -6.8; +0.0] lo -0.36 | AU:  -2.1pp [ -6.8; +0.0] lo -0.36 
+fault=cache_partial            acc= 96.9 | SP:  -2.1pp [ -7.1; +0.0] lo -0.53 | ZU:  +6.2pp [ +0.0;+21.4] lo +2.01 | AU:  +2.1pp [ +0.0; +7.1] lo +0.53 
+fault=column_loss              acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=db_down                  acc= 68.8 | SP:  -8.3pp [-15.9; -2.3] lo -0.38 | ZU: +33.3pp [ -2.5;+65.6] lo +1.63 | AU:  +8.3pp [ -2.3;+19.4] lo +0.38 
+fault=duplicates_partial       acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=low_traffic              acc= 70.8 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU: +58.3pp [+30.8;+84.6] lo +4.90 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=row_loss                 acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=stale_process            acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=weights_misscaled        acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=wrong_contact            acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=wrong_terms              acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+--- Modell H
+kind=ok_clear                  acc= 97.0 | SP:  +3.1pp [ +1.4; +4.9] lo +1.13 | ZU:  +4.5pp [ +1.0; +8.0] lo +1.87 | AU:  -2.4pp [ -4.2; -0.7] lo -0.85 
+kind=ok_noisy                  acc= 89.1 | SP:  -2.4pp [ -5.2; +0.7] lo -0.25 | ZU: +19.1pp [+11.8;+26.0] lo +2.80 | AU:  -5.9pp [ -8.7; -3.5] lo -0.61 
+kind=fail_moderate             acc= 87.8 | SP: -14.6pp [-19.1;-10.4] lo -1.53 | ZU:  -8.3pp [-14.2; -1.0] lo -0.80 | AU:  +1.4pp [ -1.0; +3.8] lo +0.13 
+kind=fail_subtle               acc= 87.3 | SP: -16.3pp [-21.5;-10.4] lo -1.69 | ZU: -10.8pp [-16.3; -5.2] lo -1.02 | AU:  +4.5pp [ +0.7; +8.3] lo +0.41 
+dom=coding|ok                  acc= 86.7 | SP:  +3.6pp [ +0.5; +6.8] lo +0.31 | ZU: +23.4pp [+13.0;+32.3] lo +2.90 | AU:  -6.8pp [-10.4; -3.1] lo -0.59 
+dom=coding|fail                acc= 74.5 | SP: -24.0pp [-31.2;-16.7] lo -1.33 | ZU:  -8.3pp [-17.2; +3.1] lo -0.44 | AU:  +6.2pp [ +0.0;+13.0] lo +0.33 
+dom=business|ok                acc= 94.0 | SP:  -4.7pp [ -7.8; -2.1] lo -0.84 | ZU: +12.0pp [ +5.2;+19.3] lo +3.98 | AU:  -2.6pp [ -4.7; -0.5] lo -0.45 
+dom=business|fail              acc= 88.5 | SP: -21.9pp [-29.2;-14.6] lo -3.61 | ZU: -19.8pp [-26.6;-13.0] lo -2.70 | AU:  +2.1pp [ -0.5; +4.7] lo +0.20 
+dom=research|ok                acc= 98.4 | SP:  +2.1pp [ +0.0; +4.2] lo +1.32 | ZU:  +0.0pp [ -2.6; +2.1] lo +0.00 | AU:  -3.1pp [ -5.7; -1.0] lo -2.60 
+dom=research|fail              acc= 99.7 | SP:  -0.5pp [ -1.6; +0.0] lo -1.10 | ZU:  -0.5pp [ -1.6; +0.0] lo -1.10 | AU:  +0.5pp [ +0.0; +1.6] lo +1.10 
+fail&primary                   acc= 82.9 | SP: -25.9pp [-29.7;-22.0] lo -2.26 | ZU: -16.4pp [-21.2;-10.1] lo -1.23 | AU:  +0.3pp [ -2.0; +2.8] lo +0.02 
+fail&nonprimary                acc= 94.2 | SP:  -0.8pp [ -3.2; +1.2] lo -0.15 | ZU:  +0.0pp [ -4.8; +5.5] lo +0.00 | AU:  +6.7pp [ +2.8;+11.0] lo +1.31 
+fail&subtl=1                   acc= 87.8 | SP: -14.6pp [-19.1;-10.4] lo -1.53 | ZU:  -8.3pp [-14.2; -1.0] lo -0.80 | AU:  +1.4pp [ -1.0; +3.8] lo +0.13 
+fail&subtl=2                   acc= 88.2 | SP: -18.2pp [-26.5;-10.7] lo -2.15 | ZU:  -8.8pp [-15.6; -1.8] lo -0.86 | AU:  +0.7pp [ -2.7; +3.9] lo +0.06 
+fail&subtl=3                   acc= 86.4 | SP: -14.3pp [-23.1; -6.4] lo -1.30 | ZU: -12.9pp [-21.2; -3.8] lo -1.15 | AU:  +8.6pp [ +1.5;+16.2] lo +0.73 
+fault=amount_mismatch          acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=bounced                  acc= 99.0 | SP:  +2.1pp [ +0.0; +6.8] lo +1.12 | ZU:  +2.1pp [ +0.0; +6.8] lo +1.12 | AU:  +2.1pp [ +0.0; +6.8] lo +1.12 
+fault=cache_partial            acc= 77.1 | SP: -45.8pp [-53.6;-37.5] lo -4.41 | ZU: -37.5pp [-46.9;-28.1] lo -2.59 | AU:  -4.2pp [-12.5; +3.6] lo -0.23 
+fault=column_loss              acc= 99.0 | SP:  -2.1pp [ -6.2; +0.0] lo -1.12 | ZU:  -2.1pp [ -6.2; +0.0] lo -1.12 | AU:  +2.1pp [ +0.0; +6.2] lo +1.12 
+fault=db_down                  acc= 71.9 | SP:  -6.2pp [-15.9; +4.5] lo -0.30 | ZU:  -2.1pp [-28.6;+25.0] lo -0.10 | AU: +31.2pp [+15.0;+45.5] lo +1.63 
+fault=duplicates_partial       acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=low_traffic              acc= 49.0 | SP: -43.8pp [-52.5;-34.4] lo -1.83 | ZU:  +6.3pp [-17.5;+30.4] lo +0.25 | AU:  -2.1pp [-11.1; +7.5] lo -0.08 
+fault=row_loss                 acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=stale_process            acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=weights_misscaled        acc=100.0 | SP:  +0.0pp [ +0.0; +0.0] lo +0.00 | ZU:  +0.0pp [ +0.0; +0.0] lo +0.00 | AU:  +0.0pp [ +0.0; +0.0] lo +0.00 
+fault=wrong_contact            acc= 76.0 | SP: -47.9pp [-54.5;-40.6] lo -4.49 | ZU: -43.8pp [-50.0;-36.4] lo -3.29 | AU:  +2.1pp [ -4.5; +9.4] lo +0.11 
+fault=wrong_terms              acc= 79.2 | SP: -41.7pp [-52.3;-31.2] lo -4.25 | ZU: -37.5pp [-45.8;-27.5] lo -3.04 | AU:  +4.2pp [ -4.2;+12.5] lo +0.24 
+
+===== Satz 7000: H-SP primary-Fehler nach SP und Nachschlagen =====
+S SP=0 primary=True  rightsec=True  n= 305 acc=0.951
+S SP=0 primary=True  rightsec=False n=  31 acc=1.000
+S SP=0 primary=True  lookup=True  n= 305 acc=0.951
+S SP=0 primary=True  lookup=False n=  31 acc=1.000
+S SP=0 primary=False rightsec=False n= 240 acc=0.942
+S SP=0 primary=False lookup=True  n= 173 acc=0.919
+S SP=0 primary=False lookup=False n=  67 acc=1.000
+S SP=1 primary=True  rightsec=True  n= 336 acc=0.952
+S SP=1 primary=True  lookup=True  n= 336 acc=0.952
+S SP=1 primary=False rightsec=False n= 240 acc=0.912
+S SP=1 primary=False lookup=True  n= 207 acc=0.903
+S SP=1 primary=False lookup=False n=  33 acc=0.970
+H SP=0 primary=True  rightsec=True  n= 180 acc=0.956
+H SP=0 primary=True  rightsec=False n= 156 acc=0.962
+H SP=0 primary=True  lookup=True  n= 180 acc=0.956
+H SP=0 primary=True  lookup=False n= 156 acc=0.962
+H SP=0 primary=False rightsec=False n= 240 acc=0.946
+H SP=0 primary=False lookup=True  n=  57 acc=0.842
+H SP=0 primary=False lookup=False n= 183 acc=0.978
+H SP=1 primary=True  rightsec=True  n= 249 acc=0.936
+H SP=1 primary=True  rightsec=False n=  87 acc=0.023
+H SP=1 primary=True  lookup=True  n= 249 acc=0.936
+H SP=1 primary=True  lookup=False n=  87 acc=0.023
+H SP=1 primary=False rightsec=False n= 240 acc=0.938
+H SP=1 primary=False lookup=True  n=  81 acc=0.889
+H SP=1 primary=False lookup=False n= 159 acc=0.962

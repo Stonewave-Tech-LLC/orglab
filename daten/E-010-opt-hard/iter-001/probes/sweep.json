@@ -1,0 +1,24 @@
+{
+  "scenario": "phantom_hard",
+  "configs": [
+    "B_minimal"
+  ],
+  "domains": [
+    "coding",
+    "business"
+  ],
+  "seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004
+  ],
+  "backend": {
+    "kind": "agent_sdk",
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+  },
+  "concurrency": 4,
+  "finished": "2026-10-21T00:44:26"
+}

@@ -1,0 +1,24 @@
+name: B_minimal_tight~i3i
+description: Full mesh, no roles. Known failures are fixed first or handed off openly;
+  checking effort goes where it can change the outcome; done rests on a fresh check
+  of the item and what it depends on.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- If a check shows something you own is not working, fixing it is your first action
+  next tick. If you cannot fix it now, release it and tell everyone waiting on it
+  so someone else can take it over; a known failure must never sit with no one working
+  on it.
+- Check other people's work only once they have reported it done or have been silent
+  about it for a tick; otherwise ask or wait. Spend your limited actions on your own
+  items and on what they depend on.
+- Report something done only right after a check that passed in that same tick, covering
+  both the item and the items it directly depends on. If a dependency is broken, say
+  so to its owner and do not report done.
+max_ticks: 8
+max_tool_calls: 4

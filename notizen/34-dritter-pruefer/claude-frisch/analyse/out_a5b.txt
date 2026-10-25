@@ -1,0 +1,18 @@
+S: Fehler gesamt 124, davon ZU0 108, davon kaputte Belege 121
+H: Fehler gesamt 430, davon ZU0 222, davon kaputte Belege 271
+
+cache_partial  deploy   S6000:  0/16  S7000:  0/16  H6000:  0/16  H7000:  0/16
+cache_partial  probe    S6000:  0/16  S7000:  0/16  H6000:  0/16  H7000:  0/16
+cache_partial  sockets  S6000:  2/16  S7000:  3/16  H6000:  1/16  H7000:  2/16
+db_down        deploy   S6000: 16/16  S7000: 16/16  H6000:  9/16  H7000: 11/16
+db_down        probe    S6000:  8/16  S7000:  7/16  H6000:  1/16  H7000:  2/16
+db_down        sockets  S6000:  1/16  S7000:  0/16  H6000:  0/16  H7000:  0/16
+low_traffic    deploy   S6000:  0/16  S7000:  0/16  H6000:  0/16  H7000:  0/16
+low_traffic    probe    S6000:  8/16  S7000: 12/16  H6000:  9/16  H7000: 13/16
+low_traffic    sockets  S6000: 16/16  S7000: 16/16  H6000: 12/16  H7000: 13/16
+none           deploy   S6000:  0/64  S7000:  1/64  H6000: 25/64  H7000: 27/64
+none           probe    S6000:  0/64  S7000:  0/64  H6000:  2/64  H7000:  3/64
+none           sockets  S6000:  0/64  S7000:  0/64  H6000: 21/64  H7000: 18/64
+stale_process  deploy   S6000:  0/16  S7000:  0/16  H6000:  0/16  H7000:  0/16
+stale_process  probe    S6000:  0/16  S7000:  0/16  H6000:  0/16  H7000:  0/16
+stale_process  sockets  S6000:  0/16  S7000:  0/16  H6000:  0/16  H7000:  0/16

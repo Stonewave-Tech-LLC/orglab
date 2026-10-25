@@ -1,0 +1,23 @@
+name: B_minimal_tight~i5s
+description: Full mesh, no roles. Dependent work starts only on a parent you inspected
+  yourself; work built on a failed parent is redone; done reports must follow a fresh
+  passing inspection.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- Before executing an item that depends on another, inspect_item the parent yourself.
+  A teammate's message or a success signal is not proof. If the parent is not verified,
+  do other work and do not execute the dependent item.
+- When you fix a failed item, tell the owners of its dependents in one message. Any
+  dependent executed before the fix must be re-executed and re-inspected by its owner
+  before being reported done.
+- Report done only if your passing inspect_item came after the last execute of the
+  item and of its parents. If either was re-run since your inspect, inspect again
+  before reporting.
+max_ticks: 8
+max_tool_calls: 4

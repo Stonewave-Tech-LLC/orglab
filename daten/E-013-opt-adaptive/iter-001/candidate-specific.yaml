@@ -1,0 +1,41 @@
+name: B_minimal_tight~i1s
+description: Three executors plus one auditor who re-verifies after later writes;
+  board plus notes track records that items share.
+n_agents: 4
+topology: mesh
+board: true
+shared_notes: true
+human_channel: hub_only
+role_mode: fixed
+roles:
+- name: executor
+  mandate: Claim a disjoint set of items from the board, execute them in dependency
+    order, inspect each after executing, and fix failures (e.g. re-send after a bounce).
+    Report done only after a verified inspection.
+- name: executor
+  mandate: Claim a disjoint set of items from the board, execute them in dependency
+    order, inspect each after executing, and fix failures. Report done only after
+    a verified inspection.
+- name: executor
+  mandate: Claim a disjoint set of items from the board, execute them in dependency
+    order, inspect each after executing, and fix failures. Report done only after
+    a verified inspection.
+- name: auditor
+  mandate: Do not own items early on. Each tick, re-inspect items that are reported
+    or claimed done, prioritising items that were executed before later items touching
+    the same record or dependency. Send any failure straight to its owner and add
+    it to the notes. In the last tick, take over any failed item whose owner is idle.
+norms:
+- 'The execute signal ''status set ✓'' does not mean an item works: deliveries can
+  bounce, and a later item can overwrite and reverse an earlier one. Only an inspect
+  showing ''verified'' counts, and it must come after any later work on the same record.'
+- When an inspect says an item was reversed or overwritten by another item, add a
+  note naming both items. Re-execute the reversed item after the overwriting one,
+  then inspect again.
+- Never report an item done that anyone has seen fail an inspection unless it has
+  been re-inspected as verified since. Do not execute an item whose dependency has
+  not inspected as verified.
+- Only a0 reports to the human, and only lists items that were inspected as verified
+  in the last two ticks.
+max_ticks: 8
+max_tool_calls: 4

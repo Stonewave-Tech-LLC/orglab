@@ -1,0 +1,18 @@
+2026-10-21T00:56:28 Iteration 1: Baseline B_minimal_tight (b1822c39d792) auf Seeds 1000–1004
+2026-10-21T01:22:42   invariant: Δ=-0.006 p=1.000 tokens×1.10 → verworfen
+2026-10-21T01:22:42   specific: Δ=-0.037 p=0.284 tokens×1.03 → verworfen
+2026-10-21T01:22:42 Iteration 1: keine Verbesserung (Serie 1)
+2026-10-21T01:22:42 Iteration 2: Baseline B_minimal_tight (b1822c39d792) auf Seeds 2000–2004
+2026-10-21T01:45:22   invariant: Δ=-0.075 p=0.015 tokens×0.88 → verworfen
+2026-10-21T01:45:22   specific: Δ=-0.037 p=0.191 tokens×0.94 → verworfen
+2026-10-21T01:45:22 Iteration 2: keine Verbesserung (Serie 2)
+2026-10-21T01:45:22 Iteration 3: Baseline B_minimal_tight (b1822c39d792) auf Seeds 3000–3004
+2026-10-21T02:14:43   invariant: Δ=+0.000 p=1.000 tokens×1.10 → verworfen
+2026-10-21T02:14:43   specific: Δ=-0.019 p=0.530 tokens×1.08 → verworfen
+2026-10-21T02:14:43 Iteration 3: keine Verbesserung (Serie 3)
+2026-10-21T02:14:43 Iteration 4: Baseline B_minimal_tight (b1822c39d792) auf Seeds 4000–4004
+2026-10-21T07:23:12 Iteration 4: Baseline B_minimal_tight (b1822c39d792) auf Seeds 4000–4004
+2026-10-21T07:56:52   invariant: Δ=-0.006 p=1.000 tokens×0.99 → verworfen
+2026-10-21T07:56:52   specific: Δ=-0.056 p=0.176 tokens×0.85 → verworfen
+2026-10-21T07:56:52 Iteration 4: keine Verbesserung (Serie 4)
+2026-10-21T07:56:52 Iteration 5: Baseline B_minimal_tight (b1822c39d792) auf Seeds 5000–5004

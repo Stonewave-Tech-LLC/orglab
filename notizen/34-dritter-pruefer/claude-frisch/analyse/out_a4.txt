@@ -1,0 +1,92 @@
+
+===== Satz 6000 =====
+S-Fehlerquote                                      0.024 [  0.015;   0.035]
+H-Fehlerquote                                      0.090 [  0.076;   0.105]
+beide falsch (Anteil)                              0.014 [  0.006;   0.023]
+P(H falsch | S falsch)                             0.582 [  0.360;   0.786]
+S~H κ ungeschichtet                                0.215 [  0.101;   0.320]
+S~H DF-Verh. ungeschichtet                         6.476 [  4.247;   8.787]
+S~H κ Schicht Zelle                                0.215 [  0.103;   0.318]
+S~H DF-Verh. Schicht Zelle                         6.527 [  4.352;   8.963]
+S~H κ Schicht Typ                                  0.137 [  0.046;   0.208]
+S~H DF-Verh. Schicht Typ                           1.962 [  1.395;   2.382]
+S~H κ Schicht Typ×Zelle                            0.128 [  0.048;   0.167]
+S~H DF-Verh. Schicht Typ×Zelle                     1.829 [  1.235;   2.435]
+S~H CAPA-ähnlich (ungeschichtet)                   0.083 [  0.064;   0.102]
+S~S (AU0/AU1) κ ungeschichtet                      0.832 [  0.662;   0.973]
+S~S (AU0/AU1) DF-Verh. ungeschichtet              36.000 [ 24.511;  60.632]
+S~S (AU0/AU1) κ Schicht Typ×SP×ZU                  0.703 [  0.425;   0.941]
+S~S (AU0/AU1) DF-Verh. Schicht Typ×SP×ZU           1.865 [  1.292;   2.474]
+H~H (AU0/AU1) κ ungeschichtet                      0.602 [  0.515;   0.674]
+H~H (AU0/AU1) DF-Verh. ungeschichtet               7.146 [  6.091;   8.459]
+H~H (AU0/AU1) κ Schicht Typ×SP×ZU                  0.291 [  0.153;   0.381]
+H~H (AU0/AU1) DF-Verh. Schicht Typ×SP×ZU           1.304 [  1.153;   1.396]
+S~H (AU gekreuzt) κ Schicht Typ×SP×ZU              0.117 [  0.033;   0.159]
+S~H (AU gekreuzt) DF-Verh. Schicht Typ×SP×ZU       1.800 [  1.190;   2.435]
+Zählung: Sonnet-Fehler 55, Haiku-Fehler 207, gemeinsame 32 von 2304 Beleg×Zellen
+gemeinsame Fehler nach Typ×Zelle: [(('coding|fail_moderate|low_traffic', 'SP0-ZU0-AU0'), 3), (('coding|fail_subtle|low_traffic', 'SP0-ZU0-AU0'), 3), (('coding|fail_subtle|low_traffic', 'SP1-ZU0-AU0'), 3), (('coding|fail_subtle|low_traffic', 'SP1-ZU0-AU1'), 3), (('coding|fail_subtle|db_down', 'SP1-ZU1-AU0'), 2), (('coding|fail_moderate|db_down', 'SP0-ZU0-AU0'), 2), (('coding|fail_moderate|db_down', 'SP0-ZU0-AU1'), 2), (('coding|fail_moderate|db_down', 'SP1-ZU0-AU0'), 2), (('coding|fail_moderate|db_down', 'SP1-ZU0-AU1'), 2), (('coding|fail_subtle|low_traffic', 'SP0-ZU0-AU1'), 2), (('coding|fail_moderate|low_traffic', 'SP0-ZU0-AU1'), 2), (('coding|fail_moderate|low_traffic', 'SP1-ZU0-AU0'), 2)]
+Schichten mit Fehlern beider Modelle (Typ, Zelle, n, S-Rate, H-Rate, beob. gemeinsam, erw. gemeinsam):
+   coding|fail_moderate|low_traffic         SP0-ZU0-AU0 n= 6 S=0.50 H=0.50 beob=3 erw=1.50
+   coding|fail_subtle|low_traffic           SP0-ZU0-AU0 n= 6 S=0.50 H=0.50 beob=3 erw=1.50
+   coding|fail_subtle|low_traffic           SP1-ZU0-AU0 n= 6 S=0.50 H=0.67 beob=3 erw=2.00
+   coding|fail_subtle|low_traffic           SP1-ZU0-AU1 n= 6 S=0.50 H=0.50 beob=3 erw=1.50
+   coding|fail_subtle|db_down               SP1-ZU1-AU0 n= 6 S=0.33 H=0.83 beob=2 erw=1.67
+   coding|fail_moderate|low_traffic         SP0-ZU0-AU1 n= 6 S=0.50 H=0.33 beob=2 erw=1.00
+   coding|fail_moderate|low_traffic         SP1-ZU0-AU0 n= 6 S=0.50 H=0.33 beob=2 erw=1.00
+   coding|fail_moderate|low_traffic         SP1-ZU0-AU1 n= 6 S=0.50 H=0.33 beob=2 erw=1.00
+   coding|fail_moderate|db_down             SP0-ZU0-AU0 n= 6 S=0.50 H=0.33 beob=2 erw=1.00
+   coding|fail_moderate|db_down             SP0-ZU0-AU1 n= 6 S=0.33 H=0.33 beob=2 erw=0.67
+   coding|fail_moderate|db_down             SP1-ZU0-AU0 n= 6 S=0.50 H=0.33 beob=2 erw=1.00
+   coding|fail_moderate|db_down             SP1-ZU0-AU1 n= 6 S=0.50 H=0.33 beob=2 erw=1.00
+   coding|fail_subtle|low_traffic           SP0-ZU0-AU1 n= 6 S=0.50 H=0.33 beob=2 erw=1.00
+   coding|fail_subtle|db_down               SP0-ZU0-AU0 n= 6 S=0.83 H=0.17 beob=1 erw=0.83
+   coding|fail_subtle|db_down               SP1-ZU0-AU0 n= 6 S=0.67 H=0.17 beob=1 erw=0.67
+   coding|fail_subtle|cache_partial         SP1-ZU0-AU1 n= 6 S=0.17 H=0.17 beob=0 erw=0.17
+
+===== Satz 7000 =====
+S-Fehlerquote                                      0.030 [  0.019;   0.043]
+H-Fehlerquote                                      0.097 [  0.082;   0.113]
+beide falsch (Anteil)                              0.020 [  0.011;   0.029]
+P(H falsch | S falsch)                             0.652 [  0.488;   0.803]
+S~H κ ungeschichtet                                0.275 [  0.178;   0.367]
+S~H DF-Verh. ungeschichtet                         6.738 [  5.279;   8.609]
+S~H κ Schicht Zelle                                0.273 [  0.176;   0.362]
+S~H DF-Verh. Schicht Zelle                         6.319 [  4.837;   8.339]
+S~H κ Schicht Typ                                  0.177 [  0.102;   0.229]
+S~H DF-Verh. Schicht Typ                           1.931 [  1.525;   2.320]
+S~H κ Schicht Typ×Zelle                            0.165 [  0.080;   0.195]
+S~H DF-Verh. Schicht Typ×Zelle                     1.800 [  1.264;   2.205]
+S~H CAPA-ähnlich (ungeschichtet)                   0.087 [  0.070;   0.105]
+S~S (AU0/AU1) κ ungeschichtet                      0.836 [  0.695;   0.944]
+S~S (AU0/AU1) DF-Verh. ungeschichtet              28.121 [ 19.562;  45.474]
+S~S (AU0/AU1) κ Schicht Typ×SP×ZU                  0.715 [  0.482;   0.868]
+S~S (AU0/AU1) DF-Verh. Schicht Typ×SP×ZU           1.907 [  1.314;   2.396]
+H~H (AU0/AU1) κ ungeschichtet                      0.628 [  0.534;   0.710]
+H~H (AU0/AU1) DF-Verh. ungeschichtet               6.864 [  5.849;   8.063]
+H~H (AU0/AU1) κ Schicht Typ×SP×ZU                  0.344 [  0.225;   0.423]
+H~H (AU0/AU1) DF-Verh. Schicht Typ×SP×ZU           1.362 [  1.218;   1.439]
+S~H (AU gekreuzt) κ Schicht Typ×SP×ZU              0.134 [  0.047;   0.170]
+S~H (AU gekreuzt) DF-Verh. Schicht Typ×SP×ZU       1.696 [  1.171;   2.123]
+Zählung: Sonnet-Fehler 69, Haiku-Fehler 223, gemeinsame 45 von 2304 Beleg×Zellen
+gemeinsame Fehler nach Typ×Zelle: [(('coding|fail_moderate|low_traffic', 'SP0-ZU0-AU0'), 4), (('coding|fail_moderate|low_traffic', 'SP1-ZU0-AU0'), 4), (('coding|fail_subtle|db_down', 'SP0-ZU0-AU0'), 3), (('coding|fail_subtle|db_down', 'SP1-ZU1-AU0'), 3), (('coding|fail_subtle|low_traffic', 'SP0-ZU0-AU0'), 3), (('coding|fail_subtle|low_traffic', 'SP0-ZU0-AU1'), 3), (('coding|fail_subtle|low_traffic', 'SP1-ZU0-AU0'), 3), (('coding|fail_subtle|low_traffic', 'SP1-ZU0-AU1'), 3), (('coding|fail_moderate|low_traffic', 'SP0-ZU0-AU1'), 3), (('coding|fail_subtle|db_down', 'SP1-ZU0-AU0'), 2), (('coding|fail_moderate|db_down', 'SP0-ZU0-AU0'), 2), (('coding|fail_moderate|db_down', 'SP0-ZU0-AU1'), 2)]
+Schichten mit Fehlern beider Modelle (Typ, Zelle, n, S-Rate, H-Rate, beob. gemeinsam, erw. gemeinsam):
+   coding|fail_moderate|low_traffic         SP0-ZU0-AU0 n= 6 S=0.67 H=0.67 beob=4 erw=2.67
+   coding|fail_moderate|low_traffic         SP1-ZU0-AU0 n= 6 S=0.67 H=0.67 beob=4 erw=2.67
+   coding|fail_subtle|db_down               SP0-ZU0-AU0 n= 6 S=0.50 H=0.50 beob=3 erw=1.50
+   coding|fail_subtle|db_down               SP1-ZU1-AU0 n= 6 S=0.67 H=0.67 beob=3 erw=2.67
+   coding|fail_moderate|low_traffic         SP0-ZU0-AU1 n= 6 S=0.67 H=0.50 beob=3 erw=2.00
+   coding|fail_subtle|low_traffic           SP0-ZU0-AU0 n= 6 S=0.50 H=0.50 beob=3 erw=1.50
+   coding|fail_subtle|low_traffic           SP0-ZU0-AU1 n= 6 S=0.50 H=0.50 beob=3 erw=1.50
+   coding|fail_subtle|low_traffic           SP1-ZU0-AU0 n= 6 S=0.50 H=0.50 beob=3 erw=1.50
+   coding|fail_subtle|low_traffic           SP1-ZU0-AU1 n= 6 S=0.50 H=0.67 beob=3 erw=2.00
+   coding|fail_subtle|db_down               SP0-ZU1-AU0 n= 6 S=0.33 H=0.50 beob=2 erw=1.00
+   coding|fail_subtle|db_down               SP1-ZU0-AU0 n= 6 S=0.67 H=0.33 beob=2 erw=1.33
+   coding|fail_moderate|low_traffic         SP1-ZU0-AU1 n= 6 S=0.67 H=0.33 beob=2 erw=1.33
+   coding|fail_moderate|db_down             SP0-ZU0-AU0 n= 6 S=0.33 H=0.33 beob=2 erw=0.67
+   coding|fail_moderate|db_down             SP0-ZU0-AU1 n= 6 S=0.33 H=0.33 beob=2 erw=0.67
+   coding|fail_moderate|db_down             SP1-ZU0-AU0 n= 6 S=0.33 H=0.33 beob=2 erw=0.67
+   coding|fail_moderate|db_down             SP1-ZU0-AU1 n= 6 S=0.50 H=0.33 beob=2 erw=1.00
+   coding|ok_clear                          SP0-ZU1-AU1 n=24 S=0.04 H=0.04 beob=1 erw=0.04
+   coding|fail_subtle|cache_partial         SP1-ZU0-AU0 n= 6 S=0.17 H=0.17 beob=1 erw=0.17
+   coding|ok_clear                          SP0-ZU1-AU0 n=24 S=0.04 H=0.04 beob=0 erw=0.04
+   coding|ok_clear                          SP1-ZU0-AU1 n=24 S=0.04 H=0.08 beob=0 erw=0.08

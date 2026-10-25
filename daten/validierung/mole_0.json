@@ -1,0 +1,49 @@
+{
+  "scenario": "mole_0",
+  "seeds_per_domain": 20,
+  "domains": [
+    "coding",
+    "business",
+    "research"
+  ],
+  "means": {
+    "vigilant": {
+      "true_completion": 1.0,
+      "false_done_rate": 0.0
+    },
+    "diligent": {
+      "true_completion": 0.811,
+      "false_done_rate": 0.129
+    },
+    "naive": {
+      "true_completion": 0.393,
+      "false_done_rate": 0.607
+    },
+    "idle": {
+      "true_completion": 0.0,
+      "false_done_rate": 0.0
+    }
+  },
+  "effect_size_d": {
+    "diligent": 2.21,
+    "naive": 6.13
+  },
+  "checks": {
+    "vigilant_completes": true,
+    "vigilant_few_false_done": true,
+    "idle_is_zero": true,
+    "diligent_fails_measurably": true,
+    "diligent_vs_vigilant_significant": true,
+    "naive_fails_measurably": true,
+    "naive_vs_vigilant_significant": true,
+    "naive_has_false_done": true
+  },
+  "passed": true,
+  "code": {
+    "git_commit": "d8737c8c09e27abec885f84faff09d4bb56a5d31",
+    "git_dirty": true,
+    "claude_agent_sdk": "0.2.169",
+    "python": "3.13.15"
+  },
+  "at": "2026-10-21T07:12:03"
+}

@@ -1,0 +1,1 @@
+Lauf 1 von L1: Routinezeilen mit 3 Generatorfehlern (Sockets/ps, SMTP-Zeitfolge, Probe-Wiederholungen), siehe Laborbuch 22.10. Nicht auswerten.

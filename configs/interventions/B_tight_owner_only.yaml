@@ -1,0 +1,22 @@
+# Intervention aus E-012 Iteration 2 (invariant), Normen unverändert übernommen.
+name: B_tight_owner_only
+description: 'B_minimal_tight plus norms from E-012 it. 2 (invariant): only the owner
+  verifies, targeted instead of broadcast updates.'
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- 'The owner of an item is the only one who checks it: execute, then inspect it yourself,
+  and re-do it if the check fails before reporting done. Do not inspect items owned
+  by others; trust the owner''s message and spend your calls on your own or unclaimed
+  work.'
+- Claim only items you can execute this tick or the next. If you hold an item you
+  cannot act on, release it, or hand it to whoever says they are idle.
+- Send a status update only to the agents whose work depends on it, once, when the
+  status changes. Do not broadcast routine progress.
+max_ticks: 8
+max_tool_calls: 4

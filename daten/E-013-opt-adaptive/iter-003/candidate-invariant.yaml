@@ -1,0 +1,24 @@
+name: B_minimal_tight~i3i
+description: Full mesh, no roles. Owners repair or hand off immediately; messages
+  are targeted, not broadcast; done is re-checked at the end.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- Claim only items you will execute within the next tick. Leave later items in a chain
+  unclaimed until their predecessor is verified.
+- If you learn that an item you own failed or was reversed, fixing it comes before
+  any new work. If you cannot re-execute it this tick, release it at once so someone
+  else can.
+- Do not broadcast. Send a message only to the one agent who must act on it, and only
+  if they cannot learn it themselves by inspecting. Spend your tool calls on executing
+  and inspecting.
+- Done is provisional. In the last two ticks, re-inspect every item you reported done.
+  Re-execute anything that was reversed, and take unclaimed items before re-checking
+  anyone else's.
+max_ticks: 8
+max_tool_calls: 4

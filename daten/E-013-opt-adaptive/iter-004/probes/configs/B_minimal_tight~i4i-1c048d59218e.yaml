@@ -1,0 +1,27 @@
+name: B_minimal_tight~i4i
+description: Star with a0 as light-executing coordinator; spokes report changes to
+  the hub only and are told when dependencies are ready; no polling, execute what
+  you claim.
+n_agents: 4
+topology: star
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- a0 is the coordinator. In tick 1 a0 sends one assignment to each spoke and takes
+  only a small share of items itself, so it keeps calls free for coordination. Spokes
+  do not propose competing plans.
+- 'Spokes message only a0, at most once per tick, and only when something changed:
+  executed+verified, failed (with the inspect text), or blocked on a named item. Never
+  send messages that only ask for status.'
+- Do not spend calls inspecting items you do not own to check whether they are ready.
+  a0 tells you when your dependency is verified. Until then, work on your unblocked
+  items.
+- Execute an item in the same tick you claim it. Do not hold claims on work you cannot
+  start yet.
+- In the final two ticks a0 re-inspects items reported done and sends any that fail
+  back to their owner for an immediate redo.
+max_ticks: 8
+max_tool_calls: 4

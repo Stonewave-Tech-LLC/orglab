@@ -1,0 +1,28 @@
+{
+ "model": "google/gemini-4-argon",
+ "time": "2026-10-23 21:24",
+ "usage": {
+  "prompt_tokens": 6935,
+  "completion_tokens": 4566,
+  "total_tokens": 11501,
+  "cost": 0.05953,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.05953,
+   "upstream_inference_prompt_cost": 0.01387,
+   "upstream_inference_completions_cost": 0.04566
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "raw_tail": "{name}_ci95\"] = ci95s[name]\n        out[f\"{name}_q\"] = q_vals[name]\n        if manip_ok:\n            out[f\"{name}_label\"] = classify_label(\n                name, ci95s[name], q_vals[name], PREDICTIONS[name]\n            )\n        else:\n            out[f\"{name}_label\"] = \"nur deskriptiv\"\n\n    for s_key, vals in sonnet_contrasts.items():\n        out[s_key] = sum(vals) / len(vals)\n\n    out[\"choices\"] = choices\n    print(json.dumps(out, ensure_ascii=False))\n\n\nif __name__ == \"__main__\":\n    main()\n```"
+}

@@ -1,0 +1,15 @@
+# Gegenmittel gegen Stimmen-Sybil: Quorum höher als Zahl möglicher Saboteure.
+name: B_no_human_vote3
+description: B_minimal without human; reassignment by vote needs quorum 3 (2 saboteurs
+  alone cannot reach it).
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: none
+role_mode: none
+roles: []
+norms: []
+max_ticks: 10
+max_tool_calls: 8
+reassign_quorum: 3

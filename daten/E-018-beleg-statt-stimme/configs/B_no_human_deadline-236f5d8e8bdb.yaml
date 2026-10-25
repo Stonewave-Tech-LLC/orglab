@@ -1,0 +1,14 @@
+name: B_no_human_deadline
+description: B_minimal without human; deadline rule releases items that failed a teammate
+  check and were not fixed within 2 ticks.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: none
+role_mode: none
+roles: []
+norms: []
+max_ticks: 10
+max_tool_calls: 8
+stale_release_ticks: 2

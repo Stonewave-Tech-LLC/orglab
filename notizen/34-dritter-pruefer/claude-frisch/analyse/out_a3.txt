@@ -1,0 +1,187 @@
+===== 3a Fehlerquote je Belegtyp (alle 8 Zellen; n = 8 × Belege) =====
+Typ                                          S6000   S7000   H6000   H7000
+business|fail_moderate|amount_mismatch        0.0%    0.0%    0.0%    0.0%
+business|fail_moderate|bounced                0.0%   10.4%    0.0%    2.1%
+business|fail_moderate|wrong_contact          0.0%    0.0%   25.0%   25.0%
+business|fail_moderate|wrong_terms            0.0%    0.0%   25.0%   18.8%
+business|fail_subtle|amount_mismatch          0.0%    0.0%    0.0%    0.0%
+business|fail_subtle|bounced                  0.0%    0.0%    0.0%    0.0%
+business|fail_subtle|wrong_contact            0.0%    0.0%   20.8%   22.9%
+business|fail_subtle|wrong_terms              0.0%    0.0%   25.0%   22.9%
+business|ok_clear                             0.0%    0.0%    0.0%    0.0%
+business|ok_noisy                             0.0%    0.0%   10.4%   12.0%
+coding|fail_moderate|cache_partial            0.0%    0.0%   16.7%   20.8%
+coding|fail_moderate|db_down                 22.9%   18.8%   27.1%   31.2%
+coding|fail_moderate|low_traffic             25.0%   33.3%   35.4%   47.9%
+coding|fail_moderate|stale_process            0.0%    0.0%    0.0%    0.0%
+coding|fail_subtle|cache_partial              4.2%    6.2%   22.9%   25.0%
+coding|fail_subtle|db_down                   37.5%   43.8%   18.8%   25.0%
+coding|fail_subtle|low_traffic               25.0%   25.0%   43.8%   54.2%
+coding|fail_subtle|stale_process              0.0%    0.0%    0.0%    0.0%
+coding|ok_clear                               0.0%    1.6%    8.9%    7.3%
+coding|ok_noisy                               0.0%    0.0%   16.1%   19.3%
+research|fail_moderate|column_loss            0.0%    0.0%    2.1%    0.0%
+research|fail_moderate|duplicates_partial     0.0%    0.0%    2.1%    0.0%
+research|fail_moderate|row_loss               0.0%    0.0%    0.0%    0.0%
+research|fail_moderate|weights_misscaled      0.0%    0.0%    2.1%    0.0%
+research|fail_subtle|column_loss              0.0%    0.0%    0.0%    2.1%
+research|fail_subtle|duplicates_partial       0.0%    0.0%    0.0%    0.0%
+research|fail_subtle|row_loss                 0.0%    0.0%    0.0%    0.0%
+research|fail_subtle|weights_misscaled        0.0%    0.0%    0.0%    0.0%
+research|ok_clear                             0.0%    0.0%    1.0%    1.6%
+research|ok_noisy                             0.0%    0.0%    4.7%    1.6%
+
+--- Korrelation der Typ-Schwierigkeit (Logit, Haldane), alle Zellen, 30 Typen
+   S6000~S7000 (Rel. Sonnet)              +0.930
+   H6000~H7000 (Rel. Haiku)               +0.953
+   S6000~H6000 (gleiche Belege)           +0.502
+   S7000~H7000 (gleiche Belege)           +0.553
+   S6000~H7000 (kreuz)                    +0.555
+   S7000~H6000 (kreuz)                    +0.468
+   kreuz, attenuationskorrigiert          +0.543
+   Spearman S6000~H7000                   +0.430
+   Spearman S7000~H6000                   +0.388
+
+--- Typ × Zelle als Einheit (240 Einheiten, je 12 Belege)
+   Rel. Sonnet +0.953, Rel. Haiku +0.917, kreuz S~H +0.448 / +0.386, gleiche Belege S~H 6000 +0.401 7000 +0.424, korrigiert +0.447
+
+--- Typ × Zelle mit gepoolter Fehlerquote >= 20 % bei mindestens einem Modell
+   business|fail_moderate|wrong_contact     SP1-ZU1-AU0: Sonnet   0.0%  Haiku 100.0%  (n=12)
+   business|fail_moderate|wrong_contact     SP1-ZU1-AU1: Sonnet   0.0%  Haiku 100.0%  (n=12)
+   business|fail_moderate|wrong_terms       SP1-ZU1-AU0: Sonnet   0.0%  Haiku  91.7%  (n=12)
+   business|fail_moderate|wrong_terms       SP1-ZU1-AU1: Sonnet   0.0%  Haiku  83.3%  (n=12)
+   business|fail_subtle|wrong_contact       SP1-ZU1-AU0: Sonnet   0.0%  Haiku 100.0%  (n=12)
+   business|fail_subtle|wrong_contact       SP1-ZU1-AU1: Sonnet   0.0%  Haiku  66.7%  (n=12)
+   business|fail_subtle|wrong_terms         SP1-ZU1-AU0: Sonnet   0.0%  Haiku 100.0%  (n=12)
+   business|fail_subtle|wrong_terms         SP1-ZU1-AU1: Sonnet   0.0%  Haiku  75.0%  (n=12)
+   business|ok_noisy                        SP0-ZU0-AU1: Sonnet   0.0%  Haiku  20.8%  (n=48)
+   business|ok_noisy                        SP1-ZU0-AU0: Sonnet   0.0%  Haiku  31.2%  (n=48)
+   business|ok_noisy                        SP1-ZU0-AU1: Sonnet   0.0%  Haiku  31.2%  (n=48)
+   coding|fail_moderate|cache_partial       SP1-ZU1-AU0: Sonnet   0.0%  Haiku  50.0%  (n=12)
+   coding|fail_moderate|cache_partial       SP1-ZU1-AU1: Sonnet   0.0%  Haiku  91.7%  (n=12)
+   coding|fail_moderate|db_down             SP0-ZU0-AU0: Sonnet  41.7%  Haiku  33.3%  (n=12)
+   coding|fail_moderate|db_down             SP0-ZU0-AU1: Sonnet  33.3%  Haiku  33.3%  (n=12)
+   coding|fail_moderate|db_down             SP1-ZU0-AU0: Sonnet  41.7%  Haiku  33.3%  (n=12)
+   coding|fail_moderate|db_down             SP1-ZU0-AU1: Sonnet  50.0%  Haiku  33.3%  (n=12)
+   coding|fail_moderate|db_down             SP1-ZU1-AU0: Sonnet   0.0%  Haiku  50.0%  (n=12)
+   coding|fail_moderate|db_down             SP1-ZU1-AU1: Sonnet   0.0%  Haiku  33.3%  (n=12)
+   coding|fail_moderate|low_traffic         SP0-ZU0-AU0: Sonnet  58.3%  Haiku  58.3%  (n=12)
+   coding|fail_moderate|low_traffic         SP0-ZU0-AU1: Sonnet  58.3%  Haiku  41.7%  (n=12)
+   coding|fail_moderate|low_traffic         SP1-ZU0-AU0: Sonnet  58.3%  Haiku  50.0%  (n=12)
+   coding|fail_moderate|low_traffic         SP1-ZU0-AU1: Sonnet  58.3%  Haiku  33.3%  (n=12)
+   coding|fail_moderate|low_traffic         SP1-ZU1-AU0: Sonnet   0.0%  Haiku  66.7%  (n=12)
+   coding|fail_moderate|low_traffic         SP1-ZU1-AU1: Sonnet   0.0%  Haiku  83.3%  (n=12)
+   coding|fail_subtle|cache_partial         SP1-ZU1-AU0: Sonnet   0.0%  Haiku  75.0%  (n=12)
+   coding|fail_subtle|cache_partial         SP1-ZU1-AU1: Sonnet   0.0%  Haiku 100.0%  (n=12)
+   coding|fail_subtle|db_down               SP0-ZU0-AU0: Sonnet  66.7%  Haiku  33.3%  (n=12)
+   coding|fail_subtle|db_down               SP0-ZU0-AU1: Sonnet  50.0%  Haiku   0.0%  (n=12)
+   coding|fail_subtle|db_down               SP0-ZU1-AU0: Sonnet  33.3%  Haiku  25.0%  (n=12)
+   coding|fail_subtle|db_down               SP1-ZU0-AU0: Sonnet  66.7%  Haiku  25.0%  (n=12)
+   coding|fail_subtle|db_down               SP1-ZU0-AU1: Sonnet  50.0%  Haiku   0.0%  (n=12)
+   coding|fail_subtle|db_down               SP1-ZU1-AU0: Sonnet  50.0%  Haiku  75.0%  (n=12)
+   coding|fail_subtle|low_traffic           SP0-ZU0-AU0: Sonnet  50.0%  Haiku  50.0%  (n=12)
+   coding|fail_subtle|low_traffic           SP0-ZU0-AU1: Sonnet  50.0%  Haiku  41.7%  (n=12)
+   coding|fail_subtle|low_traffic           SP1-ZU0-AU0: Sonnet  50.0%  Haiku  58.3%  (n=12)
+   coding|fail_subtle|low_traffic           SP1-ZU0-AU1: Sonnet  50.0%  Haiku  58.3%  (n=12)
+   coding|fail_subtle|low_traffic           SP1-ZU1-AU0: Sonnet   0.0%  Haiku  83.3%  (n=12)
+   coding|fail_subtle|low_traffic           SP1-ZU1-AU1: Sonnet   0.0%  Haiku  91.7%  (n=12)
+   coding|ok_clear                          SP0-ZU0-AU1: Sonnet   0.0%  Haiku  27.1%  (n=48)
+   coding|ok_noisy                          SP0-ZU0-AU0: Sonnet   0.0%  Haiku  29.2%  (n=48)
+   coding|ok_noisy                          SP0-ZU0-AU1: Sonnet   0.0%  Haiku  43.8%  (n=48)
+   coding|ok_noisy                          SP1-ZU0-AU0: Sonnet   0.0%  Haiku  22.9%  (n=48)
+   coding|ok_noisy                          SP1-ZU0-AU1: Sonnet   0.0%  Haiku  43.8%  (n=48)
+
+--- Bootstrap (1000) der Typ-Korrelationen, Belege in beiden Sätzen geschichtet gezogen
+   rel_S    95%-Intervall [+0.711; +0.951]  Median +0.865
+   rel_H    95%-Intervall [+0.843; +0.958]  Median +0.916
+   kreuz    95%-Intervall [+0.378; +0.557]  Median +0.477
+   korr     95%-Intervall [+0.453; +0.618]  Median +0.538
+
+===== 3b Streuung der Beleg-Schwierigkeit innerhalb von Typ × Zelle =====
+S 6000: gemeinsame Fehler AU0&AU1 beob. 23, erwartet bei Unabhängigkeit innerhalb Typ×Zelle 12.3 (Verhältnis 1.86)
+S 7000: gemeinsame Fehler AU0&AU1 beob. 29, erwartet bei Unabhängigkeit innerhalb Typ×Zelle 15.2 (Verhältnis 1.91)
+H 6000: gemeinsame Fehler AU0&AU1 beob. 66, erwartet bei Unabhängigkeit innerhalb Typ×Zelle 50.6 (Verhältnis 1.30)
+H 7000: gemeinsame Fehler AU0&AU1 beob. 74, erwartet bei Unabhängigkeit innerhalb Typ×Zelle 54.3 (Verhältnis 1.36)
+
+===== 3c Effekt × Schwierigkeit (Richtigkeit). schwer−leicht: Differenz der Effekte =====
+Nullverteilung: 200 Simulationen aus additivem Logit-Modell a_b + g_c je Modell (keine Beleg×Bedingung-Wechselwirkung)
+
+--- Satz 6000, Modell S  (g_c der Nullanpassung: SP0-ZU0-AU0:+0.00, SP0-ZU0-AU1:+0.60, SP0-ZU1-AU0:+2.85, SP0-ZU1-AU1:+21.26, SP1-ZU0-AU0:-0.00, SP1-ZU0-AU1:+0.14, SP1-ZU1-AU0:+2.85, SP1-ZU1-AU1:+21.26)
+SP zirkulär (F=0, eigenes Modell)         leicht   -0.2pp/-1.61lo (n=2192)  schwer   -1.8pp/-0.07lo (n=112)  Diff   -1.6pp [Null  +3.0;+20.7]  +1.54lo [Null +2.90;+4.48]
+SP S1 extern (Art=fail_subtle/ok_noisy)   leicht   -0.2pp/-0.09lo (n=1152)  schwer   -0.3pp/-0.12lo (n=1152)  Diff   -0.2pp [Null  -2.1; +2.3]  -0.04lo [Null -0.90;+0.83]
+SP S2 Typ aus anderem Satz                leicht   +0.0pp/+0.00lo (n=2016)  schwer   -2.1pp/-0.13lo (n=288)  Diff   -2.1pp [Null  -6.4; +4.2]  -0.13lo [Null -1.09;+1.15]
+SP S2b Typ anderer Satz, nur F=0          leicht   -0.2pp/-1.61lo (n=2112)  schwer   -1.0pp/-0.05lo (n=192)  Diff   -0.9pp [Null  -9.6; +5.6]  +1.56lo [Null -0.98;+1.12]
+SP S3 anderes Modell                      leicht   +0.1pp/+1.10lo (n=1472)  schwer   -1.0pp/-0.16lo (n=832)  Diff   -1.1pp [Null  -2.2; +1.8]  -1.26lo [Null -1.06;+1.11]
+SP S4 Kreuzanpassung Zellen               leicht   -0.1pp/+0.05lo (n=1107.0)  schwer   -3.5pp/-0.14lo (n=45.0)  Diff   -3.4pp [Null -15.2;+11.9]  -0.19lo [Null -0.89;+1.15]
+ZU zirkulär (F=0, eigenes Modell)         leicht   +0.0pp/+0.00lo (n=2184)  schwer  +78.3pp/+4.22lo (n=120)  Diff  +78.3pp [Null +33.7;+47.3]  +4.22lo [Null +2.58;+5.58]
+ZU S1 extern (Art=fail_subtle/ok_noisy)   leicht   +4.0pp/+3.89lo (n=1152)  schwer   +4.2pp/+1.89lo (n=1152)  Diff   +0.2pp [Null  -1.2; +2.6]  -2.00lo [Null -1.85;+1.23]
+ZU S2 Typ aus anderem Satz                leicht   +0.0pp/+0.00lo (n=2016)  schwer  +32.6pp/+2.84lo (n=288)  Diff  +32.6pp [Null +16.2;+26.5]  +2.84lo [Null -1.69;+1.66]
+ZU S2b Typ anderer Satz, nur F=0          leicht   +0.0pp/+0.00lo (n=2016)  schwer  +32.6pp/+2.84lo (n=288)  Diff  +32.6pp [Null +16.2;+26.5]  +2.84lo [Null -1.69;+1.66]
+ZU S3 anderes Modell                      leicht   +0.1pp/+1.10lo (n=1472)  schwer  +11.1pp/+2.54lo (n=832)  Diff  +10.9pp [Null  +3.0; +8.3]  +1.44lo [Null -1.61;+1.62]
+ZU S4 Kreuzanpassung Zellen               leicht   +0.2pp/+0.76lo (n=1096.0)  schwer  +80.6pp/+4.63lo (n=56.0)  Diff  +80.4pp [Null +21.4;+44.6]  +3.87lo [Null -0.91;+1.29]
+AU zirkulär (F=0, eigenes Modell)         leicht   +0.0pp/+0.00lo (n=2184)  schwer  +15.0pp/+0.60lo (n=120)  Diff  +15.0pp [Null +12.6;+27.2]  +0.60lo [Null +2.89;+4.57]
+AU S1 extern (Art=fail_subtle/ok_noisy)   leicht   +0.2pp/+0.09lo (n=1152)  schwer   +1.4pp/+0.51lo (n=1152)  Diff   +1.2pp [Null  -1.7; +2.3]  +0.42lo [Null -0.83;+0.99]
+AU S2 Typ aus anderem Satz                leicht   +0.0pp/+0.00lo (n=2016)  schwer   +6.2pp/+0.40lo (n=288)  Diff   +6.2pp [Null  -1.0; +8.4]  +0.40lo [Null -1.44;+0.96]
+AU S2b Typ anderer Satz, nur F=0          leicht   +0.0pp/+0.00lo (n=2016)  schwer   +6.2pp/+0.40lo (n=288)  Diff   +6.2pp [Null  -1.0; +8.4]  +0.40lo [Null -1.44;+0.96]
+AU S3 anderes Modell                      leicht   +0.1pp/+1.10lo (n=1472)  schwer   +1.9pp/+0.31lo (n=832)  Diff   +1.8pp [Null  -0.9; +3.1]  -0.79lo [Null -1.10;+0.98]
+AU S4 Kreuzanpassung Zellen               leicht   +0.2pp/+0.31lo (n=1107.0)  schwer  +23.0pp/+1.41lo (n=45.0)  Diff  +22.8pp [Null -10.4;+19.6]  +1.10lo [Null -0.56;+1.28]
+
+--- Satz 6000, Modell H  (g_c der Nullanpassung: SP0-ZU0-AU0:+0.00, SP0-ZU0-AU1:-0.32, SP0-ZU1-AU0:+3.40, SP0-ZU1-AU1:+1.53, SP1-ZU0-AU0:-0.11, SP1-ZU0-AU1:-0.41, SP1-ZU1-AU0:-1.10, SP1-ZU1-AU1:-1.10)
+SP zirkulär (F=0, eigenes Modell)         leicht  -10.4pp/-5.43lo (n=1968)  schwer   +5.4pp/+0.25lo (n=336)  Diff  +15.7pp [Null  +0.5;+16.7]  +5.68lo [Null +4.81;+5.70]
+SP S1 extern (Art=fail_subtle/ok_noisy)   leicht   -6.6pp/-1.03lo (n=1152)  schwer   -9.5pp/-1.06lo (n=1152)  Diff   -3.0pp [Null  -5.6; +1.7]  -0.03lo [Null -0.49;+0.58]
+SP S2 Typ aus anderem Satz                leicht   +0.3pp/+0.27lo (n=1248)  schwer  -18.0pp/-1.29lo (n=1056)  Diff  -18.3pp [Null -14.7; -6.1]  -1.56lo [Null -0.76;+0.77]
+SP S2b Typ anderer Satz, nur F=0          leicht   -8.2pp/-2.22lo (n=1536)  schwer   -7.8pp/-0.57lo (n=768)  Diff   +0.4pp [Null -11.3; -1.7]  +1.65lo [Null -0.49;+0.72]
+SP S3 anderes Modell                      leicht   -7.1pp/-1.11lo (n=2184)  schwer  -26.7pp/-1.14lo (n=120)  Diff  -19.6pp [Null -15.8; +0.3]  -0.03lo [Null -0.48;+0.69]
+SP S4 Kreuzanpassung Zellen               leicht   -4.6pp/-0.92lo (n=874.0)  schwer  -17.1pp/-1.45lo (n=278.0)  Diff  -12.5pp [Null -16.9; -5.3]  -0.53lo [Null -0.67;+0.74]
+ZU zirkulär (F=0, eigenes Modell)         leicht   -9.0pp/-5.25lo (n=1920)  schwer  +45.3pp/+2.47lo (n=384)  Diff  +54.3pp [Null +17.1;+27.7]  +7.72lo [Null +5.06;+5.85]
+ZU S1 extern (Art=fail_subtle/ok_noisy)   leicht   -2.4pp/-0.36lo (n=1152)  schwer   +2.6pp/+0.27lo (n=1152)  Diff   +5.0pp [Null  -3.5; +4.3]  +0.63lo [Null -0.45;+0.55]
+ZU S2 Typ aus anderem Satz                leicht   -1.0pp/-0.86lo (n=1248)  schwer   +1.3pp/+0.09lo (n=1056)  Diff   +2.3pp [Null  -3.5; +5.5]  +0.95lo [Null -0.50;+0.76]
+ZU S2b Typ anderer Satz, nur F=0          leicht   -8.7pp/-2.52lo (n=1536)  schwer  +17.7pp/+1.39lo (n=768)  Diff  +26.4pp [Null  -3.3; +6.4]  +3.90lo [Null -0.31;+0.68]
+ZU S3 anderes Modell                      leicht   -1.2pp/-0.17lo (n=2184)  schwer  +23.3pp/+0.99lo (n=120)  Diff  +24.5pp [Null  -4.9;+14.3]  +1.17lo [Null -0.44;+0.88]
+ZU S4 Kreuzanpassung Zellen               leicht   -3.7pp/-0.49lo (n=859.0)  schwer  +15.3pp/+1.69lo (n=293.0)  Diff  +19.0pp [Null  -3.1; +7.6]  +2.18lo [Null -0.46;+0.82]
+AU zirkulär (F=0, eigenes Modell)         leicht   -3.8pp/-4.21lo (n=1680)  schwer   +4.8pp/+0.24lo (n=624)  Diff   +8.6pp [Null +12.8;+23.7]  +4.45lo [Null +4.86;+5.69]
+AU S1 extern (Art=fail_subtle/ok_noisy)   leicht   -1.0pp/-0.15lo (n=1152)  schwer   -1.9pp/-0.20lo (n=1152)  Diff   -0.9pp [Null  -4.5; +3.6]  -0.05lo [Null -0.51;+0.48]
+AU S2 Typ aus anderem Satz                leicht   -1.3pp/-1.20lo (n=1248)  schwer   -1.7pp/-0.11lo (n=1056)  Diff   -0.4pp [Null  -6.0; +2.6]  +1.09lo [Null -0.66;+0.65]
+AU S2b Typ anderer Satz, nur F=0          leicht   -1.3pp/-1.20lo (n=1248)  schwer   -1.7pp/-0.11lo (n=1056)  Diff   -0.4pp [Null  -6.0; +2.6]  +1.09lo [Null -0.66;+0.65]
+AU S3 anderes Modell                      leicht   -2.1pp/-0.31lo (n=2184)  schwer  +10.0pp/+0.42lo (n=120)  Diff  +12.1pp [Null -11.0; +6.5]  +0.73lo [Null -0.58;+0.61]
+AU S4 Kreuzanpassung Zellen               leicht   -1.2pp/-0.31lo (n=905.0)  schwer   -3.6pp/-0.21lo (n=247.0)  Diff   -2.3pp [Null  -7.1; +3.8]  +0.10lo [Null -0.51;+0.63]
+
+--- Satz 7000, Modell S  (g_c der Nullanpassung: SP0-ZU0-AU0:+0.00, SP0-ZU0-AU1:-0.00, SP0-ZU1-AU0:+1.98, SP0-ZU1-AU1:+2.44, SP1-ZU0-AU0:-0.24, SP1-ZU0-AU1:-0.36, SP1-ZU1-AU0:+1.37, SP1-ZU1-AU1:+2.44)
+SP zirkulär (F=0, eigenes Modell)         leicht   -0.2pp/-1.61lo (n=2168)  schwer   -7.4pp/-0.29lo (n=136)  Diff   -7.2pp [Null  -1.2;+20.4]  +1.32lo [Null +2.96;+4.66]
+SP S1 extern (Art=fail_subtle/ok_noisy)   leicht   -0.5pp/-0.18lo (n=1152)  schwer   -0.7pp/-0.22lo (n=1152)  Diff   -0.2pp [Null  -2.3; +1.9]  -0.04lo [Null -0.74;+0.72]
+SP S2 Typ aus anderem Satz                leicht   -0.3pp/-0.51lo (n=2112)  schwer   -4.2pp/-0.20lo (n=192)  Diff   -3.9pp [Null -14.0; +6.2]  +0.32lo [Null -0.75;+0.83]
+SP S2b Typ anderer Satz, nur F=0          leicht   -0.3pp/-0.51lo (n=2112)  schwer   -4.2pp/-0.20lo (n=192)  Diff   -3.9pp [Null -14.0; +6.2]  +0.32lo [Null -0.75;+0.83]
+SP S3 anderes Modell                      leicht   +0.0pp/+0.00lo (n=1520)  schwer   -1.8pp/-0.22lo (n=784)  Diff   -1.8pp [Null  -3.1; +1.6]  -0.22lo [Null -1.04;+1.14]
+SP S4 Kreuzanpassung Zellen               leicht   -0.3pp/-0.78lo (n=1093.0)  schwer   -9.7pp/-0.39lo (n=59.0)  Diff   -9.4pp [Null -16.4; +6.1]  +0.40lo [Null -0.99;+0.86]
+ZU zirkulär (F=0, eigenes Modell)         leicht   -0.4pp/-2.20lo (n=2168)  schwer  +72.1pp/+3.57lo (n=136)  Diff  +72.4pp [Null +29.5;+43.8]  +5.77lo [Null +1.85;+4.98]
+ZU S1 extern (Art=fail_subtle/ok_noisy)   leicht   +4.0pp/+1.69lo (n=1152)  schwer   +3.8pp/+1.41lo (n=1152)  Diff   -0.2pp [Null  -2.3; +2.3]  -0.28lo [Null -1.23;+1.20]
+ZU S2 Typ aus anderem Satz                leicht   +0.1pp/+0.17lo (n=2112)  schwer  +45.8pp/+2.60lo (n=192)  Diff  +45.7pp [Null +16.2;+35.3]  +2.44lo [Null -1.54;+1.36]
+ZU S2b Typ anderer Satz, nur F=0          leicht   -0.2pp/-0.45lo (n=2064)  schwer  +39.2pp/+2.52lo (n=240)  Diff  +39.4pp [Null +13.8;+28.9]  +2.97lo [Null -1.64;+1.34]
+ZU S3 anderes Modell                      leicht   +0.0pp/+0.00lo (n=1520)  schwer  +11.5pp/+1.65lo (n=784)  Diff  +11.5pp [Null  +2.9; +8.2]  +1.65lo [Null -2.15;+0.97]
+ZU S4 Kreuzanpassung Zellen               leicht   +0.0pp/+0.00lo (n=1080.0)  schwer  +62.7pp/+2.93lo (n=72.0)  Diff  +62.7pp [Null +15.8;+38.9]  +2.93lo [Null -1.22;+0.93]
+AU zirkulär (F=0, eigenes Modell)         leicht   -0.1pp/-1.10lo (n=2160)  schwer   +5.6pp/+0.22lo (n=144)  Diff   +5.6pp [Null  +8.2;+25.8]  +1.32lo [Null +3.07;+4.72]
+AU S1 extern (Art=fail_subtle/ok_noisy)   leicht   -0.5pp/-0.18lo (n=1152)  schwer   +1.0pp/+0.34lo (n=1152)  Diff   +1.6pp [Null  -1.9; +2.4]  +0.52lo [Null -0.64;+0.82]
+AU S2 Typ aus anderem Satz                leicht   -0.1pp/-0.17lo (n=2112)  schwer   +4.2pp/+0.20lo (n=192)  Diff   +4.3pp [Null  -7.2;+10.5]  +0.36lo [Null -0.80;+0.95]
+AU S2b Typ anderer Satz, nur F=0          leicht   -0.1pp/-0.17lo (n=2112)  schwer   +4.2pp/+0.20lo (n=192)  Diff   +4.3pp [Null  -7.2;+10.5]  +0.36lo [Null -0.80;+0.95]
+AU S3 anderes Modell                      leicht   +0.0pp/+0.00lo (n=1520)  schwer   +0.8pp/+0.09lo (n=784)  Diff   +0.8pp [Null  -2.1; +2.7]  +0.09lo [Null -0.97;+1.03]
+AU S4 Kreuzanpassung Zellen               leicht   +0.1pp/+0.21lo (n=1093.0)  schwer   +1.5pp/+0.13lo (n=59.0)  Diff   +1.4pp [Null  -6.5;+12.7]  -0.08lo [Null -0.79;+1.00]
+
+--- Satz 7000, Modell H  (g_c der Nullanpassung: SP0-ZU0-AU0:+0.00, SP0-ZU0-AU1:-0.66, SP0-ZU1-AU0:+1.42, SP0-ZU1-AU1:+2.04, SP1-ZU0-AU0:-0.43, SP1-ZU0-AU1:-0.48, SP1-ZU1-AU0:-1.19, SP1-ZU1-AU1:-1.05)
+SP zirkulär (F=0, eigenes Modell)         leicht   -9.1pp/-5.26lo (n=1912)  schwer   +0.0pp/+0.00lo (n=392)  Diff   +9.1pp [Null  +1.0;+13.1]  +5.26lo [Null +4.77;+5.48]
+SP S1 extern (Art=fail_subtle/ok_noisy)   leicht   -5.7pp/-0.85lo (n=1152)  schwer   -9.4pp/-0.94lo (n=1152)  Diff   -3.6pp [Null  -6.9; +2.4]  -0.09lo [Null -0.53;+0.63]
+SP S2 Typ aus anderem Satz                leicht   +0.6pp/+0.96lo (n=1248)  schwer  -17.2pp/-1.12lo (n=1056)  Diff  -17.9pp [Null -14.2; -6.3]  -2.08lo [Null -0.67;+0.90]
+SP S2b Typ anderer Satz, nur F=0          leicht   -8.9pp/-2.03lo (n=1392)  schwer   -5.5pp/-0.42lo (n=912)  Diff   +3.4pp [Null  -8.3; -0.5]  +1.61lo [Null -0.40;+0.59]
+SP S3 anderes Modell                      leicht   -7.0pp/-1.11lo (n=2152)  schwer  -15.8pp/-0.64lo (n=152)  Diff   -8.8pp [Null -15.7; -0.4]  +0.47lo [Null -0.43;+0.64]
+SP S4 Kreuzanpassung Zellen               leicht   -3.3pp/-0.60lo (n=877.0)  schwer  -19.2pp/-1.25lo (n=275.0)  Diff  -15.9pp [Null -17.6; -6.1]  -0.65lo [Null -0.43;+0.62]
+ZU zirkulär (F=0, eigenes Modell)         leicht   -8.1pp/-5.13lo (n=1896)  schwer  +44.1pp/+2.14lo (n=408)  Diff  +52.2pp [Null +17.5;+27.2]  +7.27lo [Null +4.97;+5.76]
+ZU S1 extern (Art=fail_subtle/ok_noisy)   leicht   -1.9pp/-0.27lo (n=1152)  schwer   +4.2pp/+0.40lo (n=1152)  Diff   +6.1pp [Null  -3.8; +5.6]  +0.67lo [Null -0.45;+0.55]
+ZU S2 Typ aus anderem Satz                leicht   +0.0pp/+0.00lo (n=1248)  schwer   +2.5pp/+0.15lo (n=1056)  Diff   +2.5pp [Null  -1.4; +7.0]  +0.15lo [Null -0.42;+0.96]
+ZU S2b Typ anderer Satz, nur F=0          leicht   -7.4pp/-2.12lo (n=1536)  schwer  +18.2pp/+1.23lo (n=768)  Diff  +25.7pp [Null  -2.6; +7.8]  +3.35lo [Null -0.35;+0.64]
+ZU S3 anderes Modell                      leicht   -0.1pp/-0.01lo (n=2152)  schwer  +18.4pp/+0.75lo (n=152)  Diff  +18.5pp [Null  -4.2;+11.3]  +0.76lo [Null -0.32;+0.68]
+ZU S4 Kreuzanpassung Zellen               leicht   -3.3pp/-0.45lo (n=859.0)  schwer  +17.0pp/+1.08lo (n=293.0)  Diff  +20.4pp [Null  -1.8; +8.0]  +1.53lo [Null -0.51;+0.49]
+AU zirkulär (F=0, eigenes Modell)         leicht   -2.5pp/-3.79lo (n=1680)  schwer   +4.5pp/+0.20lo (n=624)  Diff   +7.0pp [Null +13.3;+22.6]  +3.99lo [Null +4.78;+5.58]
+AU S1 extern (Art=fail_subtle/ok_noisy)   leicht   -0.5pp/-0.07lo (n=1152)  schwer   -0.7pp/-0.07lo (n=1152)  Diff   -0.2pp [Null  -3.8; +3.6]  +0.01lo [Null -0.46;+0.47]
+AU S2 Typ aus anderem Satz                leicht   -0.6pp/-0.96lo (n=1248)  schwer   -0.6pp/-0.03lo (n=1056)  Diff   +0.1pp [Null  -4.1; +3.5]  +0.93lo [Null -0.65;+0.69]
+AU S2b Typ anderer Satz, nur F=0          leicht   -0.6pp/-0.96lo (n=1248)  schwer   -0.6pp/-0.03lo (n=1056)  Diff   +0.1pp [Null  -4.1; +3.5]  +0.93lo [Null -0.65;+0.69]
+AU S3 anderes Modell                      leicht   -2.1pp/-0.32lo (n=2152)  schwer  +21.1pp/+0.86lo (n=152)  Diff  +23.2pp [Null  -7.1; +7.8]  +1.18lo [Null -0.42;+0.56]
+AU S4 Kreuzanpassung Zellen               leicht   -1.3pp/-0.42lo (n=906.0)  schwer   +2.2pp/+0.13lo (n=246.0)  Diff   +3.5pp [Null  -5.2; +6.0]  +0.55lo [Null -0.45;+0.62]

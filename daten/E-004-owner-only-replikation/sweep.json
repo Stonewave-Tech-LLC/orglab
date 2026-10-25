@@ -1,0 +1,31 @@
+{
+  "scenario": "phantom_stress",
+  "configs": [
+    "B_minimal_tight",
+    "B_tight_owner_only"
+  ],
+  "domains": [
+    "coding",
+    "business",
+    "research"
+  ],
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109
+  ],
+  "backend": {
+    "kind": "agent_sdk",
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+  },
+  "concurrency": 1,
+  "finished": "2026-10-21T17:13:32"
+}

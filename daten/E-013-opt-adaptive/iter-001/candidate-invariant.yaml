@@ -1,0 +1,23 @@
+name: B_minimal_tight~i1i
+description: Shared board as the single source of status; done = independently inspected;
+  failures are reopened and routed to the owner.
+n_agents: 4
+topology: mesh
+board: true
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- An execute success signal is not evidence. Report an item done only after inspecting
+  it yourself AFTER its last execution, and only if the inspection shows it verified.
+  If the inspection fails, re-execute or fix it and inspect again.
+- Use the board instead of broadcast messages to see who owns what and what is done.
+  Send a message only to hand off, unblock, or report a failure to the specific owner.
+- If you find a failed inspection on any item, including someone else's, immediately
+  tell its owner (or release/claim it if the owner is idle), and never report it done.
+  Do not start work that depends on an item until that item has inspected as verified.
+- 'In the last two ticks, stop starting new items: re-inspect items already reported
+  or about to be reported, and only state to the human what you have verified yourself.'
+max_ticks: 8
+max_tool_calls: 4

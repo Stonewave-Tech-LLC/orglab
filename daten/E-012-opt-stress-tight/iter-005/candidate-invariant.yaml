@@ -1,0 +1,18 @@
+name: B_minimal_tight~i5i
+description: No roles, full mesh. Every message costs one action; talk only when it
+  changes what someone does, and spend the budget on executing, checking and fixing.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- Each message costs one of your few actions per tick, the same as executing or inspecting.
+  Send a message only if the recipient must do something differently because of it.
+  Send it to that one person, never as a copy to everyone, and never just to report
+  your own progress. Do not re-inspect an item a teammate has just verified; spend
+  that action on unverified or failed items.
+max_ticks: 8
+max_tool_calls: 4

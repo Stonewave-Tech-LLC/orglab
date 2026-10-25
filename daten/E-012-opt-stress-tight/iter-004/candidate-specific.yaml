@@ -1,0 +1,24 @@
+name: B_minimal_tight~i4s
+description: Full mesh, no roles. Each item's execute, inspect and report happen in
+  one tick; messaging is kept to a minimum; dependents wait for a verified root; the
+  last two ticks are a verification sweep.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- 'Handle an item in one tick: execute, then inspect it right away, then report done
+  if it is verified. If the inspect fails, re-execute and inspect again before touching
+  anything else.'
+- Send at most one message per tick, to the one agent whose next action it changes
+  (an unblock, a failure in their item, a handover). Never copy everyone on status
+  updates.
+- Execute an item that depends on another only after that item's owner has told you
+  its inspect says verified.
+- From tick 7 on, don't claim new items. Spend your calls inspecting items you executed
+  that aren't verified yet, and re-executing the ones that failed.
+max_ticks: 8
+max_tool_calls: 4

@@ -1,0 +1,14 @@
+name: C_stigmergy
+description: Shared board and notebook as coordination medium, no roles, minimal rules.
+n_agents: 4
+topology: mesh
+board: true
+shared_notes: true
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- Coordinate primarily through the board and the shared notebook; send messages only
+  when something cannot be expressed there.
+max_ticks: 10
+max_tool_calls: 8

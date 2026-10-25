@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: software
+title: "orglab: what makes a 'verified' justified in multi-agent systems"
+abstract: >-
+  Preregistered experiments on how LLM agents verify each other's work: when verifiers confirm success that the
+  evidence does not show, which information they need, and which organisational rules catch failures. Includes the
+  testbed (orglab), lab book, hypotheses, preregistrations, results and data.
+authors:
+  - family-names: Erbler
+    given-names: Neo
+    affiliation: Stonewave Tech LLC
+    email: neo.erbler@stonewavetech.com
+repository-code: "https://github.com/Stonewave-Tech-LLC/orglab"
+license: [MIT, CC-BY-4.0]
+keywords: [LLM agents, verification, multi-agent systems, preregistration, AI evaluation]

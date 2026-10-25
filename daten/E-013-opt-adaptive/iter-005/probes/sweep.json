@@ -1,0 +1,25 @@
+{
+  "scenario": "phantom_stress",
+  "configs": [
+    "B_minimal_tight~i5i",
+    "B_minimal_tight~i5s"
+  ],
+  "domains": [
+    "coding",
+    "business"
+  ],
+  "seeds": [
+    5000,
+    5001,
+    5002,
+    5003,
+    5004
+  ],
+  "backend": {
+    "kind": "agent_sdk",
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+  },
+  "concurrency": 3,
+  "finished": "2026-10-22T04:44:46"
+}

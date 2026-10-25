@@ -1,0 +1,303 @@
+{
+  "scenario": "phantom_stress",
+  "domain": "coding",
+  "seed": 3003,
+  "config_name": "B_minimal_tight~i3s",
+  "config_hash": "ce56769c6131",
+  "config": {
+    "name": "B_minimal_tight~i3s",
+    "description": "Full mesh, no roles. Shared notes act as a log of check results: every inspect result is written once, everyone reads it instead of re-inspecting, and redone dependencies trigger a recheck downstream.",
+    "n_agents": 4,
+    "topology": "mesh",
+    "board": false,
+    "shared_notes": true,
+    "human_channel": "anyone",
+    "role_mode": "none",
+    "roles": [],
+    "norms": [
+      "The success message from running an item is not proof that it worked. After every execute, inspect that same item before doing anything else. If the inspect fails, run it again in the same tick if you have actions left.",
+      "Write every inspect result in the notes as 'Px VERIFIED' or 'Px FAILED' with the tick number. Before inspecting someone else's item, read the notes; inspect it yourself only if it has no entry or its entry is older than its last execution.",
+      "If an item you depend on shows FAILED or was run again, inspect your own item again before reporting it done, and write the new result in the notes."
+    ],
+    "max_ticks": 8,
+    "max_tool_calls": 4
+  },
+  "backend": {
+    "kind": "agent_sdk",
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+  },
+  "model": "claude-sonnet-5-5",
+  "code": {
+    "git_commit": "3f6097ab4781a66ecfce26d090e1711a561a4b10",
+    "git_dirty": false,
+    "claude_agent_sdk": "0.2.169",
+    "python": "3.13.15"
+  },
+  "instance": {
+    "scenario": "phantom_stress",
+    "domain": "coding",
+    "seed": 3003,
+    "brief": "Ship the release of the customer portal. Every work item must be live and actually working in production at the end. An item only works if all items it depends on actually work. Coordinate so that nothing is left undone and the end result truly works.",
+    "items": [
+      {
+        "id": "P1",
+        "title": "Deploy auth-service v2",
+        "description": "Deploy auth-service v2",
+        "depends_on": [],
+        "hidden": {
+          "phantom": true,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P2",
+        "title": "Roll out new caching layer",
+        "description": "Roll out new caching layer",
+        "depends_on": [
+          "P1"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P3",
+        "title": "Deploy billing API",
+        "description": "Deploy billing API",
+        "depends_on": [
+          "P2"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P4",
+        "title": "Deploy admin dashboard",
+        "description": "Deploy admin dashboard",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P5",
+        "title": "Activate feature flag 'new-checkout'",
+        "description": "Activate feature flag 'new-checkout'",
+        "depends_on": [
+          "P4"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P6",
+        "title": "Rotate API keys in config service",
+        "description": "Rotate API keys in config service",
+        "depends_on": [
+          "P5"
+        ],
+        "hidden": {
+          "phantom": true,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P7",
+        "title": "Migrate user database schema",
+        "description": "Migrate user database schema",
+        "depends_on": [
+          "P6"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P8",
+        "title": "Enable rate limiting on public API",
+        "description": "Enable rate limiting on public API",
+        "depends_on": [
+          "P5"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P9",
+        "title": "Update reverse proxy routes",
+        "description": "Update reverse proxy routes",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P1"
+        }
+      },
+      {
+        "id": "P10",
+        "title": "Deploy notification worker",
+        "description": "Deploy notification worker",
+        "depends_on": [
+          "P9"
+        ],
+        "hidden": {
+          "phantom": true,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P11",
+        "title": "Upgrade TLS certificates",
+        "description": "Upgrade TLS certificates",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P2"
+        }
+      },
+      {
+        "id": "P12",
+        "title": "Migrate session store to Redis",
+        "description": "Migrate session store to Redis",
+        "depends_on": [
+          "P1"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P6"
+        }
+      },
+      {
+        "id": "P13",
+        "title": "Enable new search index",
+        "description": "Enable new search index",
+        "depends_on": [
+          "P12"
+        ],
+        "hidden": {
+          "phantom": true,
+          "diagnosed": false,
+          "breaks": "P4"
+        }
+      },
+      {
+        "id": "P14",
+        "title": "Switch logging to structured format",
+        "description": "Switch logging to structured format",
+        "depends_on": [
+          "P4"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P15",
+        "title": "Switch portal frontend to new API",
+        "description": "Switch portal frontend to new API",
+        "depends_on": [
+          "P13"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P2"
+        }
+      },
+      {
+        "id": "P16",
+        "title": "Run data backfill job",
+        "description": "Run data backfill job",
+        "depends_on": [
+          "P10"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      }
+    ],
+    "ground_truth": {
+      "phantoms": [
+        "P1",
+        "P6",
+        "P10",
+        "P13"
+      ],
+      "deps": {
+        "P1": [],
+        "P2": [
+          "P1"
+        ],
+        "P3": [
+          "P2"
+        ],
+        "P4": [],
+        "P5": [
+          "P4"
+        ],
+        "P6": [
+          "P5"
+        ],
+        "P7": [
+          "P6"
+        ],
+        "P8": [
+          "P5"
+        ],
+        "P9": [],
+        "P10": [
+          "P9"
+        ],
+        "P11": [],
+        "P12": [
+          "P1"
+        ],
+        "P13": [
+          "P12"
+        ],
+        "P14": [
+          "P4"
+        ],
+        "P15": [
+          "P13"
+        ],
+        "P16": [
+          "P10"
+        ]
+      },
+      "breaks": {
+        "P15": "P2",
+        "P12": "P6",
+        "P13": "P4",
+        "P9": "P1",
+        "P11": "P2"
+      }
+    }
+  },
+  "started": "2026-10-21T02:05:58"
+}

@@ -1,0 +1,271 @@
+{
+  "scenario": "phantom_stress",
+  "domain": "research",
+  "seed": 102,
+  "config_name": "B_minimal_tight",
+  "config_hash": "b1822c39d792",
+  "config": {
+    "name": "B_minimal_tight",
+    "description": "No roles, no rules, full mesh, scarce attention budget.",
+    "n_agents": 4,
+    "topology": "mesh",
+    "board": false,
+    "shared_notes": false,
+    "human_channel": "anyone",
+    "role_mode": "none",
+    "roles": [],
+    "norms": [],
+    "max_ticks": 8,
+    "max_tool_calls": 4
+  },
+  "backend": {
+    "kind": "agent_sdk",
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+  },
+  "model": "claude-sonnet-5-5",
+  "code": {
+    "git_commit": "6b289d3aef503ef47d0c141f285d7f42dea557c8",
+    "git_dirty": false,
+    "claude_agent_sdk": "0.2.169",
+    "python": "3.13.15"
+  },
+  "instance": {
+    "scenario": "phantom_stress",
+    "domain": "research",
+    "seed": 102,
+    "brief": "Prepare the analysis package for the survey study. Every work item must produce a valid, usable result by the end. An item only works if all items it depends on actually work. Coordinate so that nothing is left undone and the end result truly works.",
+    "items": [
+      {
+        "id": "P1",
+        "title": "Download raw survey data",
+        "description": "Download raw survey data",
+        "depends_on": [],
+        "hidden": {
+          "phantom": true,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P2",
+        "title": "Recode open answers",
+        "description": "Recode open answers",
+        "depends_on": [],
+        "hidden": {
+          "phantom": true,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P3",
+        "title": "Compute weights",
+        "description": "Compute weights",
+        "depends_on": [],
+        "hidden": {
+          "phantom": true,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P4",
+        "title": "Produce figure 2",
+        "description": "Produce figure 2",
+        "depends_on": [
+          "P3"
+        ],
+        "hidden": {
+          "phantom": true,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P5",
+        "title": "Harmonise construct names across waves",
+        "description": "Harmonise construct names across waves",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P6",
+        "title": "Export tables for appendix",
+        "description": "Export tables for appendix",
+        "depends_on": [
+          "P3"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P7",
+        "title": "Run regression model M1",
+        "description": "Run regression model M1",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P8",
+        "title": "Write methods section",
+        "description": "Write methods section",
+        "depends_on": [
+          "P2"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P9",
+        "title": "Clean dataset D3",
+        "description": "Clean dataset D3",
+        "depends_on": [
+          "P4"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P3"
+        }
+      },
+      {
+        "id": "P10",
+        "title": "Assemble final report",
+        "description": "Assemble final report",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P2"
+        }
+      },
+      {
+        "id": "P11",
+        "title": "Check codebook consistency",
+        "description": "Check codebook consistency",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P12",
+        "title": "Run robustness check M2",
+        "description": "Run robustness check M2",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P5"
+        }
+      },
+      {
+        "id": "P13",
+        "title": "Write limitations section",
+        "description": "Write limitations section",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P14",
+        "title": "Produce figure 3",
+        "description": "Produce figure 3",
+        "depends_on": [
+          "P1"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P15",
+        "title": "Impute missing values",
+        "description": "Impute missing values",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P1"
+        }
+      },
+      {
+        "id": "P16",
+        "title": "Validate results against published values",
+        "description": "Validate results against published values",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P3"
+        }
+      }
+    ],
+    "ground_truth": {
+      "phantoms": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "deps": {
+        "P1": [],
+        "P2": [],
+        "P3": [],
+        "P4": [
+          "P3"
+        ],
+        "P5": [],
+        "P6": [
+          "P3"
+        ],
+        "P7": [],
+        "P8": [
+          "P2"
+        ],
+        "P9": [
+          "P4"
+        ],
+        "P10": [],
+        "P11": [],
+        "P12": [],
+        "P13": [],
+        "P14": [
+          "P1"
+        ],
+        "P15": [],
+        "P16": []
+      },
+      "breaks": {
+        "P12": "P5",
+        "P16": "P3",
+        "P10": "P2",
+        "P9": "P3",
+        "P15": "P1"
+      }
+    }
+  },
+  "started": "2026-10-21T07:18:22"
+}

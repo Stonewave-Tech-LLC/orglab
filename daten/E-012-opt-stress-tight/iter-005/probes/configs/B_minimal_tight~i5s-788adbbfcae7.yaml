@@ -1,0 +1,18 @@
+name: B_minimal_tight~i5s
+description: No roles, full mesh. Whoever sees a failed check repairs it right away
+  instead of reporting it, including earlier work broken by later changes.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- If an inspect shows an item failing, whoever ran the inspect re-executes it in that
+  same tick (claim it first if needed) and inspects it again next. Do not just message
+  the owner about it. This includes items that were already done but broke after another
+  item was rolled out. Re-executing them is always the fix, and the ones you find
+  last matter most.
+max_ticks: 8
+max_tool_calls: 4

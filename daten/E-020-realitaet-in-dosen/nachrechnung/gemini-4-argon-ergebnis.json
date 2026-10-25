@@ -1,0 +1,48 @@
+{
+  "n_complete_seeds": 24,
+  "v1_estimate": 0.005952380952380952,
+  "v1_ci95": [
+    0.0,
+    0.017857142857142856
+  ],
+  "v1_label": "praktisch null",
+  "v2_estimate": -0.015625,
+  "v2_ci95": [
+    -0.034722222222222224,
+    -0.001736111111111111
+  ],
+  "v2_label": "praktisch null",
+  "v3_estimate": -0.001736111111111111,
+  "v3_ci95": [
+    -0.005208333333333333,
+    0.0
+  ],
+  "miss_rate": {
+    "SP0-ZU0-AU0": 0.09722222222222222,
+    "SP0-ZU0-AU1": 0.06944444444444445,
+    "SP0-ZU1-AU0": 0.013888888888888888,
+    "SP0-ZU1-AU1": 0.0,
+    "SP1-ZU0-AU0": 0.09722222222222222,
+    "SP1-ZU0-AU1": 0.09027777777777778,
+    "SP1-ZU1-AU0": 0.013888888888888888,
+    "SP1-ZU1-AU1": 0.0
+  },
+  "false_alarm_rate": {
+    "SP0-ZU0-AU0": 0.0,
+    "SP0-ZU0-AU1": 0.0,
+    "SP0-ZU1-AU0": 0.0,
+    "SP0-ZU1-AU1": 0.0,
+    "SP1-ZU0-AU0": 0.0,
+    "SP1-ZU0-AU1": 0.0,
+    "SP1-ZU1-AU0": 0.0,
+    "SP1-ZU1-AU1": 0.0
+  },
+  "choices": [
+    "Bootstrap seeds assigned as 201 for V1, 202 for V2, and 203 for V3 from the preregistered list of seeds (201-205, 211-212).",
+    "Percentile bootstrap 95% CI computed using sorted array indices 125 (0.025 * 5000) and 4875 (0.975 * 5000), with items sorted by id before resampling.",
+    "Complete seeds defined as seeds having the full set of items and all 8 cells per item with non-null boolean verdicts.",
+    "V3 computed across all items (both broken and working) in complete seeds, averaging n_checks over SP=0 and SP=1 within ZU=1 for AU=1 minus AU=0.",
+    "Decision rule hierarchy when both 'Vorhersage widerlegt' (upper CI < prediction threshold) and 'praktisch null' (upper CI < +0.02) hold: assigned the more specific 'praktisch null' (both imply the prediction is refuted).",
+    "Two-sided p-values for BH-FDR (over V1 and V2) derived from the empirical bootstrap distribution as 2 * min(P(boot <= 0), P(boot >= 0)), which aligns directly with the 95% percentile CI."
+  ]
+}

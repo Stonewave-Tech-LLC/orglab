@@ -1,0 +1,303 @@
+{
+  "scenario": "phantom_stress",
+  "domain": "business",
+  "seed": 2003,
+  "config_name": "B_minimal_tight~i2s",
+  "config_hash": "9d810c9295e2",
+  "config": {
+    "name": "B_minimal_tight~i2s",
+    "description": "Star with a0 as executing sequencer: spokes report only to a0, a0 orders dependency chains and record conflicts; everyone executes and self-verifies.",
+    "n_agents": 4,
+    "topology": "star",
+    "board": false,
+    "shared_notes": false,
+    "human_channel": "anyone",
+    "role_mode": "fixed",
+    "roles": [
+      {
+        "name": "sequencer",
+        "mandate": "Execute items yourself, and also own the ordering. In tick 1 send each spoke a short list of items to run, roots first. When a spoke reports that an item reverses or overwrites another, decide which runs last and tell the affected owner to re-execute. In the last two ticks, direct spokes to any failed or unexecuted item."
+      },
+      {
+        "name": "executor",
+        "mandate": "Claim and execute the items the sequencer assigned, roots first. Inspect each item once after executing, report it done if verified, and re-execute it at once if it failed. Tell the sequencer only about failures, overwrites, or when you are idle."
+      }
+    ],
+    "norms": [
+      "Claim only what you execute this tick, and release anything you cannot act on now. Inspect your own item once after executing and report it done only if verified. Do not re-inspect verified items unless a later execute could have overwritten them.",
+      "If an item's inspection says it was reversed or overwritten by another item, tell the sequencer in one message. The item that must survive is re-executed after the overwriting one, by its owner, in the same or next tick."
+    ],
+    "max_ticks": 8,
+    "max_tool_calls": 4
+  },
+  "backend": {
+    "kind": "agent_sdk",
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+  },
+  "model": "claude-sonnet-5-5",
+  "code": {
+    "git_commit": "71ba03e8776c16df47f8e5c512cc71c334c7c267",
+    "git_dirty": false,
+    "claude_agent_sdk": "0.2.169",
+    "python": "3.13.15"
+  },
+  "instance": {
+    "scenario": "phantom_stress",
+    "domain": "business",
+    "seed": 2003,
+    "brief": "Close the quarter for our key accounts. Every work item must have actually reached its recipient or taken effect by the end. An item only works if all items it depends on actually work. Coordinate so that nothing is left undone and the end result truly works.",
+    "items": [
+      {
+        "id": "P1",
+        "title": "Send quarterly report to tax advisor",
+        "description": "Send quarterly report to tax advisor",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P2",
+        "title": "Book incoming payment K-09",
+        "description": "Book incoming payment K-09",
+        "depends_on": [
+          "P1"
+        ],
+        "hidden": {
+          "phantom": true,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P3",
+        "title": "Send invoice K-17 to customer",
+        "description": "Send invoice K-17 to customer",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P4",
+        "title": "Update payment terms in ERP",
+        "description": "Update payment terms in ERP",
+        "depends_on": [
+          "P2"
+        ],
+        "hidden": {
+          "phantom": true,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P5",
+        "title": "Book travel expenses Q3",
+        "description": "Book travel expenses Q3",
+        "depends_on": [
+          "P3"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P6",
+        "title": "Send dunning letter K-22",
+        "description": "Send dunning letter K-22",
+        "depends_on": [
+          "P3"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P7",
+        "title": "Create invoice for account K-17",
+        "description": "Create invoice for account K-17",
+        "depends_on": [
+          "P3"
+        ],
+        "hidden": {
+          "phantom": true,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P8",
+        "title": "Send contract renewal to K-31",
+        "description": "Send contract renewal to K-31",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P9",
+        "title": "Register supplier payment run",
+        "description": "Register supplier payment run",
+        "depends_on": [
+          "P4"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P7"
+        }
+      },
+      {
+        "id": "P10",
+        "title": "Send onboarding pack to new client K-40",
+        "description": "Send onboarding pack to new client K-40",
+        "depends_on": [],
+        "hidden": {
+          "phantom": true,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P11",
+        "title": "Renew insurance policy",
+        "description": "Renew insurance policy",
+        "depends_on": [
+          "P10"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P5"
+        }
+      },
+      {
+        "id": "P12",
+        "title": "Notify sales of closed deals",
+        "description": "Notify sales of closed deals",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P2"
+        }
+      },
+      {
+        "id": "P13",
+        "title": "Send price update to distributor",
+        "description": "Send price update to distributor",
+        "depends_on": [
+          "P9"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P7"
+        }
+      },
+      {
+        "id": "P14",
+        "title": "Reconcile bank statement September",
+        "description": "Reconcile bank statement September",
+        "depends_on": [
+          "P10"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      },
+      {
+        "id": "P15",
+        "title": "Update CRM pipeline values",
+        "description": "Update CRM pipeline values",
+        "depends_on": [],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": "P8"
+        }
+      },
+      {
+        "id": "P16",
+        "title": "Archive signed contracts",
+        "description": "Archive signed contracts",
+        "depends_on": [
+          "P7"
+        ],
+        "hidden": {
+          "phantom": false,
+          "diagnosed": false,
+          "breaks": null
+        }
+      }
+    ],
+    "ground_truth": {
+      "phantoms": [
+        "P2",
+        "P4",
+        "P7",
+        "P10"
+      ],
+      "deps": {
+        "P1": [],
+        "P2": [
+          "P1"
+        ],
+        "P3": [],
+        "P4": [
+          "P2"
+        ],
+        "P5": [
+          "P3"
+        ],
+        "P6": [
+          "P3"
+        ],
+        "P7": [
+          "P3"
+        ],
+        "P8": [],
+        "P9": [
+          "P4"
+        ],
+        "P10": [],
+        "P11": [
+          "P10"
+        ],
+        "P12": [],
+        "P13": [
+          "P9"
+        ],
+        "P14": [
+          "P10"
+        ],
+        "P15": [],
+        "P16": [
+          "P7"
+        ]
+      },
+      "breaks": {
+        "P9": "P7",
+        "P11": "P5",
+        "P12": "P2",
+        "P13": "P7",
+        "P15": "P8"
+      }
+    }
+  },
+  "started": "2026-10-21T17:28:29"
+}

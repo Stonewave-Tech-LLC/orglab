@@ -1,0 +1,23 @@
+name: B_minimal_tight~i1i
+description: Shared board for ownership and status; done means a fresh personal check
+  passed; failures go straight to those affected; checking effort goes to unverified
+  items.
+n_agents: 4
+topology: mesh
+board: true
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- An execute/action success signal is not evidence. Report an item done only if your
+  own inspect_item, made after the item's last execute, shows it truly works. If you
+  or anyone re-executes it later, it is not done until it is inspected again.
+- If any inspect shows a failure, immediately message the item's owner and the owners
+  of every item that depends on it, quoting the failure. Treat that item and its dependents
+  as not done until a new inspect passes.
+- Use the board instead of long plan messages. Spend spare calls inspecting items
+  that nobody has verified since their last execute; never re-inspect an item that
+  is already verified and unchanged.
+max_ticks: 8
+max_tool_calls: 4

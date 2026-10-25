@@ -1,0 +1,23 @@
+# Verifikations-Bürokratie: Normen wortgleich aus E-012 It. 1 (invariant), Budget wie B_minimal (8/10).
+name: B_verify_bureaucracy
+description: 'B_minimal plus board and the verification norms of E-012 it. 1 (invariant):
+  explicit verification bureaucracy.'
+n_agents: 4
+topology: mesh
+board: true
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- An execute/action success signal is not evidence. Report an item done only if your
+  own inspect_item, made after the item's last execute, shows it truly works. If you
+  or anyone re-executes it later, it is not done until it is inspected again.
+- If any inspect shows a failure, immediately message the item's owner and the owners
+  of every item that depends on it, quoting the failure. Treat that item and its dependents
+  as not done until a new inspect passes.
+- Use the board instead of long plan messages. Spend spare calls inspecting items
+  that nobody has verified since their last execute; never re-inspect an item that
+  is already verified and unchanged.
+max_ticks: 10
+max_tool_calls: 8

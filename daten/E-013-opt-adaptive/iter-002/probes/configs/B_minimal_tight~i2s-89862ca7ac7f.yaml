@@ -1,0 +1,29 @@
+name: B_minimal_tight~i2s
+description: Mesh, no roles. The execute signal is not proof. Overwrite conflicts
+  are resolved by a fixed rule; dependency chains run only on verified inputs; the
+  final ticks are for converting work into verified outcomes.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- An execute signal ('status set ✓') is not proof. An item counts as working only
+  after an inspect says verified. The owner inspects its own item once after executing
+  it, and reports done only on a verified result.
+- If an inspect shows that an item was reversed or overwritten by a later item, do
+  not touch the overwriter. Tell the overwritten item's owner, who re-executes it
+  once the overwriter is finished, then re-inspects it.
+- Execute a dependent item only after its prerequisite has a verified inspect. If
+  the prerequisite failed (for example bounced or not delivered), its owner re-executes
+  it first; dependents wait or go to another agent.
+- Claim only what you will execute within the next tick, and release blocked claims
+  at once so idle agents can act. Do not re-inspect items a teammate already reported
+  verified, unless a later write could have changed them.
+- In the last two ticks, finish and verify items whose prerequisites are verified,
+  and report them done. Do not start chains you cannot verify. Message only the agent
+  who must act, with item IDs.
+max_ticks: 8
+max_tool_calls: 4

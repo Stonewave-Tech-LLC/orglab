@@ -1,0 +1,21 @@
+--- Modell S
+   Domäne=business  ZU=0 nachgeschlagen=True :  96/ 96 = 1.00
+   Domäne=business  ZU=1 nachgeschlagen=True :  96/ 96 = 1.00
+   Domäne=coding    ZU=0 nachgeschlagen=True :  66/ 96 = 0.69
+   Domäne=coding    ZU=1 nachgeschlagen=True :  96/ 96 = 1.00
+   Domäne=research  ZU=0 nachgeschlagen=True : 144/144 = 1.00
+   Domäne=research  ZU=1 nachgeschlagen=True : 144/144 = 1.00
+   Nachschlagequote Domäne×SP×ZU: bus SP0 ZU0: 0.79; bus SP0 ZU1: 1.00; bus SP1 ZU0: 0.93; bus SP1 ZU1: 1.00; cod SP0 ZU0: 0.95; cod SP0 ZU1: 1.00; cod SP1 ZU0: 0.98; cod SP1 ZU1: 1.00; res SP0 ZU0: 0.77; res SP0 ZU1: 0.99; res SP1 ZU0: 0.93; res SP1 ZU1: 1.00
+--- Modell H
+   Domäne=business  ZU=0 nachgeschlagen=False:   0/  3 = 0.00
+   Domäne=business  ZU=0 nachgeschlagen=True :  93/ 93 = 1.00
+   Domäne=business  ZU=1 nachgeschlagen=False:   0/ 85 = 0.00
+   Domäne=business  ZU=1 nachgeschlagen=True :  10/ 11 = 0.91
+   Domäne=coding    ZU=0 nachgeschlagen=False:   2/  5 = 0.40
+   Domäne=coding    ZU=0 nachgeschlagen=True :  67/ 91 = 0.74
+   Domäne=coding    ZU=1 nachgeschlagen=False:   0/ 68 = 0.00
+   Domäne=coding    ZU=1 nachgeschlagen=True :  19/ 28 = 0.68
+   Domäne=research  ZU=0 nachgeschlagen=True : 143/144 = 0.99
+   Domäne=research  ZU=1 nachgeschlagen=False:   3/  5 = 0.60
+   Domäne=research  ZU=1 nachgeschlagen=True : 139/139 = 1.00
+   Nachschlagequote Domäne×SP×ZU: bus SP0 ZU0: 0.43; bus SP0 ZU1: 0.07; bus SP1 ZU0: 0.82; bus SP1 ZU1: 0.12; cod SP0 ZU0: 0.60; cod SP0 ZU1: 0.29; cod SP1 ZU0: 0.86; cod SP1 ZU1: 0.28; res SP0 ZU0: 0.73; res SP0 ZU1: 0.60; res SP1 ZU0: 0.91; res SP1 ZU1: 0.89

@@ -1,0 +1,29 @@
+name: B_minimal_tight~i2i
+description: Mesh, no roles. Claim only what you will act on now; one owner verifies
+  each item; no duplicate checks; message only the agent who needs the information;
+  check inputs before building on them.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- Claim only items you will execute this tick or next. If you cannot act on a claimed
+  item now, because it is blocked or you lack budget, release it immediately and say
+  who should take it.
+- Every tool call is scarce. Do not inspect an item that another agent already reported
+  as verified, unless something was executed since that could have changed it. Trust
+  a teammate's verified report.
+- The owner of an item verifies it once, right after executing it, and only reports
+  it done if that inspect confirms it works. Nobody else re-checks it.
+- Send a message only to the agent who needs it, not to everyone. Send at most one
+  message per tick, and include the item IDs and their verified state.
+- Before executing an item that depends on another, inspect the prerequisite once,
+  unless its owner has already reported it verified. Never build on an item whose
+  last inspect failed or showed it unprocessed; fix or escalate the prerequisite first.
+- If you are idle or blocked, take unclaimed or released work instead of polling someone
+  else's item.
+max_ticks: 8
+max_tool_calls: 4

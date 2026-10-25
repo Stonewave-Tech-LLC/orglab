@@ -1,0 +1,25 @@
+name: B_minimal_tight~i2s
+description: Root items first, spread across agents; shared notebook logs verified
+  items and record overwrites; overwriter runs before the item it overwrites.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: true
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- 'Tick 1: each agent claims at most 2 items with no dependencies and executes them
+  right away. Spread the root items across agents so no one holds more than 2 unexecuted
+  claims.'
+- An execute signal ('status set ✓') is not proof. Inspect the item before report_done
+  or before anyone builds on it, and add_note 'Px verified' so others don't repeat
+  the check.
+- If an inspect shows an item was reversed or overwritten by another item, add_note
+  the pair (e.g. 'P15 overwrites P8'). Fix it by re-executing the overwritten item
+  after the overwriter, never the overwriter again.
+- Only execute an item when the notes show all its dependencies verified. Owners re-execute
+  their own failed items immediately, and the last two ticks go to executing remaining
+  items, not re-inspecting verified ones.
+max_ticks: 8
+max_tool_calls: 4

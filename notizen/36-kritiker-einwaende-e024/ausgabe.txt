@@ -1,0 +1,57 @@
+# E-024, Cluster-Bootstrap über Seeds (EXPLORATIV, nachträglich)
+
+Vollständige Seeds: 21 ([7000, 7001, 7002, 7003, 7004, 7005, 7006, 7007, 7008, 7009, 7011, 7012, 7013, 7014, 7017, 7018, 7019, 7020, 7021, 7022, 7023]). B = 5000, Startwerte KI 241–245, p 251–255.
+
+## Primär (wie prereg, nur Resampling-Einheit getauscht)
+
+| Nr | n (Seeds) | Mittel | KI Belege (prereg) | KI Seed-Cluster | Breite Cluster/Belege | q Belege | q Cluster | Etikett Belege | Etikett Cluster |
+|---|---|---|---|---|---|---|---|---|---|
+| V1 | 76 (21) | +0.263 | [+0.207; +0.322] | [+0.213; +0.299] | 0.75 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+| W1 | 76 (21) | +0.260 | [+0.204; +0.316] | [+0.211; +0.294] | 0.75 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+| C1 | 252 (21) | +0.472 | [+0.417; +0.530] | [+0.437; +0.504] | 0.60 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+| C2 | 76 (21) | +0.408 | [+0.309; +0.513] | [+0.314; +0.479] | 0.81 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+| F1 | 87 (21) | +0.029 | [+0.014; +0.046] | [+0.015; +0.043] | 0.90 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+
+| Nr | Belege je Seed (Mittel) | ICC(1) roh | ICC(1) nach Abzug Domäne×Art×Fehlerart×Kanal | empirischer Designeffekt (SE Cluster / SE Belege)² |
+|---|---|---|---|---|
+| V1 | 3.62 | -0.078 | -0.024 | 0.59 |
+| W1 | 3.62 | -0.081 | -0.060 | 0.57 |
+| C1 | 12.00 | -0.055 | -0.022 | 0.38 |
+| C2 | 3.62 | -0.119 | -0.238 | 0.62 |
+| F1 | 4.14 | -0.086 | +0.064 | 0.72 |
+
+## Sekundär: ohne die 62 einzeln nicht entscheidbaren Belege
+
+| Nr | n (Seeds) | Mittel | KI Belege (prereg) | KI Seed-Cluster | Breite Cluster/Belege | q Belege | q Cluster | Etikett Belege | Etikett Cluster |
+|---|---|---|---|---|---|---|---|---|---|
+| V1 | 70 (21) | +0.257 | [+0.196; +0.318] | [+0.204; +0.296] | 0.76 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+| W1 | 70 (21) | +0.254 | [+0.193; +0.314] | [+0.201; +0.289] | 0.73 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+| C1 | 252 (21) | +0.472 | [+0.417; +0.530] | [+0.437; +0.504] | 0.60 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+| C2 | 70 (21) | +0.443 | [+0.336; +0.550] | [+0.340; +0.517] | 0.83 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+| F1 | 87 (21) | +0.029 | [+0.014; +0.046] | [+0.015; +0.043] | 0.90 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+
+| Nr | Belege je Seed (Mittel) | ICC(1) roh | ICC(1) nach Abzug Domäne×Art×Fehlerart×Kanal | empirischer Designeffekt (SE Cluster / SE Belege)² |
+|---|---|---|---|---|
+| V1 | 3.33 | -0.113 | +0.021 | 0.60 |
+| W1 | 3.33 | -0.120 | -0.028 | 0.55 |
+| C1 | 12.00 | -0.055 | -0.022 | 0.38 |
+| C2 | 3.33 | -0.100 | -0.193 | 0.66 |
+| F1 | 4.14 | -0.086 | +0.064 | 0.72 |
+
+## Deskriptiv: F1 auf allen Ok-Belegen (übrige Zeilen wie primär)
+
+| Nr | n (Seeds) | Mittel | KI Belege (prereg) | KI Seed-Cluster | Breite Cluster/Belege | q Belege | q Cluster | Etikett Belege | Etikett Cluster |
+|---|---|---|---|---|---|---|---|---|---|
+| V1 | 76 (21) | +0.263 | [+0.207; +0.322] | [+0.213; +0.299] | 0.75 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+| W1 | 76 (21) | +0.260 | [+0.204; +0.316] | [+0.211; +0.294] | 0.75 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+| C1 | 252 (21) | +0.472 | [+0.417; +0.530] | [+0.437; +0.504] | 0.60 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+| C2 | 76 (21) | +0.408 | [+0.309; +0.513] | [+0.314; +0.479] | 0.81 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+| F1 | 126 (21) | +0.046 | [+0.030; +0.063] | [+0.028; +0.063] | 1.06 | 0.0000 | 0.0000 | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) | BESTÄTIGT (Vorhersagewert nicht ausgeschlossen) |
+
+| Nr | Belege je Seed (Mittel) | ICC(1) roh | ICC(1) nach Abzug Domäne×Art×Fehlerart×Kanal | empirischer Designeffekt (SE Cluster / SE Belege)² |
+|---|---|---|---|---|
+| V1 | 3.62 | -0.078 | -0.024 | 0.59 |
+| W1 | 3.62 | -0.081 | -0.060 | 0.57 |
+| C1 | 12.00 | -0.055 | -0.022 | 0.38 |
+| C2 | 3.62 | -0.119 | -0.238 | 0.62 |
+| F1 | 6.00 | -0.002 | +0.074 | 0.96 |

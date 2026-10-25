@@ -1,0 +1,66 @@
+6000 S: Verteilung Fehler/8 je Beleg: [(0, 273), (1, 1), (2, 1), (3, 2), (4, 10), (6, 1)]
+6000 H: Verteilung Fehler/8 je Beleg: [(0, 184), (1, 38), (2, 46), (3, 9), (4, 6), (5, 4), (6, 1)]
+6000: Belege mit >=3/8 Fehlern bei einem Modell:
+   business-fail_subtle-6017          wrong_terms      Kanal=ledger     S=0/8 H=3/8 GPT-entscheidbar=-
+   business-ok_noisy-6004             none             Kanal=delivery   S=0/8 H=3/8 GPT-entscheidbar=-
+   business-ok_noisy-6007             none             Kanal=delivery   S=0/8 H=3/8 GPT-entscheidbar=-
+   business-ok_noisy-6019             none             Kanal=delivery   S=0/8 H=4/8 GPT-entscheidbar=-
+   coding-fail_moderate-6005          low_traffic      Kanal=sockets    S=4/8 H=2/8 GPT-entscheidbar=-
+   coding-fail_moderate-6006          db_down          Kanal=deploy     S=4/8 H=4/8 GPT-entscheidbar=-
+   coding-fail_moderate-6010          db_down          Kanal=probe      S=3/8 H=1/8 GPT-entscheidbar=-
+   coding-fail_moderate-6013          low_traffic      Kanal=probe      S=4/8 H=5/8 GPT-entscheidbar=-
+   coding-fail_moderate-6017          low_traffic      Kanal=sockets    S=4/8 H=5/8 GPT-entscheidbar=-
+   coding-fail_moderate-6018          db_down          Kanal=deploy     S=4/8 H=4/8 GPT-entscheidbar=-
+   coding-fail_subtle-6000            db_down          Kanal=deploy     S=6/8 H=3/8 GPT-entscheidbar=-
+   coding-fail_subtle-6004            db_down          Kanal=probe      S=4/8 H=2/8 GPT-entscheidbar=-
+   coding-fail_subtle-6005            cache_partial    Kanal=sockets    S=0/8 H=3/8 GPT-entscheidbar=-
+   coding-fail_subtle-6007            low_traffic      Kanal=probe      S=4/8 H=6/8 GPT-entscheidbar=-
+   coding-fail_subtle-6011            low_traffic      Kanal=sockets    S=4/8 H=5/8 GPT-entscheidbar=-
+   coding-fail_subtle-6012            db_down          Kanal=deploy     S=4/8 H=1/8 GPT-entscheidbar=-
+   coding-fail_subtle-6016            db_down          Kanal=probe      S=3/8 H=1/8 GPT-entscheidbar=-
+   coding-fail_subtle-6023            low_traffic      Kanal=sockets    S=4/8 H=5/8 GPT-entscheidbar=-
+   coding-ok_clear-6017               none             Kanal=sockets    S=0/8 H=4/8 GPT-entscheidbar=-
+   coding-ok_noisy-6000               none             Kanal=deploy     S=0/8 H=4/8 GPT-entscheidbar=-
+   coding-ok_noisy-6003               none             Kanal=deploy     S=0/8 H=3/8 GPT-entscheidbar=-
+   coding-ok_noisy-6006               none             Kanal=deploy     S=0/8 H=4/8 GPT-entscheidbar=-
+   coding-ok_noisy-6009               none             Kanal=deploy     S=0/8 H=3/8 GPT-entscheidbar=-
+   coding-ok_noisy-6015               none             Kanal=deploy     S=0/8 H=3/8 GPT-entscheidbar=-
+   coding-ok_noisy-6018               none             Kanal=deploy     S=0/8 H=3/8 GPT-entscheidbar=-
+7000 S: Verteilung Fehler/8 je Beleg: [(0, 269), (1, 2), (3, 3), (4, 12), (5, 2)]
+7000 H: Verteilung Fehler/8 je Beleg: [(0, 190), (1, 30), (2, 38), (3, 16), (4, 7), (5, 2), (6, 4), (7, 1)]
+7000: Belege mit >=3/8 Fehlern bei einem Modell:
+   business-fail_moderate-7016        bounced          Kanal=ledger     S=5/8 H=1/8 GPT-entscheidbar=False
+   business-fail_subtle-7001          wrong_terms      Kanal=ledger     S=0/8 H=3/8 GPT-entscheidbar=True
+   business-fail_subtle-7019          wrong_contact    Kanal=ledger     S=0/8 H=3/8 GPT-entscheidbar=True
+   business-ok_noisy-7000             none             Kanal=delivery   S=0/8 H=3/8 GPT-entscheidbar=True
+   business-ok_noisy-7003             none             Kanal=delivery   S=0/8 H=3/8 GPT-entscheidbar=True
+   business-ok_noisy-7006             none             Kanal=delivery   S=0/8 H=3/8 GPT-entscheidbar=True
+   business-ok_noisy-7009             none             Kanal=delivery   S=0/8 H=3/8 GPT-entscheidbar=True
+   business-ok_noisy-7018             none             Kanal=delivery   S=0/8 H=3/8 GPT-entscheidbar=True
+   business-ok_noisy-7021             none             Kanal=delivery   S=0/8 H=4/8 GPT-entscheidbar=True
+   coding-fail_moderate-7001          low_traffic      Kanal=sockets    S=4/8 H=3/8 GPT-entscheidbar=False
+   coding-fail_moderate-7002          db_down          Kanal=deploy     S=4/8 H=4/8 GPT-entscheidbar=False
+   coding-fail_moderate-7009          low_traffic      Kanal=probe      S=4/8 H=5/8 GPT-entscheidbar=False
+   coding-fail_moderate-7013          low_traffic      Kanal=sockets    S=4/8 H=5/8 GPT-entscheidbar=False
+   coding-fail_moderate-7014          db_down          Kanal=deploy     S=4/8 H=6/8 GPT-entscheidbar=False
+   coding-fail_moderate-7021          low_traffic      Kanal=probe      S=4/8 H=6/8 GPT-entscheidbar=False
+   coding-fail_moderate-7022          db_down          Kanal=sockets    S=0/8 H=3/8 GPT-entscheidbar=False
+   coding-fail_subtle-7000            db_down          Kanal=probe      S=5/8 H=3/8 GPT-entscheidbar=True
+   coding-fail_subtle-7001            cache_partial    Kanal=sockets    S=3/8 H=3/8 GPT-entscheidbar=True
+   coding-fail_subtle-7003            low_traffic      Kanal=probe      S=0/8 H=3/8 GPT-entscheidbar=True
+   coding-fail_subtle-7007            low_traffic      Kanal=sockets    S=4/8 H=7/8 GPT-entscheidbar=True
+   coding-fail_subtle-7008            db_down          Kanal=deploy     S=4/8 H=3/8 GPT-entscheidbar=True
+   coding-fail_subtle-7012            db_down          Kanal=probe      S=4/8 H=2/8 GPT-entscheidbar=False
+   coding-fail_subtle-7015            low_traffic      Kanal=probe      S=4/8 H=6/8 GPT-entscheidbar=True
+   coding-fail_subtle-7016            db_down          Kanal=sockets    S=3/8 H=1/8 GPT-entscheidbar=False
+   coding-fail_subtle-7019            low_traffic      Kanal=sockets    S=4/8 H=6/8 GPT-entscheidbar=False
+   coding-fail_subtle-7020            db_down          Kanal=deploy     S=4/8 H=2/8 GPT-entscheidbar=False
+   coding-ok_clear-7013               none             Kanal=sockets    S=0/8 H=3/8 GPT-entscheidbar=True
+   coding-ok_clear-7016               none             Kanal=sockets    S=0/8 H=3/8 GPT-entscheidbar=True
+   coding-ok_clear-7023               none             Kanal=deploy     S=3/8 H=1/8 GPT-entscheidbar=False
+   coding-ok_noisy-7002               none             Kanal=deploy     S=0/8 H=4/8 GPT-entscheidbar=False
+   coding-ok_noisy-7008               none             Kanal=deploy     S=0/8 H=4/8 GPT-entscheidbar=False
+   coding-ok_noisy-7011               none             Kanal=deploy     S=0/8 H=4/8 GPT-entscheidbar=True
+   coding-ok_noisy-7014               none             Kanal=deploy     S=0/8 H=4/8 GPT-entscheidbar=False
+   coding-ok_noisy-7017               none             Kanal=deploy     S=0/8 H=3/8 GPT-entscheidbar=True
+   coding-ok_noisy-7023               none             Kanal=deploy     S=0/8 H=4/8 GPT-entscheidbar=True

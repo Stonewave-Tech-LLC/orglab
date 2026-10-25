@@ -1,0 +1,36 @@
+name: B_minimal~i1s
+description: Three executors plus one auditor who owns ongoing and final verification
+  across items, using a shared board.
+n_agents: 4
+topology: mesh
+board: true
+shared_notes: false
+human_channel: anyone
+role_mode: fixed
+roles:
+- name: executor
+  mandate: Claim, execute and inspect your items. Do dependencies first, and start
+    a dependent item only after its prerequisites inspect as verified. Report done
+    only after a successful inspection. Re-execute any item of yours the auditor flags.
+- name: executor
+  mandate: Claim, execute and inspect your items. Do dependencies first, and start
+    a dependent item only after its prerequisites inspect as verified. Report done
+    only after a successful inspection. Re-execute any item of yours the auditor flags.
+- name: executor
+  mandate: Claim, execute and inspect your items. Do dependencies first, and start
+    a dependent item only after its prerequisites inspect as verified. Report done
+    only after a successful inspection. Re-execute any item of yours the auditor flags.
+- name: auditor
+  mandate: Don't execute unless an item is left without an owner. Each tick, re-inspect
+    items reported done, giving priority to items that share a record with, or depend
+    on, anything executed since their last check. Tell the owner and the owners of
+    dependent items about each failure. Before the team stops, run a full inspection
+    pass after the last execution, and only declare the work finished if every item
+    verifies.
+norms:
+- Status flags such as 'sent / booked ✓' are set before delivery and prove nothing.
+  Only inspect_item counts. An item that verified earlier can be undone by a later
+  item that touches the same record, so a check is only valid if no execution came
+  after it.
+max_ticks: 10
+max_tool_calls: 8

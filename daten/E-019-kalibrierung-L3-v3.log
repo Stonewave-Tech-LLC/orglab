@@ -1,0 +1,49 @@
+[E-019] 36 Aufrufe geplant, offen 36 | heute 7.09 $ von 50.00 $
+[E-019] 20/36 Aufrufe | heute 7.61 $
+[E-019] fertig, 36 neue Aufrufe, heute 7.98 $
+# E-019 Kalibrierung L3, Material v3 (B=12, Reasoning=aus, anthropic/claude-sonnet-5.5)
+
+Aufrufe: 36, Urteile: 432, gültig: 432 (Parse-Ausfall 0.000)
+
+**Einzelfehlerrate: 0.028** · Fehlalarm 0.019 · Übersehen 0.037
+
+Kanalpositionen: 0.035, 0.021, 0.028
+Position im Stapel (V8-Vorschau): vordere Hälfte 0.046, hintere Hälfte 0.009
+
+Übersehensrate je Fehlerart: amount_mismatch 0.000, bounced 0.000, cache_down 0.048, column_loss 0.000, db_down 0.133, duplicates_kept 0.000, empty_attachment 0.042, row_loss 0.000, stale_process 0.000, weights_broken 0.000, wrong_recipient 0.000, zero_traffic 0.167
+Größter Anteil eines einzelnen Belegs an allen Fehlern: 0.167
+
+## Kriterien
+
+- ✘ 1 Fehlerrate 0,10–0,40
+- ✔ 2 Kanalbalance ≤ 0,20
+- ✘ 3 Fehlalarm und Übersehen ≥ 0,03
+- ✘ 4 ≥ Hälfte der Fehlerarten ≥ 0,05 und kein Beleg > 5 % der Fehler (D-016)
+- ✔ 6 Parse-Ausfall ≤ 5 %
+- (5 Stichprobe: von Hand, siehe unten)
+
+**Alle automatischen Kriterien erfüllt: NEIN**
+
+## Fehlerrate je Art und Subtilität
+
+- fail_moderate: 0.037
+- fail_subtle: 0.037
+- ok_clear: 0.019
+- ok_noisy: 0.019
+
+Kosten: 0.90 $
+
+## Falsch beurteilte Belege (für die Stichprobe)
+
+- business-ok_clear-1209 · ledger · Slot 6 · Wahrheit ok · Konf. 0.6
+- coding-fail_moderate-1201 · probe · Slot 5 · Wahrheit kaputt · Konf. 0.7
+- coding-fail_subtle-1204 · deploy · Slot 9 · Wahrheit kaputt · Konf. 0.9
+- business-fail_subtle-1203 · smtp · Slot 4 · Wahrheit kaputt · Konf. 0.93
+- coding-fail_subtle-1202 · deploy · Slot 1 · Wahrheit kaputt · Konf. 0.6
+- research-ok_noisy-1208 · joblog · Slot 3 · Wahrheit ok · Konf. 0.6
+- research-ok_clear-1208 · joblog · Slot 5 · Wahrheit ok · Konf. 0.5
+- research-ok_noisy-1208 · output · Slot 3 · Wahrheit ok · Konf. 0.6
+- coding-fail_moderate-1200 · deploy · Slot 10 · Wahrheit kaputt · Konf. 0.88
+- coding-fail_subtle-1211 · probe · Slot 3 · Wahrheit kaputt · Konf. 0.5
+- coding-fail_moderate-1210 · probe · Slot 1 · Wahrheit kaputt · Konf. 0.6
+- coding-fail_moderate-1207 · probe · Slot 5 · Wahrheit kaputt · Konf. 0.6

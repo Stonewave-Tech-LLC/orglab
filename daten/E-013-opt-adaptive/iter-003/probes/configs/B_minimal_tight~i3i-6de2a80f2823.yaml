@@ -1,0 +1,22 @@
+name: B_minimal_tight~i3i
+description: Full mesh, no roles. Message only the agent who must act; hold only claims
+  you are acting on; final ticks are reserved for re-verifying everything.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- Every message costs one of your scarce actions. Do not broadcast. Send one message,
+  and only to the specific agent who must act on it. Skip any message that does not
+  change what its recipient will do.
+- Hold a claim only while you are actively working on it. If you cannot execute an
+  item this tick or next, or another agent asks to fix an item you own, release it
+  immediately so someone else can act.
+- Your work is not finished when it first checks out; later work can undo it. In the
+  last two ticks, stop starting new items. Re-inspect every item you own or reported
+  done, and re-execute or hand off anything that no longer verifies.
+max_ticks: 8
+max_tool_calls: 4

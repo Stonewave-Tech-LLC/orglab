@@ -1,0 +1,56 @@
+{
+  "iteration": 0,
+  "start": {
+    "name": "B_minimal",
+    "description": "No roles, no rules, full mesh. Organisation must emerge.",
+    "n_agents": 4,
+    "topology": "mesh",
+    "board": false,
+    "shared_notes": false,
+    "human_channel": "anyone",
+    "role_mode": "none",
+    "roles": [],
+    "norms": [],
+    "max_ticks": 10,
+    "max_tool_calls": 8
+  },
+  "current": {
+    "name": "B_minimal",
+    "description": "No roles, no rules, full mesh. Organisation must emerge.",
+    "n_agents": 4,
+    "topology": "mesh",
+    "board": false,
+    "shared_notes": false,
+    "human_channel": "anyone",
+    "role_mode": "none",
+    "roles": [],
+    "norms": [],
+    "max_ticks": 10,
+    "max_tool_calls": 8
+  },
+  "history": [],
+  "library": [],
+  "holdout": [],
+  "no_improve": 0,
+  "started": "2026-10-21T00:37:34",
+  "settings": {
+    "scenario": "phantom_hard",
+    "train": [
+      "coding",
+      "business"
+    ],
+    "holdout": [
+      "research"
+    ],
+    "seeds_per_probe": 5,
+    "backend": {
+      "kind": "agent_sdk",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium"
+    },
+    "alpha": 0.1,
+    "min_effect": 0.02,
+    "token_guard": 3.0,
+    "editor_model": "claude-opus-5-5"
+  }
+}

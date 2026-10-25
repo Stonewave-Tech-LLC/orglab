@@ -1,0 +1,52 @@
+===== 1. verdict gegen letztes JSON im Endtext =====
+S: Urteile 4603, ohne JSON im Endausschnitt 0, Widerspruch 0
+H: Urteile 4604, ohne JSON im Endausschnitt 47, Widerspruch 0
+
+===== 2. Fehlende Urteile ausgeschlossen =====
+6000 S: Trefferquote ohne Nulls 0.9761 (mit Nulls als falsch 0.9761)
+6000 H: Trefferquote ohne Nulls 0.9106 (mit Nulls als falsch 0.9102)
+7000 S: Trefferquote ohne Nulls 0.9722 (mit Nulls als falsch 0.9701)
+7000 H: Trefferquote ohne Nulls 0.9044 (mit Nulls als falsch 0.9032)
+Nulls nach Beleg: Counter({('business-fail_moderate-7016', 'S'): 5, ('business-ok_noisy-6014', 'H'): 1, ('coding-ok_noisy-7010', 'H'): 1, ('coding-ok_clear-7015', 'H'): 1, ('business-fail_moderate-7016', 'H'): 1})
+7000 gemeinsame Fehler 45, ohne business-fail_moderate-7016: 45
+
+===== 3. Replikation 6000 gegen 7000: Haupteffekte (pp) je Modell =====
+S SP: 6000  -0.3pp, 7000  -0.6pp
+S ZU: 6000  +4.1pp, 7000  +3.9pp
+S AU: 6000  +0.8pp, 7000  +0.3pp
+H SP: 6000  -8.1pp, 7000  -7.6pp
+H ZU: 6000  +0.1pp, 7000  +1.1pp
+H AU: 6000  -1.5pp, 7000  -0.6pp
+
+===== 4. Haiku: Konsistenz des Nachschlagens zwischen AU0 und AU1 (gleicher Beleg, gleiche SP/ZU) =====
+6000 SP1-ZU1: Nachschlagen AU0 0.51, AU1 0.38, κ(AU0,AU1) +0.48
+6000 SP1-ZU0: Nachschlagen AU0 0.87, AU1 0.86, κ(AU0,AU1) +0.64
+6000 SP0-ZU1: Nachschlagen AU0 0.45, AU1 0.18, κ(AU0,AU1) +0.23
+6000 SP0-ZU0: Nachschlagen AU0 0.61, AU1 0.53, κ(AU0,AU1) +0.39
+   SP1-ZU1 Nachschlagequote nach Domäne/Wahrheit: {('business', False): 0.04, ('business', True): 0.23, ('coding', False): 0.33, ('coding', True): 0.33, ('research', False): 0.8, ('research', True): 0.95}
+7000 SP1-ZU1: Nachschlagen AU0 0.44, AU1 0.38, κ(AU0,AU1) +0.55
+7000 SP1-ZU0: Nachschlagen AU0 0.89, AU1 0.84, κ(AU0,AU1) +0.53
+7000 SP0-ZU1: Nachschlagen AU0 0.45, AU1 0.19, κ(AU0,AU1) +0.25
+7000 SP0-ZU0: Nachschlagen AU0 0.63, AU1 0.58, κ(AU0,AU1) +0.47
+   SP1-ZU1 Nachschlagequote nach Domäne/Wahrheit: {('business', False): 0.07, ('business', True): 0.14, ('coding', False): 0.22, ('coding', True): 0.22, ('research', False): 0.81, ('research', True): 0.99}
+
+===== 5. Konfidenz: Haiku SP1-ZU1, primary-Fehler =====
+richtig n=171, mittl. Konfidenz 0.745; falsch n=165, mittl. Konfidenz 0.856
+Haiku ZU0 intakte Belege: falsch-Alarm n=144, Konfidenz 0.576; richtig Konfidenz 0.783
+Sonnet ZU0 kaputte Belege: übersehen n=105, Konfidenz 0.800; erkannt Konfidenz 0.867
+
+===== 6. AU1: Erwähnung des Agentenberichts im Endausschnitt (explorativ) =====
+S truth=True : erwähnt 26/1152; Trefferquote erwähnt 0.962, nicht erwähnt 0.999
+S truth=False: erwähnt 647/1149; Trefferquote erwähnt 0.995, nicht erwähnt 0.904
+   S AU0 Kontrolle: Muster trifft in 2/2302
+H truth=True : erwähnt 586/1151; Trefferquote erwähnt 0.925, nicht erwähnt 0.896
+H truth=False: erwähnt 605/1152; Trefferquote erwähnt 0.902, nicht erwähnt 0.883
+   H AU0 Kontrolle: Muster trifft in 1/2301
+
+===== 7. Läufe mit 6 Werkzeugrunden =====
+6000 H research-fail_subtle-6001 SP1-ZU1-AU0 1
+7000 S research-ok_noisy-7000 SP0-ZU1-AU1 1
+
+===== 8. ZU1: Anteil mit allen 3 Kanälen und Nachschlagen je Modell =====
+S: alle 3 Kanäle 1.000, nachgeschlagen 0.998
+H: alle 3 Kanäle 1.000, nachgeschlagen 0.373

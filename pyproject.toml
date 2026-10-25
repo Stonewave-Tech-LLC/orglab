@@ -1,0 +1,15 @@
+[project]
+name = "orglab"
+version = "0.1.0"
+description = "Testbed: emergente Organisation in Multi-Agent-Systemen"
+requires-python = ">=3.12"
+dependencies = ["claude-agent-sdk>=0.2.169", "pyyaml>=6"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["orglab*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

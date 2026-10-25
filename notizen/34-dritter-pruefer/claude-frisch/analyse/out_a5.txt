@@ -1,0 +1,255 @@
+===== GPT selbst =====
+GPT Trefferquote 0.844; decidable ja 229/288
+  decidable=True: n=229, GPT richtig 0.987, GPT sagt kaputt 0.550, Wahrheit kaputt 0.555
+  decidable=False: n=59, GPT richtig 0.288, GPT sagt kaputt 1.000, Wahrheit kaputt 0.288
+
+Entscheidbarkeit nach Typ (n nicht entscheidbar / n) und vorgelegtem Kanal:
+  business|fail_moderate|amount_mismatch      0/ 6   (delivery:0/2, ledger:0/2, smtp:0/2)
+  business|fail_moderate|bounced              2/ 6   (delivery:0/2, ledger:2/2, smtp:0/2)
+  business|fail_moderate|wrong_contact        0/ 6   (delivery:0/2, ledger:0/2, smtp:0/2)
+  business|fail_moderate|wrong_terms          0/ 6   (delivery:0/2, ledger:0/2, smtp:0/2)
+  business|fail_subtle|amount_mismatch        0/ 6   (delivery:0/2, ledger:0/2, smtp:0/2)
+  business|fail_subtle|bounced                0/ 6   (delivery:0/2, ledger:0/2, smtp:0/2)
+  business|fail_subtle|wrong_contact          0/ 6   (delivery:0/2, ledger:0/2, smtp:0/2)
+  business|fail_subtle|wrong_terms            0/ 6   (delivery:0/2, ledger:0/2, smtp:0/2)
+  business|ok_clear                           0/24   (delivery:0/8, ledger:0/8, smtp:0/8)
+  business|ok_noisy                           0/24   (delivery:0/8, ledger:0/8, smtp:0/8)
+  coding|fail_moderate|cache_partial          0/ 6   (deploy:0/2, probe:0/2, sockets:0/2)
+  coding|fail_moderate|db_down                6/ 6   (deploy:2/2, probe:2/2, sockets:2/2)
+  coding|fail_moderate|low_traffic            4/ 6   (deploy:0/2, probe:2/2, sockets:2/2)
+  coding|fail_moderate|stale_process          0/ 6   (deploy:0/2, probe:0/2, sockets:0/2)
+  coding|fail_subtle|cache_partial            0/ 6   (deploy:0/2, probe:0/2, sockets:0/2)
+  coding|fail_subtle|db_down                  4/ 6   (deploy:1/2, probe:1/2, sockets:2/2)
+  coding|fail_subtle|low_traffic              1/ 6   (deploy:0/2, probe:0/2, sockets:1/2)
+  coding|fail_subtle|stale_process            0/ 6   (deploy:0/2, probe:0/2, sockets:0/2)
+  coding|ok_clear                            15/24   (deploy:6/8, probe:6/8, sockets:3/8)
+  coding|ok_noisy                            12/24   (deploy:5/8, probe:3/8, sockets:4/8)
+  research|fail_moderate|column_loss          0/ 6   (joblog:0/2, output:0/2, validation:0/2)
+  research|fail_moderate|duplicates_partial   0/ 6   (joblog:0/2, output:0/2, validation:0/2)
+  research|fail_moderate|row_loss             0/ 6   (joblog:0/2, output:0/2, validation:0/2)
+  research|fail_moderate|weights_misscaled    0/ 6   (joblog:0/2, output:0/2, validation:0/2)
+  research|fail_subtle|column_loss            0/ 6   (joblog:0/2, output:0/2, validation:0/2)
+  research|fail_subtle|duplicates_partial     0/ 6   (joblog:0/2, output:0/2, validation:0/2)
+  research|fail_subtle|row_loss               0/ 6   (joblog:0/2, output:0/2, validation:0/2)
+  research|fail_subtle|weights_misscaled      0/ 6   (joblog:0/2, output:0/2, validation:0/2)
+  research|ok_clear                          13/24   (joblog:8/8, output:0/8, validation:5/8)
+  research|ok_noisy                           2/24   (joblog:1/8, output:0/8, validation:1/8)
+
+GPT-Richtigkeit nach Typ:
+  business|fail_moderate|amount_mismatch     GPT richtig 1.00
+  business|fail_moderate|bounced             GPT richtig 1.00
+  business|fail_moderate|wrong_contact       GPT richtig 1.00
+  business|fail_moderate|wrong_terms         GPT richtig 1.00
+  business|fail_subtle|amount_mismatch       GPT richtig 1.00
+  business|fail_subtle|bounced               GPT richtig 1.00
+  business|fail_subtle|wrong_contact         GPT richtig 1.00
+  business|fail_subtle|wrong_terms           GPT richtig 1.00
+  business|ok_clear                          GPT richtig 1.00
+  business|ok_noisy                          GPT richtig 1.00
+  coding|fail_moderate|cache_partial         GPT richtig 1.00
+  coding|fail_moderate|db_down               GPT richtig 1.00
+  coding|fail_moderate|low_traffic           GPT richtig 1.00
+  coding|fail_moderate|stale_process         GPT richtig 1.00
+  coding|fail_subtle|cache_partial           GPT richtig 1.00
+  coding|fail_subtle|db_down                 GPT richtig 1.00
+  coding|fail_subtle|low_traffic             GPT richtig 0.67
+  coding|fail_subtle|stale_process           GPT richtig 1.00
+  coding|ok_clear                            GPT richtig 0.38
+  coding|ok_noisy                            GPT richtig 0.46
+  research|fail_moderate|column_loss         GPT richtig 1.00
+  research|fail_moderate|duplicates_partial  GPT richtig 1.00
+  research|fail_moderate|row_loss            GPT richtig 1.00
+  research|fail_moderate|weights_misscaled   GPT richtig 1.00
+  research|fail_subtle|column_loss           GPT richtig 1.00
+  research|fail_subtle|duplicates_partial    GPT richtig 1.00
+  research|fail_subtle|row_loss              GPT richtig 1.00
+  research|fail_subtle|weights_misscaled     GPT richtig 1.00
+  research|ok_clear                          GPT richtig 0.46
+  research|ok_noisy                          GPT richtig 0.92
+
+===== Richtigkeit nach GPT-Entscheidbarkeit, alle Belege =====
+S dec=True  SP=0 ZU0                                   98.0 [  96.4;   99.3]
+S dec=True  SP=0 ZU1                                  100.0 [ 100.0;  100.0]
+S dec=True  SP=0 ZU1-ZU0 pp                             2.0 [   0.7;    3.6]
+S dec=True  SP=0 ZU1-ZU0 lo                            2.964 [  1.953;   3.533]
+S dec=True  SP=1 ZU0                                   97.8 [  96.1;   99.1]
+S dec=True  SP=1 ZU1                                   99.8 [  99.3;  100.0]
+S dec=True  SP=1 ZU1-ZU0 pp                             2.0 [   0.7;    3.6]
+S dec=True  SP=1 ZU1-ZU0 lo                            1.966 [  1.039;   3.398]
+S dec=True  SP=* ZU0                                   97.9 [  96.3;   99.2]
+S dec=True  SP=* ZU1                                   99.9 [  99.7;  100.0]
+S dec=True  SP=* ZU1-ZU0 pp                             2.0 [   0.7;    3.5]
+S dec=True  SP=* ZU1-ZU0 lo                            2.585 [  1.620;   4.037]
+S dec=False SP=0 ZU0                                   85.6 [  77.1;   93.8]
+S dec=False SP=0 ZU1                                   95.8 [  91.1;   99.2]
+S dec=False SP=0 ZU1-ZU0 pp                            10.2 [   0.0;   20.0]
+S dec=False SP=0 ZU1-ZU0 lo                            1.269 [  0.000;   2.876]
+S dec=False SP=1 ZU0                                   82.2 [  72.8;   90.4]
+S dec=False SP=1 ZU1                                   94.9 [  89.8;   99.2]
+S dec=False SP=1 ZU1-ZU0 pp                            12.7 [   2.8;   22.7]
+S dec=False SP=1 ZU1-ZU0 lo                            1.339 [  0.360;   2.864]
+S dec=False SP=* ZU0                                   83.9 [  75.0;   91.8]
+S dec=False SP=* ZU1                                   95.3 [  91.2;   98.8]
+S dec=False SP=* ZU1-ZU0 pp                            11.4 [   2.3;   21.0]
+S dec=False SP=* ZU1-ZU0 lo                            1.336 [  0.319;   2.654]
+S ZU0 SP0: nicht-entsch. − entsch. pp                 -12.4 [ -21.6;   -3.9]
+S ZU-Effekt: nicht-entsch. − entsch. (lo, alle SP)    -1.249 [ -3.122;   0.315]
+H dec=True  SP=0 ZU0                                   94.8 [  92.3;   97.0]
+H dec=True  SP=0 ZU1                                   99.1 [  98.2;   99.8]
+H dec=True  SP=0 ZU1-ZU0 pp                             4.4 [   2.0;    6.9]
+H dec=True  SP=0 ZU1-ZU0 lo                            1.740 [  0.878;   2.929]
+H dec=True  SP=1 ZU0                                   91.9 [  89.0;   94.8]
+H dec=True  SP=1 ZU1                                   82.8 [  79.0;   86.3]
+H dec=True  SP=1 ZU1-ZU0 pp                            -9.2 [ -13.7;   -4.8]
+H dec=True  SP=1 ZU1-ZU0 lo                           -0.856 [ -1.357;  -0.432]
+H dec=True  SP=* ZU0                                   93.3 [  90.9;   95.7]
+H dec=True  SP=* ZU1                                   90.9 [  88.9;   92.9]
+H dec=True  SP=* ZU1-ZU0 pp                            -2.4 [  -5.4;    0.5]
+H dec=True  SP=* ZU1-ZU0 lo                           -0.332 [ -0.836;   0.072]
+H dec=False SP=0 ZU0                                   72.0 [  62.9;   80.5]
+H dec=False SP=0 ZU1                                   94.1 [  89.6;   98.0]
+H dec=False SP=0 ZU1-ZU0 pp                            22.0 [  12.5;   33.1]
+H dec=False SP=0 ZU1-ZU0 lo                            1.762 [  0.982;   2.862]
+H dec=False SP=1 ZU0                                   79.7 [  70.5;   87.7]
+H dec=False SP=1 ZU1                                   87.3 [  81.0;   94.1]
+H dec=False SP=1 ZU1-ZU0 pp                             7.6 [  -0.8;   17.2]
+H dec=False SP=1 ZU1-ZU0 lo                            0.549 [ -0.062;   1.322]
+H dec=False SP=* ZU0                                   75.8 [  67.2;   83.9]
+H dec=False SP=* ZU1                                   90.7 [  86.7;   94.7]
+H dec=False SP=* ZU1-ZU0 pp                            14.8 [   6.8;   23.7]
+H dec=False SP=* ZU1-ZU0 lo                            1.116 [  0.562;   1.736]
+H ZU0 SP0: nicht-entsch. − entsch. pp                 -22.7 [ -31.8;  -13.7]
+H ZU-Effekt: nicht-entsch. − entsch. (lo, alle SP)     1.448 [  0.750;   2.268]
+
+===== Richtigkeit nach GPT-Entscheidbarkeit, nur kaputte Belege =====
+S dec=True  SP=0 ZU0                                   96.5 [  93.5;   99.2]
+S dec=True  SP=0 ZU1                                  100.0 [ 100.0;  100.0]
+S dec=True  SP=0 ZU1-ZU0 pp                             3.5 [   1.1;    6.5]
+S dec=True  SP=0 ZU1-ZU0 lo                            2.980 [  1.957;   3.564]
+S dec=True  SP=1 ZU0                                   96.1 [  92.7;   98.5]
+S dec=True  SP=1 ZU1                                   99.6 [  98.8;  100.0]
+S dec=True  SP=1 ZU1-ZU0 pp                             3.5 [   1.1;    6.7]
+S dec=True  SP=1 ZU1-ZU0 lo                            1.982 [  0.972;   3.425]
+S dec=True  SP=* ZU0                                   96.3 [  93.2;   98.8]
+S dec=True  SP=* ZU1                                   99.8 [  99.4;  100.0]
+S dec=True  SP=* ZU1-ZU0 pp                             3.5 [   1.2;    6.6]
+S dec=True  SP=* ZU1-ZU0 lo                            2.601 [  1.622;   4.097]
+S dec=False SP=0 ZU0                                   50.0 [  25.0;   73.3]
+S dec=False SP=0 ZU1                                   91.2 [  81.8;  100.0]
+S dec=False SP=0 ZU1-ZU0 pp                            41.2 [  15.4;   70.0]
+S dec=False SP=0 ZU1-ZU0 lo                            2.197 [  0.828;   4.422]
+S dec=False SP=1 ZU0                                   41.2 [  19.4;   64.7]
+S dec=False SP=1 ZU1                                   82.4 [  65.8;   97.4]
+S dec=False SP=1 ZU1-ZU0 pp                            41.2 [  11.5;   70.0]
+S dec=False SP=1 ZU1-ZU0 lo                            1.824 [  0.513;   3.970]
+S dec=False SP=* ZU0                                   45.6 [  23.1;   68.3]
+S dec=False SP=* ZU1                                   86.8 [  73.7;   98.5]
+S dec=False SP=* ZU1-ZU0 pp                            41.2 [  14.3;   69.3]
+S dec=False SP=* ZU1-ZU0 lo                            2.009 [  0.679;   4.558]
+S ZU0 SP0: nicht-entsch. − entsch. pp                 -46.5 [ -71.8;  -23.4]
+S ZU-Effekt: nicht-entsch. − entsch. (lo, alle SP)    -0.592 [ -2.613;   2.021]
+H dec=True  SP=0 ZU0                                   97.6 [  95.2;   99.6]
+H dec=True  SP=0 ZU1                                   99.2 [  98.0;  100.0]
+H dec=True  SP=0 ZU1-ZU0 pp                             1.6 [   0.0;    3.6]
+H dec=True  SP=0 ZU1-ZU0 lo                            0.971 [  0.000;   2.418]
+H dec=True  SP=1 ZU0                                   96.1 [  93.3;   98.4]
+H dec=True  SP=1 ZU1                                   69.3 [  62.7;   75.8]
+H dec=True  SP=1 ZU1-ZU0 pp                           -26.8 [ -33.2;  -20.6]
+H dec=True  SP=1 ZU1-ZU0 lo                           -2.338 [ -3.196;  -1.774]
+H dec=True  SP=* ZU0                                   96.9 [  94.3;   99.0]
+H dec=True  SP=* ZU1                                   84.3 [  80.8;   87.5]
+H dec=True  SP=* ZU1-ZU0 pp                           -12.6 [ -16.0;   -9.2]
+H dec=True  SP=* ZU1-ZU0 lo                           -1.724 [ -2.693;  -1.151]
+H dec=False SP=0 ZU0                                   55.9 [  34.2;   76.9]
+H dec=False SP=0 ZU1                                   88.2 [  77.3;   97.1]
+H dec=False SP=0 ZU1-ZU0 pp                            32.4 [   5.9;   60.0]
+H dec=False SP=0 ZU1-ZU0 lo                            1.684 [  0.334;   3.371]
+H dec=False SP=1 ZU0                                   61.8 [  40.0;   82.5]
+H dec=False SP=1 ZU1                                   55.9 [  37.5;   75.0]
+H dec=False SP=1 ZU1-ZU0 pp                            -5.9 [ -30.0;   20.0]
+H dec=False SP=1 ZU1-ZU0 lo                           -0.236 [ -1.257;   0.788]
+H dec=False SP=* ZU0                                   58.8 [  37.5;   79.2]
+H dec=False SP=* ZU1                                   72.1 [  61.8;   82.8]
+H dec=False SP=* ZU1-ZU0 pp                            13.2 [  -8.9;   35.7]
+H dec=False SP=* ZU1-ZU0 lo                            0.580 [ -0.428;   1.529]
+H ZU0 SP0: nicht-entsch. − entsch. pp                 -41.8 [ -63.9;  -21.0]
+H ZU-Effekt: nicht-entsch. − entsch. (lo, alle SP)     2.304 [  1.141;   3.648]
+
+===== Richtigkeit nach GPT-Entscheidbarkeit, nur intakte Belege =====
+S dec=True  SP=0 ZU0                                  100.0 [ 100.0;  100.0]
+S dec=True  SP=0 ZU1                                  100.0 [ 100.0;  100.0]
+S dec=True  SP=0 ZU1-ZU0 pp                             0.0 [   0.0;    0.0]
+S dec=True  SP=0 ZU1-ZU0 lo                            0.000 [  0.000;   0.000]
+S dec=True  SP=1 ZU0                                  100.0 [ 100.0;  100.0]
+S dec=True  SP=1 ZU1                                  100.0 [ 100.0;  100.0]
+S dec=True  SP=1 ZU1-ZU0 pp                             0.0 [   0.0;    0.0]
+S dec=True  SP=1 ZU1-ZU0 lo                            0.000 [  0.000;   0.000]
+S dec=True  SP=* ZU0                                  100.0 [ 100.0;  100.0]
+S dec=True  SP=* ZU1                                  100.0 [ 100.0;  100.0]
+S dec=True  SP=* ZU1-ZU0 pp                             0.0 [   0.0;    0.0]
+S dec=True  SP=* ZU1-ZU0 lo                            0.000 [  0.000;   0.000]
+S dec=False SP=0 ZU0                                  100.0 [ 100.0;  100.0]
+S dec=False SP=0 ZU1                                   97.6 [  91.7;  100.0]
+S dec=False SP=0 ZU1-ZU0 pp                            -2.4 [  -8.3;    0.0]
+S dec=False SP=0 ZU1-ZU0 lo                           -1.633 [ -2.651;   0.000]
+S dec=False SP=1 ZU0                                   98.8 [  95.8;  100.0]
+S dec=False SP=1 ZU1                                  100.0 [ 100.0;  100.0]
+S dec=False SP=1 ZU1-ZU0 pp                             1.2 [   0.0;    4.2]
+S dec=False SP=1 ZU1-ZU0 lo                            1.111 [  0.000;   1.988]
+S dec=False SP=* ZU0                                   99.4 [  97.9;  100.0]
+S dec=False SP=* ZU1                                   98.8 [  95.8;  100.0]
+S dec=False SP=* ZU1-ZU0 pp                            -0.6 [  -2.1;    0.0]
+S dec=False SP=* ZU1-ZU0 lo                           -0.517 [ -0.640;   0.000]
+S ZU0 SP0: nicht-entsch. − entsch. pp                   0.0 [   0.0;    0.0]
+S ZU-Effekt: nicht-entsch. − entsch. (lo, alle SP)    -0.517 [ -0.640;   0.000]
+H dec=True  SP=0 ZU0                                   91.2 [  86.6;   95.6]
+H dec=True  SP=0 ZU1                                   99.0 [  97.5;  100.0]
+H dec=True  SP=0 ZU1-ZU0 pp                             7.8 [   3.4;   12.7]
+H dec=True  SP=0 ZU1-ZU0 lo                            2.084 [  1.016;   3.924]
+H dec=True  SP=1 ZU0                                   86.8 [  80.8;   92.3]
+H dec=True  SP=1 ZU1                                   99.5 [  98.4;  100.0]
+H dec=True  SP=1 ZU1-ZU0 pp                            12.7 [   7.2;   18.7]
+H dec=True  SP=1 ZU1-ZU0 lo                            3.045 [  1.909;   4.517]
+H dec=True  SP=* ZU0                                   89.0 [  84.1;   93.5]
+H dec=True  SP=* ZU1                                   99.3 [  98.3;  100.0]
+H dec=True  SP=* ZU1-ZU0 pp                            10.3 [   5.8;   15.3]
+H dec=True  SP=* ZU1-ZU0 lo                            2.674 [  1.741;   4.683]
+H dec=False SP=0 ZU0                                   78.6 [  69.5;   87.2]
+H dec=False SP=0 ZU1                                   96.4 [  92.1;  100.0]
+H dec=False SP=0 ZU1-ZU0 pp                            17.9 [   8.3;   27.1]
+H dec=False SP=0 ZU1-ZU0 lo                            1.868 [  0.838;   3.718]
+H dec=False SP=1 ZU0                                   86.9 [  78.6;   94.0]
+H dec=False SP=1 ZU1                                  100.0 [ 100.0;  100.0]
+H dec=False SP=1 ZU1-ZU0 pp                            13.1 [   6.0;   21.6]
+H dec=False SP=1 ZU1-ZU0 lo                            3.275 [  2.459;   3.883]
+H dec=False SP=* ZU0                                   82.7 [  74.3;   90.1]
+H dec=False SP=* ZU1                                   98.2 [  96.1;  100.0]
+H dec=False SP=* ZU1-ZU0 pp                            15.5 [   7.9;   24.3]
+H dec=False SP=* ZU1-ZU0 lo                            2.303 [  1.298;   4.122]
+H ZU0 SP0: nicht-entsch. − entsch. pp                 -12.6 [ -23.2;   -2.4]
+H ZU-Effekt: nicht-entsch. − entsch. (lo, alle SP)    -0.372 [ -2.284;   1.524]
+
+===== Innerhalb Typ: ZU0-Fehlerquote nach decidable (Zählung über ZU0-Zellen) =====
+business|fail_moderate|bounced             S/dec=T:   0.0% (0/16) S/dec=F:  25.0% (2/8) H/dec=T:   0.0% (0/16) H/dec=F:  12.5% (1/8)
+business|ok_noisy                          S/dec=T:   0.0% (0/96) H/dec=T:  24.0% (23/96)
+coding|fail_moderate|db_down               S/dec=F:  37.5% (9/24) H/dec=F:  33.3% (8/24)
+coding|fail_moderate|low_traffic           S/dec=T:   0.0% (0/8) S/dec=F: 100.0% (16/16) H/dec=T:   0.0% (0/8) H/dec=F:  81.2% (13/16)
+coding|fail_subtle|cache_partial           S/dec=T:  12.5% (3/24) H/dec=T:   4.2% (1/24)
+coding|fail_subtle|db_down                 S/dec=T: 100.0% (8/8) S/dec=F:  37.5% (6/16) H/dec=T:  37.5% (3/8) H/dec=F:  12.5% (2/16)
+coding|fail_subtle|low_traffic             S/dec=T:  40.0% (8/20) S/dec=F: 100.0% (4/4) H/dec=T:  45.0% (9/20) H/dec=F: 100.0% (4/4)
+coding|ok_clear                            S/dec=T:   0.0% (0/36) S/dec=F:   1.7% (1/60) H/dec=T:  22.2% (8/36) H/dec=F:   6.7% (4/60)
+coding|ok_noisy                            S/dec=T:   0.0% (0/48) S/dec=F:   0.0% (0/48) H/dec=T:  29.2% (14/48) H/dec=F:  45.8% (22/48)
+
+===== Gemeinsame Fehler bei ZU0, geschichtet nach Typ×Zelle vs. Typ×Zelle×decidable =====
+κ Typ×Zelle                      0.268 [  0.120;   0.330]
+κ Typ×Zelle×decidable            0.191 [  0.056;   0.258]
+DF Typ×Zelle                     1.835 [  1.236;   2.540]
+DF Typ×Zelle×decidable           1.417 [  1.091;   1.741]
+
+===== Explorativ: ZU0-Fehler nach vorgelegtem Kanal bei schwierigen Coding-Fehlern =====
+low_traffic    S: deploy/dec=T: 0/16, probe/dec=F: 8/8, probe/dec=T: 4/8, sockets/dec=F: 12/12, sockets/dec=T: 4/4
+low_traffic    H: deploy/dec=T: 0/16, probe/dec=F: 8/8, probe/dec=T: 5/8, sockets/dec=F: 9/12, sockets/dec=T: 4/4
+db_down        S: deploy/dec=F: 12/12, deploy/dec=T: 4/4, probe/dec=F: 3/12, probe/dec=T: 4/4, sockets/dec=F: 0/16
+db_down        H: deploy/dec=F: 10/12, deploy/dec=T: 1/4, probe/dec=F: 0/12, probe/dec=T: 2/4, sockets/dec=F: 0/16
+cache_partial  S: deploy/dec=T: 0/16, probe/dec=T: 0/16, sockets/dec=T: 3/16
+cache_partial  H: deploy/dec=T: 0/16, probe/dec=T: 0/16, sockets/dec=T: 2/16

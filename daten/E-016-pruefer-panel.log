@@ -1,0 +1,61 @@
+[panel] 300 Belege × 8 Modelle × 3 = 7200, offen 7200 | heute verbraucht 0.09 $ von 10.00 $
+[panel] 100/7200 | verbraucht heute 0.16 $
+[panel] 200/7200 | verbraucht heute 0.22 $
+[panel] 300/7200 | verbraucht heute 0.28 $
+[panel] 400/7200 | verbraucht heute 0.35 $
+[panel] 500/7200 | verbraucht heute 0.42 $
+[panel] 600/7200 | verbraucht heute 0.49 $
+[panel] 700/7200 | verbraucht heute 0.56 $
+[panel] 800/7200 | verbraucht heute 0.64 $
+[panel] 900/7200 | verbraucht heute 0.71 $
+[panel] 1000/7200 | verbraucht heute 0.78 $
+[panel] 1100/7200 | verbraucht heute 0.84 $
+[panel] 1200/7200 | verbraucht heute 0.91 $
+[panel] 1300/7200 | verbraucht heute 0.96 $
+[panel] 1400/7200 | verbraucht heute 1.02 $
+[panel] 1500/7200 | verbraucht heute 1.09 $
+[panel] 1600/7200 | verbraucht heute 1.16 $
+[panel] 1700/7200 | verbraucht heute 1.24 $
+[panel] 1800/7200 | verbraucht heute 1.31 $
+[panel] 1900/7200 | verbraucht heute 1.39 $
+[panel] 2000/7200 | verbraucht heute 1.47 $
+[panel] 2100/7200 | verbraucht heute 1.55 $
+[panel] 2200/7200 | verbraucht heute 1.64 $
+[panel] 2300/7200 | verbraucht heute 1.73 $
+[panel] 2400/7200 | verbraucht heute 1.81 $
+[panel] 2500/7200 | verbraucht heute 1.87 $
+[panel] 2600/7200 | verbraucht heute 1.93 $
+[panel] 2700/7200 | verbraucht heute 1.99 $
+[panel] 2800/7200 | verbraucht heute 2.05 $
+[panel] 2900/7200 | verbraucht heute 2.12 $
+[panel] 3000/7200 | verbraucht heute 2.19 $
+[panel] 3100/7200 | verbraucht heute 2.27 $
+[panel] 3200/7200 | verbraucht heute 2.34 $
+[panel] 3300/7200 | verbraucht heute 2.41 $
+[panel] 3400/7200 | verbraucht heute 2.47 $
+[panel] 3500/7200 | verbraucht heute 2.53 $
+[panel] 3600/7200 | verbraucht heute 2.58 $
+[panel] 3700/7200 | verbraucht heute 2.63 $
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<home>\Desktop\AI Workspace\social-skills-benchmark\orglab\panel.py", line 252, in <module>
+    main()
+    ~~~~^^
+  File "<home>\Desktop\AI Workspace\social-skills-benchmark\orglab\panel.py", line 246, in main
+    run(a.experiment, range(min(s), max(s) + 1), a.samples, a.models, a.workers)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>\Desktop\AI Workspace\social-skills-benchmark\orglab\panel.py", line 115, in run
+    print(f"[panel] {n}/{len(jobs)} | verbraucht heute {openrouter.spent_today():.2f} $", flush=True)
+                                                        ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "<home>\Desktop\AI Workspace\social-skills-benchmark\orglab\openrouter.py", line 58, in spent_today
+    e = json.loads(line)
+  File "<home>\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "<home>\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

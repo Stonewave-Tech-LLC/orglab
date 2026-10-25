@@ -1,0 +1,24 @@
+name: B_minimal_tight~i3s
+description: Full mesh. Items that overwrite each other's records are consolidated
+  under one owner, who repairs reversals immediately; final-tick verification of done
+  items.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- A green status signal after execute is not proof. Inspect before report_done. If
+  inspect says FAILED or not working, simply execute it again, since a bounce or a
+  stale flag is fixed by re-running.
+- If inspect shows item X was reversed by item Y (they share a record), the owner
+  of X releases X immediately. The owner of Y claims X, re-executes it right after
+  Y, and inspects both. One agent should own both items of a shared record.
+- Claim only items you can execute this tick or next. Message only the specific agent
+  who must act, never all peers at once.
+- In the last two ticks, re-inspect every item you reported done. Re-execute any that
+  were reversed, then take any unclaimed or unprocessed items.
+max_ticks: 8
+max_tool_calls: 4

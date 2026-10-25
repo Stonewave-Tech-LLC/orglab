@@ -1,0 +1,59 @@
+[sweep] k1: 20 Runs, davon 0 schon fertig, 20 offen
+[sweep] 1/20 B_no_human/coding/seed 0: {'end_reason': 'max_ticks', 'true_completion': 0.7142857142857143, 'false_done_rate': 0.16666666666666666} (~107 min übrig)
+[sweep] 2/20 B_no_human/coding/seed 1: {'end_reason': 'max_ticks', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.07692307692307693} (~54 min übrig)
+[sweep] 3/20 B_no_human/coding/seed 3: {'end_reason': 'max_ticks', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.14285714285714285} (~65 min übrig)
+[sweep] 4/20 B_no_human/coding/seed 2: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.21428571428571427} (~48 min übrig)
+[sweep] 5/20 B_no_human/coding/seed 4: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~48 min übrig)
+[sweep] 6/20 B_no_human/business/seed 0: {'end_reason': 'max_ticks', 'true_completion': 0.6428571428571429, 'false_done_rate': 0.3333333333333333} (~38 min übrig)
+[sweep] 7/20 B_no_human/business/seed 2: {'end_reason': 'quiescent', 'true_completion': 0.42857142857142855, 'false_done_rate': 0.5} (~35 min übrig)
+[sweep] 8/20 B_no_human/business/seed 1: {'end_reason': 'max_ticks', 'true_completion': 0.5, 'false_done_rate': 0.4166666666666667} (~28 min übrig)
+[sweep] 9/20 B_no_human/business/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~27 min übrig)
+[sweep] 10/20 B_no_human/business/seed 4: {'end_reason': 'max_ticks', 'true_completion': 0.7142857142857143, 'false_done_rate': 0.23076923076923078} (~22 min übrig)
+[sweep] 11/20 B_no_human_vote/coding/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~20 min übrig)
+[sweep] 12/20 B_no_human_vote/coding/seed 0: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~17 min übrig)
+[sweep] 13/20 B_no_human_vote/coding/seed 3: {'end_reason': 'quiescent', 'true_completion': 0.7142857142857143, 'false_done_rate': 0.16666666666666666} (~14 min übrig)
+[sweep] 14/20 B_no_human_vote/coding/seed 4: {'end_reason': 'quiescent', 'true_completion': 0.0, 'false_done_rate': 1.0} (~11 min übrig)
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 4:20pm (Europe/Vienna)); Pause 1 min, Versuch 1/8
+[sweep] 15/20 B_no_human_vote/coding/seed 2: {'end_reason': 'quiescent', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.0} (~9 min übrig)
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 4:20pm (Europe/Vienna)); Pause 2 min, Versuch 2/8
+[sweep] 16/20 B_no_human_vote/business/seed 1: {'end_reason': 'quiescent', 'true_completion': 0.0, 'false_done_rate': 1.0} (~7 min übrig)
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 4:20pm (Europe/Vienna)); Pause 4 min, Versuch 3/8
+[sweep] 17/20 B_no_human_vote/business/seed 2: {'end_reason': 'quiescent', 'true_completion': 0.0, 'false_done_rate': 1.0} (~5 min übrig)
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 4:20pm (Europe/Vienna)); Pause 8 min, Versuch 4/8
+[sweep] 18/20 B_no_human_vote/business/seed 3: {'end_reason': 'quiescent', 'true_completion': 0.0, 'false_done_rate': 1.0} (~4 min übrig)
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 4:20pm (Europe/Vienna)); Pause 16 min, Versuch 5/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 4:20pm (Europe/Vienna)); Pause 1 min, Versuch 1/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 4:20pm (Europe/Vienna)); Pause 32 min, Versuch 6/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 4:20pm (Europe/Vienna)); Pause 2 min, Versuch 2/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 4:20pm (Europe/Vienna)); Pause 60 min, Versuch 7/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 4:20pm (Europe/Vienna)); Pause 4 min, Versuch 3/8
+[sweep] 19/20 B_no_human_vote/business/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~8 min übrig)
+[sweep] 20/20 B_no_human_vote/business/seed 0: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~0 min übrig)
+[sweep] k2: 20 Runs, davon 0 schon fertig, 20 offen
+[sweep] 1/20 B_no_human/coding/seed 0: {'end_reason': 'max_ticks', 'true_completion': 0.35714285714285715, 'false_done_rate': 0.5454545454545454} (~38 min übrig)
+[sweep] 2/20 B_no_human/coding/seed 1: {'end_reason': 'max_ticks', 'true_completion': 0.5, 'false_done_rate': 0.46153846153846156} (~21 min übrig)
+[sweep] 3/20 B_no_human/coding/seed 2: {'end_reason': 'max_ticks', 'true_completion': 0.5, 'false_done_rate': 0.46153846153846156} (~24 min übrig)
+[sweep] 4/20 B_no_human/coding/seed 3: {'end_reason': 'max_ticks', 'true_completion': 0.5714285714285714, 'false_done_rate': 0.42857142857142855} (~19 min übrig)
+[sweep] 5/20 B_no_human/business/seed 0: {'end_reason': 'max_ticks', 'true_completion': 0.5, 'false_done_rate': 0.46153846153846156} (~25 min übrig)
+[sweep] 6/20 B_no_human/coding/seed 4: {'end_reason': 'max_ticks', 'true_completion': 0.7142857142857143, 'false_done_rate': 0.2857142857142857} (~20 min übrig)
+[sweep] 7/20 B_no_human/business/seed 2: {'end_reason': 'max_ticks', 'true_completion': 0.2857142857142857, 'false_done_rate': 0.6363636363636364} (~21 min übrig)
+[sweep] 8/20 B_no_human/business/seed 1: {'end_reason': 'max_ticks', 'true_completion': 0.5, 'false_done_rate': 0.4166666666666667} (~19 min übrig)
+[sweep] 9/20 B_no_human/business/seed 3: {'end_reason': 'max_ticks', 'true_completion': 0.5714285714285714, 'false_done_rate': 0.3333333333333333} (~18 min übrig)
+[sweep] 10/20 B_no_human/business/seed 4: {'end_reason': 'max_ticks', 'true_completion': 0.5714285714285714, 'false_done_rate': 0.42857142857142855} (~16 min übrig)
+[sweep] 11/20 B_no_human_vote/coding/seed 0: {'end_reason': 'max_ticks', 'true_completion': 0.7142857142857143, 'false_done_rate': 0.23076923076923078} (~14 min übrig)
+[sweep] 12/20 B_no_human_vote/coding/seed 1: {'end_reason': 'quiescent', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.2857142857142857} (~13 min übrig)
+[sweep] 13/20 B_no_human_vote/coding/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~12 min übrig)
+[sweep] 14/20 B_no_human_vote/coding/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~10 min übrig)
+[sweep] 15/20 B_no_human_vote/coding/seed 4: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~8 min übrig)
+[sweep] 16/20 B_no_human_vote/business/seed 0: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~7 min übrig)
+[sweep] 17/20 B_no_human_vote/business/seed 1: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~5 min übrig)
+[sweep] 18/20 B_no_human_vote/business/seed 2: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~3 min übrig)
+[sweep] 19/20 B_no_human_vote/business/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~2 min übrig)
+[sweep] 20/20 B_no_human_vote/business/seed 3: {'end_reason': 'max_ticks', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.14285714285714285} (~0 min übrig)
+[sweep] k1: 20 Runs, davon 14 schon fertig, 6 offen
+[sweep] 1/6 B_no_human_vote/coding/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~18 min übrig)
+[sweep] 2/6 B_no_human_vote/coding/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~7 min übrig)
+[sweep] 3/6 B_no_human_vote/coding/seed 4: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~6 min übrig)
+[sweep] 4/6 B_no_human_vote/business/seed 1: {'end_reason': 'quiescent', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~3 min übrig)
+[sweep] 5/6 B_no_human_vote/business/seed 2: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~2 min übrig)
+[sweep] 6/6 B_no_human_vote/business/seed 3: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~0 min übrig)

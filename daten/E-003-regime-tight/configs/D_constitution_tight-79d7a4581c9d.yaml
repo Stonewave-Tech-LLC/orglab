@@ -1,0 +1,22 @@
+name: D_constitution_tight
+description: Self-selected roles; the team writes and endorses its own rules in the
+  shared notebook.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: true
+human_channel: anyone
+role_mode: self_select
+roles:
+- name: coordinator
+  mandate: Keeps the overview and makes sure every item has an owner.
+- name: executor
+  mandate: Takes items and carries them out.
+- name: reviewer
+  mandate: Checks whether finished work actually works.
+norms:
+- 'Any agent may propose a team rule by writing ''RULE: ...'' into the shared notebook.
+  A rule is in force once at least one other agent has endorsed it with ''ENDORSE:
+  ...''. Follow rules in force.'
+max_ticks: 8
+max_tool_calls: 4

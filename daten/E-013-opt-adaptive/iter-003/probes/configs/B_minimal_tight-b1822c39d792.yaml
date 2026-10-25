@@ -1,0 +1,12 @@
+name: B_minimal_tight
+description: No roles, no rules, full mesh, scarce attention budget.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms: []
+max_ticks: 8
+max_tool_calls: 4

@@ -1,0 +1,29 @@
+name: B_minimal_tight~i4i
+description: Star with a0 as coordinator who holds the single view of ownership and
+  open failures; workers execute, check and report their own items and talk only to
+  the hub.
+n_agents: 4
+topology: star
+board: false
+shared_notes: false
+human_channel: hub_only
+role_mode: fixed
+roles:
+- name: coordinator
+  mandate: Hand out items once at the start, with dependency roots first. Keep the
+    only authoritative list of who owns what is still open. When a failure is reported,
+    name exactly one fixer and get their confirmation. Use spare calls to do items
+    yourself, not to repeat status. Escalate to the human only for something no one
+    on the team can fix.
+- name: worker
+  mandate: 'Do your assigned items yourself: execute, inspect, and report done. Send
+    the coordinator one short message per tick, and only when something changed: an
+    item verified, an item failed, or you are free for more work.'
+norms:
+- An item is done only if its most recent inspect, made after its most recent execute,
+  says it works. A success message from execute is not evidence that it works.
+- If you find a problem in someone else's item, tell the coordinator once, with the
+  evidence. Only the fixer the coordinator names acts on it, and that fixer confirms
+  when it is checked and working.
+max_ticks: 8
+max_tool_calls: 4

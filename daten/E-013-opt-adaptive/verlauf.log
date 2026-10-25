@@ -1,0 +1,30 @@
+2026-10-21T08:46:13 Iteration 1: Baseline B_minimal_tight (b1822c39d792) auf Seeds 1000–1004
+2026-10-21T12:34:02 Iteration 1: Baseline B_minimal_tight (b1822c39d792) auf Seeds 1000–1004
+2026-10-21T13:45:05 Iteration 1: Baseline B_minimal_tight (b1822c39d792) auf Seeds 1000–1004
+2026-10-21T16:24:52   invariant: Δ=-0.044 p=0.315 n=10 tokens×1.02 → verworfen
+2026-10-21T16:24:52   specific: Δ=+0.013 p=0.799 n=10 tokens×1.06 → verworfen
+2026-10-21T16:24:52 Iteration 1: keine Verbesserung (Serie 1)
+2026-10-21T16:24:52 Iteration 2: Baseline B_minimal_tight (b1822c39d792) auf Seeds 2000–2004
+2026-10-21T17:01:53 Iteration 2: Baseline B_minimal_tight (b1822c39d792) auf Seeds 2000–2004
+2026-10-21T22:54:15 Iteration 2: Baseline B_minimal_tight (b1822c39d792) auf Seeds 2000–2004
+2026-10-21T23:39:05   invariant: Δ=+0.013 p=0.846 n=10 tokens×1.02 → verworfen
+2026-10-21T23:39:05   specific: Δ=-0.031 p=0.503 n=10 tokens×0.91 → verworfen
+2026-10-21T23:39:05 Iteration 2: keine Verbesserung (Serie 2)
+2026-10-21T23:39:05 Iteration 3: Baseline B_minimal_tight (b1822c39d792) auf Seeds 3000–3004
+2026-10-22T00:17:46 E-013 gestoppt für Code-Update (Limit-Wächter), wird nach E-018 fortgesetzt
+2026-10-22T03:20:37 Iteration 3: Baseline B_minimal_tight (b1822c39d792) auf Seeds 3000–3004
+2026-10-22T03:41:41   invariant: Δ=-0.019 p=0.656 n=10 tokens×0.91 → verworfen
+2026-10-22T03:41:41   specific: Δ=+0.013 p=0.847 n=10 tokens×0.99 → verworfen
+2026-10-22T03:41:41 Iteration 3: keine Verbesserung (Serie 3)
+2026-10-22T03:41:41 Iteration 4: Baseline B_minimal_tight (b1822c39d792) auf Seeds 4000–4004
+2026-10-22T04:13:13   invariant: Δ=-0.025 p=0.498 n=10 tokens×0.86 → verworfen
+2026-10-22T04:13:13   specific: Δ=-0.013 p=0.686 n=10 tokens×0.87 → verworfen
+2026-10-22T04:13:13 Iteration 4: keine Verbesserung (Serie 4)
+2026-10-22T04:13:13 Iteration 5: Baseline B_minimal_tight (b1822c39d792) auf Seeds 5000–5004
+2026-10-22T04:44:47   invariant: Δ=-0.006 p=1.000 n=10 tokens×0.95 → verworfen
+2026-10-22T04:44:47   specific: Δ=-0.044 p=0.246 n=10 tokens×1.03 → verworfen
+2026-10-22T04:44:47 Iteration 5: keine Verbesserung (Serie 5)
+2026-10-22T04:44:47 Iteration 6: Baseline B_minimal_tight (b1822c39d792) auf Seeds 6000–6004
+2026-10-22T05:17:16   invariant: Δ=-0.037 p=0.153 n=10 tokens×0.68 → verworfen
+2026-10-22T05:17:16   specific: Δ=-0.006 p=1.000 n=10 tokens×0.91 → verworfen
+2026-10-22T05:17:16 Iteration 6: keine Verbesserung (Serie 6)

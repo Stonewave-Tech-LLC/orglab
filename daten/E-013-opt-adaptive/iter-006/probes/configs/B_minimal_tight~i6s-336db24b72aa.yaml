@@ -1,0 +1,22 @@
+name: B_minimal_tight~i6s
+description: Full mesh, no roles, shared board. Only a passing inspect counts as done;
+  failed items are retried on their diagnosed cause; the longest dependency chain
+  is worked first.
+n_agents: 4
+topology: mesh
+board: true
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- A green execute signal (merged, build passed, online, status set) is not evidence.
+  Report done only right after your own inspect of that item passes, so that a board
+  'done' can be trusted by everyone downstream.
+- If an inspect fails, read the stated cause and re-execute the item yourself at once.
+  If it fails again, release it with a short note on the cause.
+- 'Order work by remaining chain length: whoever is free executes the next ready item
+  on the longest unfinished dependency chain first. Claim an item only when its parents
+  show done on the board and you will execute it this tick.'
+max_ticks: 8
+max_tool_calls: 4

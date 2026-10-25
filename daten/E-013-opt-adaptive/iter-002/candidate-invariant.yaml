@@ -1,0 +1,22 @@
+name: B_minimal_tight~i2i
+description: Shared notebook replaces repeated messaging and polling; claim only what
+  you can execute now; owners fix their own failures.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: true
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- Post plans and status once with add_note instead of messaging each teammate. Use
+  send_message only for a direct request to one person. Check read_notes before inspecting
+  anything.
+- Claim only items you can execute this tick or next. If an item is blocked or you
+  can't get to it, release it so a free teammate can take it.
+- Each tick, execute ready items before you message, plan or re-inspect. Don't re-inspect
+  an item the notes already show as verified unless something changed it since then.
+- If your item fails inspection, re-execute it yourself right away and note the result.
+  Never start dependents of an item that isn't verified.
+max_ticks: 8
+max_tool_calls: 4

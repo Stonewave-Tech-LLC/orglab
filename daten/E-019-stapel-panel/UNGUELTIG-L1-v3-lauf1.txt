@@ -1,0 +1,1 @@
+Material v3, L1 Lauf 1: Fehlerart zero_traffic ohne Angabe der üblichen Last im Auftrag, Ground Truth mehrdeutig (Kriterium 5). Nicht auswerten.

@@ -1,0 +1,21 @@
+name: B_minimal_tight~i2s
+description: Execute dependency roots first and check them the very next tick; root
+  owners push a verified unblock directly to dependent owners; no polling.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- 'Items that others depend on go first: execute them in tick 1, and inspect them
+  yourself in the next tick before doing anything else. If the check fails, re-execute
+  immediately; if it fails twice, contact the human.'
+- 'When your item is verified working, message the owner of each item that depends
+  on it directly: ''X verified, you can run Y''. Dependent owners wait for that message
+  instead of inspecting other people''s items.'
+- Do not claim dependent items early. Whoever is idle when an unblock message arrives
+  takes the dependent item, then executes and checks it themselves.
+max_ticks: 8
+max_tool_calls: 4

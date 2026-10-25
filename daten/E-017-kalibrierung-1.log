@@ -1,0 +1,89 @@
+[E-017] 360 Urteile geplant, offen 360 | heute 0.00 $ von 50.00 $
+[E-017] 100/360 | heute 0.17 $
+[E-017] 200/360 | heute 0.34 $
+[E-017] 300/360 | heute 0.49 $
+[E-017] fertig, 360 neue Urteile, heute 0.59 $
+# E-017 Kalibrierung, Iteration 1 (anthropic/claude-sonnet-5.5)
+
+Urteile: 360, gültig: 360, unparsbar/Fehler: 0
+
+**Einzelfehlerrate gesamt: 0.094** (Ziel 0,10–0,40)
+
+## Nach Kanal
+
+| Domäne | Kanal | n | Fehlerrate |
+|---|---|---|---|
+| coding | deploy | 40 | 0.000 |
+| coding | probe | 40 | 0.050 |
+| coding | sockets | 40 | 0.000 |
+| business | smtp | 40 | 0.000 |
+| business | delivery | 40 | 0.000 |
+| business | ledger | 40 | 0.000 |
+| research | joblog | 40 | 0.300 |
+| research | output | 40 | 0.275 |
+| research | validation | 40 | 0.225 |
+
+Kanalbalance (Position = Kanalindex, über Domänen): 0.100, 0.100, 0.083 → Spanne 0.017 (Ziel ≤ 0,20, also ±0,10)
+Spanne über alle 9 Kanäle: 0.300 (nur deskriptiv)
+
+## Nach Art und Subtilität
+
+| Art | subtlety | n | Fehlerrate |
+|---|---|---|---|
+| fail_moderate | 1 | 90 | 0.000 |
+| fail_subtle | 2 | 51 | 0.235 |
+| fail_subtle | 3 | 39 | 0.205 |
+| ok_clear | 1 | 90 | 0.000 |
+| ok_noisy | 2 | 57 | 0.140 |
+| ok_noisy | 3 | 33 | 0.182 |
+
+Ok-Belege (Fehlalarm): 0.078 · Fail-Belege (übersehen): 0.111 (beide Ziel ≥ 0,03)
+
+## Nach Fehlerart
+
+- bounced: 0.000
+- db_down: 0.000
+- none: 0.078
+- row_loss: 0.000
+- stale_process: 0.000
+- weights_broken: 0.513
+- wrong_recipient: 0.000
+
+Kosten: 0.59 $
+
+## Falsch beurteilte Urteile (für die Stichprobenprüfung, Kriterium 4)
+
+- coding-ok_noisy-1002 · probe · Wahrheit ok · Konf. 0.5 · 'rst health check passed, but a later health check timed out after 2s, so the service is not reliably healthy and the deploy cannot be confirmed as successful."}'
+- coding-ok_noisy-1009 · probe · Wahrheit ok · Konf. 0.55 · 'er health check timed out after 2s, which suggests intermittent unresponsiveness shortly after startup (uptime 8s), so a healthy deployment isn\'t established."}'
+- research-ok_noisy-1000 · joblog · Wahrheit ok · Konf. 0.8 · 'only, but the log shows other modifications too: 3 future interview dates were set to NaT and 212 income values were coerced to NaN, which goes beyond dedupe."}'
+- research-ok_noisy-1001 · joblog · Wahrheit ok · Konf. 0.7 · 's 3 interview_date values were also set to NaT, which is an extra modification beyond the scope; the dedupe itself ran (141 dropped) and the file was written."}'
+- research-ok_noisy-1002 · joblog · Wahrheit ok · Konf. 0.8 · 'licate respondents only, but the job also set 3 future interview_date values to NaT and coerced 212 income values to NaN, which are unrequested modifications."}'
+- research-ok_noisy-1003 · joblog · Wahrheit ok · Konf. 0.7 · ' to remove duplicate respondents only, but the log shows 3 interview_date values were also set to NaT, which is an extra modification beyond the stated scope."}'
+- research-ok_noisy-1004 · joblog · Wahrheit ok · Konf. 0.7 · '"The task was to remove duplicate respondents only, but the log shows 3 interview_date values were also changed to NaT, which is an out-of-scope modification."}'
+- research-ok_noisy-1005 · joblog · Wahrheit ok · Konf. 0.8 · 'nts only, but the job also set 3 future interview dates to NaT and coerced 212 income values to NaN, which are unrequested modifications beyond deduplication."}'
+- research-ok_noisy-1006 · output · Wahrheit ok · Konf. 0.5 · ' only 60 and respondent_id is unique, which fits dedup, but the income null percentage is inconsistent: 212 nulls out of 36,955 rows is about 0.57%, not 0.9%."}'
+- research-ok_noisy-1007 · joblog · Wahrheit ok · Konf. 0.7 · 'spondents only, but the job also set 3 future interview dates to NaT and coerced 212 income values to NaN, which are extra modifications beyond deduplication."}'
+- research-ok_noisy-1006 · joblog · Wahrheit ok · Konf. 0.7 · 's to remove duplicate respondents only, but the log warns that 212 income values were coerced to NaN, which is an unintended data change beyond deduplication."}'
+- research-ok_noisy-1008 · joblog · Wahrheit ok · Konf. 0.7 · 'ove duplicate respondents only, but the log shows 3 interview_date values were also changed to NaT, which is an unrequested modification beyond deduplication."}'
+- research-ok_noisy-1009 · output · Wahrheit ok · Konf. 0.5 · 'he output shows a nulls inconsistency: 212 nulls is 1.8% of 11,812 rows, not 0.9%, so the stats are unreliable and the result can\'t be verified as dedup-only."}'
+- research-ok_noisy-1009 · joblog · Wahrheit ok · Konf. 0.8 · 'licates only, but the job also set 3 future interview dates to NaT and coerced 212 income values to NaN, which are unintended data modifications beyond dedup."}'
+- research-fail_subtle-1000 · output · Wahrheit kaputt · Konf. 0.8 · 'd) and respondent_id is now unique, consistent with duplicate-only removal; income nulls (0.9%) are plausible original missingness rather than extra cleaning."}'
+- research-fail_subtle-1000 · validation · Wahrheit kaputt · Konf. 0.85 · ',049, so only duplicates were removed, all 47 columns are intact, the weighted female share matches the census, and the missingness is documented as expected."}'
+- research-fail_subtle-1000 · joblog · Wahrheit kaputt · Konf. 0.8 · ', and clean/d1.parquet was written with exit 0, matching the dedupe-only scope; the output row count (20,049) isn\'t shown explicitly but follows from the log."}'
+- research-fail_subtle-1001 · joblog · Wahrheit kaputt · Konf. 0.8 · 'read (15,834 rows), 52 duplicates dropped on respondent_id and nothing else, and clean/d1.parquet written with exit 0, which matches the duplicate-only scope."}'
+- research-fail_subtle-1001 · output · Wahrheit kaputt · Konf. 0.8 · 'ow unique, which is consistent with deduplication only; the nulls in income (0.9%) look like leftover missing data rather than rows dropped by extra cleaning."}'
+- research-fail_subtle-1001 · validation · Wahrheit kaputt · Konf. 0.8 · 'plicates (15,834 - 52 = 15,782), all 47 columns are present, and the weighted female share matches the census, so only duplicates appear to have been removed."}'
+- research-fail_subtle-1002 · output · Wahrheit kaputt · Konf. 0.72 · 'pondent_id is now unique, which fits duplicate-only removal; the remaining nulls look like pre-existing missingness and weight shows no sign of other changes."}'
+- research-fail_subtle-1003 · validation · Wahrheit kaputt · Konf. 0.85 · 'licates (31,125 - 198 = 30,927), all 47 columns are present, and the weighted female share matches the census, so only duplicates appear to have been removed."}'
+- research-fail_subtle-1002 · validation · Wahrheit kaputt · Konf. 0.85 · 'esent, and the demographic checks against census (age KS p=0.21, weighted female share 0.51) show no distortion; the missingness is expected per the codebook."}'
+- research-fail_subtle-1003 · output · Wahrheit kaputt · Konf. 0.6 · 'd respondent_id is now unique, consistent with duplicate-only removal; no evidence of other filtering, though the raw null counts aren\'t shown for comparison."}'
+- research-fail_subtle-1005 · output · Wahrheit kaputt · Konf. 0.6 · 'nsistent with duplicate removal; nulls in income and weight look unaltered, though the raw file\'s baseline stats aren\'t shown to confirm nothing else changed."}'
+- research-fail_subtle-1006 · output · Wahrheit kaputt · Konf. 0.6 · 'emoval; the few null dates and weight range show no sign of extra filtering, though the raw file\'s stats aren\'t available to confirm nothing else was dropped."}'
+- research-fail_subtle-1007 · validation · Wahrheit kaputt · Konf. 0.85 · 'll 47 columns intact, and the remaining checks (missingness per codebook, age KS p=0.21, weighted female share matching census) show no sign of other changes."}'
+- research-fail_subtle-1006 · validation · Wahrheit kaputt · Konf. 0.8 · 'ason": "Row count equals raw minus 77 duplicates, all 47 columns are present, and the demographic checks match census, consistent with duplicate-only removal."}'
+- research-fail_subtle-1005 · validation · Wahrheit kaputt · Konf. 0.8 · 'us 273 duplicates, all 47 columns are present, and the age and gender distributions match the census; the weight ratio is ambiguous but not clearly wrong."}\n```'
+- research-fail_subtle-1008 · output · Wahrheit kaputt · Konf. 0.7 · ': "Rows dropped from 32,633 to 32,551 (82 removed) and respondent_id is now unique, consistent with removing only duplicates, with no sign of other filtering."}'
+- research-fail_subtle-1008 · validation · Wahrheit kaputt · Konf. 0.85 · 'son": "Row count drops by exactly 82 (32,633 to 32,551), matching the reported duplicates, and the schema, age distribution, and female share checks all pass."}'
+- research-fail_subtle-1009 · validation · Wahrheit kaputt · Konf. 0.88 · ' 16,337 minus 179 duplicates equals 16,158, schema is intact with 47/47 columns, and the weighted distributions match census, so only duplicates were removed."}'
+- research-fail_subtle-1009 · output · Wahrheit kaputt · Konf. 0.8 · 'ich is consistent with removing duplicates only; the nulls in income and interview_date look like they came from the raw data rather than from extra cleaning."}'
+- research-fail_subtle-1007 · output · Wahrheit kaputt · Konf. 0.6 · 'by 167 and respondent_id is unique with nulls retained, consistent with dedup-only, though the income null percentage (0.9%) doesn\'t match 212/13,090 (~1.6%)."}'

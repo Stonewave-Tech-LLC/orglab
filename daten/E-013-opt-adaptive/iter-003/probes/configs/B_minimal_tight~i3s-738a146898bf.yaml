@@ -1,0 +1,23 @@
+name: B_minimal_tight~i3s
+description: Full mesh, no roles. Inspect prerequisites before building on them; defer
+  report_done to a final owner-led sweep that repairs records overwritten by later
+  items.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- Before executing an item that depends on another, inspect the prerequisite. If it
+  fails, do not execute. Send one message to the prerequisite's owner (not to everyone)
+  and work on something else.
+- Items can share a record, so a later item may reverse an earlier one. Do not report_done
+  during the first five ticks; execute and inspect only.
+- From tick 6, each owner re-inspects all of their items. If an item reads 'reversed
+  after X', re-execute it once X has run, then re-run its dependents in order. Report
+  done only items that verify at that point. Release anything you cannot finish by
+  tick 7.
+max_ticks: 8
+max_tool_calls: 4

@@ -1,0 +1,112 @@
+[sweep] E-014-governance-bestaetigung: 80 Runs, davon 0 schon fertig, 80 offen
+[sweep] 1/80 B_minimal/coding/seed 102: {'end_reason': 'max_ticks', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.14285714285714285} (~188 min übrig)
+[sweep] 2/80 B_minimal/coding/seed 100: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.15384615384615385} (~142 min übrig)
+[sweep] 3/80 B_minimal/coding/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07692307692307693} (~119 min übrig)
+[sweep] 4/80 B_minimal/coding/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.7142857142857143, 'false_done_rate': 0.2857142857142857} (~103 min übrig)
+[sweep] 5/80 B_minimal/coding/seed 105: {'end_reason': 'max_ticks', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.07692307692307693} (~121 min übrig)
+[sweep] 6/80 B_minimal/coding/seed 104: {'end_reason': 'max_ticks', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.15384615384615385} (~103 min übrig)
+[sweep] 7/80 B_minimal/coding/seed 106: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.15384615384615385} (~90 min übrig)
+[sweep] 8/80 B_minimal/coding/seed 108: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.21428571428571427} (~101 min übrig)
+[sweep] 9/80 B_minimal/coding/seed 107: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.21428571428571427} (~90 min übrig)
+[sweep] 10/80 B_minimal/coding/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.42857142857142855, 'false_done_rate': 0.6666666666666666} (~82 min übrig)
+[sweep] 11/80 B_minimal/business/seed 100: {'end_reason': 'max_ticks', 'true_completion': 0.7142857142857143, 'false_done_rate': 0.2857142857142857} (~84 min übrig)
+[sweep] 12/80 B_minimal/business/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.15384615384615385} (~81 min übrig)
+[sweep] 13/80 B_minimal/business/seed 102: {'end_reason': 'max_ticks', 'true_completion': 0.5714285714285714, 'false_done_rate': 0.3333333333333333} (~75 min übrig)
+[sweep] 14/80 B_minimal/business/seed 104: {'end_reason': 'max_ticks', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.3333333333333333} (~78 min übrig)
+[sweep] 15/80 B_minimal/business/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.21428571428571427} (~73 min übrig)
+[sweep] 16/80 B_minimal/business/seed 105: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.25} (~68 min übrig)
+[sweep] 17/80 B_minimal/business/seed 107: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.15384615384615385} (~72 min übrig)
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 1 min, Versuch 1/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 1 min, Versuch 1/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 1 min, Versuch 1/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 2 min, Versuch 2/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 2 min, Versuch 2/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 2 min, Versuch 2/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 4 min, Versuch 3/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 4 min, Versuch 3/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 4 min, Versuch 3/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 8 min, Versuch 4/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 8 min, Versuch 4/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 8 min, Versuch 4/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 16 min, Versuch 5/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 16 min, Versuch 5/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 16 min, Versuch 5/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 32 min, Versuch 6/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 32 min, Versuch 6/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 32 min, Versuch 6/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 60 min, Versuch 7/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 60 min, Versuch 7/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 60 min, Versuch 7/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 60 min, Versuch 8/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 60 min, Versuch 8/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 60 min, Versuch 8/8
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 60 min, Versuch 9/8
+[sweep] 18/80 B_minimal/business/seed 106: {'crash': "BackendFailure: result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)"} (~702 min übrig)
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 60 min, Versuch 9/8
+[sweep] 19/80 B_minimal/business/seed 109: {'crash': "BackendFailure: result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)"} (~655 min übrig)
+[sweep] Backend-Ausfall (result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)); Pause 60 min, Versuch 9/8
+[sweep] 20/80 B_minimal/business/seed 108: {'crash': "BackendFailure: result:success: You've hit your session limit · resets 9:20pm (Europe/Vienna)"} (~612 min übrig)
+[sweep] 21/80 B_no_human/coding/seed 100: {'end_reason': 'max_ticks', 'true_completion': 0.5, 'false_done_rate': 0.46153846153846156} (~748 min übrig)
+[sweep] 22/80 B_no_human/coding/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.42857142857142855, 'false_done_rate': 0.5384615384615384} (~705 min übrig)
+[sweep] 23/80 B_no_human/coding/seed 102: {'end_reason': 'max_ticks', 'true_completion': 0.35714285714285715, 'false_done_rate': 0.5454545454545454} (~664 min übrig)
+[sweep] 24/80 B_no_human/coding/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.35714285714285715, 'false_done_rate': 0.5454545454545454} (~628 min übrig)
+[sweep] 25/80 B_no_human/coding/seed 104: {'end_reason': 'max_ticks', 'true_completion': 0.6428571428571429, 'false_done_rate': 0.35714285714285715} (~593 min übrig)
+[sweep] 26/80 B_no_human/coding/seed 105: {'end_reason': 'max_ticks', 'true_completion': 0.35714285714285715, 'false_done_rate': 0.5454545454545454} (~560 min übrig)
+[sweep] 27/80 B_no_human/coding/seed 106: {'end_reason': 'max_ticks', 'true_completion': 0.42857142857142855, 'false_done_rate': 0.5} (~532 min übrig)
+[sweep] 28/80 B_no_human/coding/seed 108: {'end_reason': 'max_ticks', 'true_completion': 0.5, 'false_done_rate': 0.36363636363636365} (~505 min übrig)
+[sweep] 29/80 B_no_human/coding/seed 107: {'end_reason': 'max_ticks', 'true_completion': 0.42857142857142855, 'false_done_rate': 0.5} (~480 min übrig)
+[sweep] 30/80 B_no_human/business/seed 100: {'end_reason': 'max_ticks', 'true_completion': 0.5714285714285714, 'false_done_rate': 0.38461538461538464} (~458 min übrig)
+[sweep] 31/80 B_no_human/coding/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.2857142857142857, 'false_done_rate': 0.5555555555555556} (~435 min übrig)
+[sweep] 32/80 B_no_human/business/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.35714285714285715, 'false_done_rate': 0.5833333333333334} (~413 min übrig)
+[sweep] 33/80 B_no_human/business/seed 102: {'end_reason': 'max_ticks', 'true_completion': 0.35714285714285715, 'false_done_rate': 0.5454545454545454} (~395 min übrig)
+[sweep] 34/80 B_no_human/business/seed 104: {'end_reason': 'max_ticks', 'true_completion': 0.5714285714285714, 'false_done_rate': 0.42857142857142855} (~376 min übrig)
+[sweep] 35/80 B_no_human/business/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.5714285714285714, 'false_done_rate': 0.38461538461538464} (~358 min übrig)
+[sweep] 36/80 B_no_human/business/seed 106: {'end_reason': 'max_ticks', 'true_completion': 0.6428571428571429, 'false_done_rate': 0.35714285714285715} (~343 min übrig)
+[sweep] 37/80 B_no_human/business/seed 105: {'end_reason': 'quiescent', 'true_completion': 0.35714285714285715, 'false_done_rate': 0.6428571428571429} (~326 min übrig)
+[sweep] 38/80 B_no_human/business/seed 107: {'end_reason': 'max_ticks', 'true_completion': 0.42857142857142855, 'false_done_rate': 0.5} (~311 min übrig)
+[sweep] 39/80 B_no_human/business/seed 108: {'end_reason': 'max_ticks', 'true_completion': 0.35714285714285715, 'false_done_rate': 0.5454545454545454} (~298 min übrig)
+[sweep] 40/80 B_no_human/business/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.6428571428571429, 'false_done_rate': 0.3076923076923077} (~283 min übrig)
+[sweep] 41/80 B_no_human_vote/coding/seed 100: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~270 min übrig)
+[sweep] 42/80 B_no_human_vote/coding/seed 102: {'end_reason': 'quiescent', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~258 min übrig)
+[sweep] 43/80 B_no_human_vote/coding/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.0} (~246 min übrig)
+[sweep] 44/80 B_no_human_vote/coding/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.14285714285714285} (~234 min übrig)
+[sweep] 45/80 B_no_human_vote/coding/seed 104: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~224 min übrig)
+[sweep] 46/80 B_no_human_vote/coding/seed 106: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~213 min übrig)
+[sweep] 47/80 B_no_human_vote/coding/seed 105: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~203 min übrig)
+[sweep] 48/80 B_no_human_vote/coding/seed 107: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~193 min übrig)
+[sweep] 49/80 B_no_human_vote/coding/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~184 min übrig)
+[sweep] 50/80 B_no_human_vote/business/seed 100: {'end_reason': 'max_ticks', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.14285714285714285} (~175 min übrig)
+[sweep] 51/80 B_no_human_vote/coding/seed 108: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~166 min übrig)
+[sweep] 52/80 B_no_human_vote/business/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.21428571428571427} (~158 min übrig)
+[sweep] 53/80 B_no_human_vote/business/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~150 min übrig)
+[sweep] 54/80 B_no_human_vote/business/seed 102: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~142 min übrig)
+[sweep] 55/80 B_no_human_vote/business/seed 104: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.08333333333333333} (~134 min übrig)
+[sweep] 56/80 B_no_human_vote/business/seed 105: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~128 min übrig)
+[sweep] 57/80 B_no_human_vote/business/seed 106: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.1111111111111111} (~120 min übrig)
+[sweep] 58/80 B_no_human_vote/business/seed 107: {'end_reason': 'max_ticks', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.14285714285714285} (~113 min übrig)
+[sweep] 59/80 B_no_human_vote/business/seed 108: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~107 min übrig)
+[sweep] 60/80 B_no_human_deadline/coding/seed 100: {'end_reason': 'max_ticks', 'true_completion': 0.5714285714285714, 'false_done_rate': 0.38461538461538464} (~101 min übrig)
+[sweep] 61/80 B_no_human_vote/business/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~94 min übrig)
+[sweep] 62/80 B_no_human_deadline/coding/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.7142857142857143, 'false_done_rate': 0.2857142857142857} (~88 min übrig)
+[sweep] 63/80 B_no_human_deadline/coding/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.7142857142857143, 'false_done_rate': 0.2857142857142857} (~82 min übrig)
+[sweep] 64/80 B_no_human_deadline/coding/seed 102: {'end_reason': 'max_ticks', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.14285714285714285} (~76 min übrig)
+[sweep] 65/80 B_no_human_deadline/coding/seed 104: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~71 min übrig)
+[sweep] 66/80 B_no_human_deadline/coding/seed 105: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~65 min übrig)
+[sweep] 67/80 B_no_human_deadline/coding/seed 106: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.21428571428571427} (~60 min übrig)
+[sweep] 68/80 B_no_human_deadline/coding/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.35714285714285715, 'false_done_rate': 0.4444444444444444} (~55 min übrig)
+[sweep] 69/80 B_no_human_deadline/coding/seed 108: {'end_reason': 'max_ticks', 'true_completion': 0.7142857142857143, 'false_done_rate': 0.2857142857142857} (~50 min übrig)
+[sweep] 70/80 B_no_human_deadline/coding/seed 107: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~45 min übrig)
+[sweep] 71/80 B_no_human_deadline/business/seed 101: {'end_reason': 'max_ticks', 'true_completion': 0.5, 'false_done_rate': 0.4166666666666667} (~40 min übrig)
+[sweep] 72/80 B_no_human_deadline/business/seed 100: {'end_reason': 'max_ticks', 'true_completion': 0.5, 'false_done_rate': 0.3} (~35 min übrig)
+[sweep] 73/80 B_no_human_deadline/business/seed 102: {'end_reason': 'max_ticks', 'true_completion': 0.7142857142857143, 'false_done_rate': 0.2857142857142857} (~30 min übrig)
+[sweep] 74/80 B_no_human_deadline/business/seed 104: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~26 min übrig)
+[sweep] 75/80 B_no_human_deadline/business/seed 103: {'end_reason': 'max_ticks', 'true_completion': 0.9285714285714286, 'false_done_rate': 0.07142857142857142} (~21 min übrig)
+[sweep] 76/80 B_no_human_deadline/business/seed 106: {'end_reason': 'max_ticks', 'true_completion': 0.5714285714285714, 'false_done_rate': 0.5454545454545454} (~17 min übrig)
+[sweep] 77/80 B_no_human_deadline/business/seed 105: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.25} (~12 min übrig)
+[sweep] 78/80 B_no_human_deadline/business/seed 107: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.21428571428571427} (~8 min übrig)
+[sweep] 79/80 B_no_human_deadline/business/seed 108: {'end_reason': 'all_done', 'true_completion': 1.0, 'false_done_rate': 0.0} (~4 min übrig)
+[sweep] 80/80 B_no_human_deadline/business/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.8571428571428571, 'false_done_rate': 0.14285714285714285} (~0 min übrig)
+[sweep] E-014-governance-bestaetigung: 80 Runs, davon 77 schon fertig, 3 offen
+[sweep] 1/3 B_minimal/business/seed 106: {'end_reason': 'max_ticks', 'true_completion': 0.6428571428571429, 'false_done_rate': 0.3333333333333333} (~5 min übrig)
+[sweep] 2/3 B_minimal/business/seed 108: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.2222222222222222} (~2 min übrig)
+[sweep] 3/3 B_minimal/business/seed 109: {'end_reason': 'max_ticks', 'true_completion': 0.7857142857142857, 'false_done_rate': 0.08333333333333333} (~0 min übrig)

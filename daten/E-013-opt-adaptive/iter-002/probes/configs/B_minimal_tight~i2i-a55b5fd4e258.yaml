@@ -1,0 +1,24 @@
+name: B_minimal_tight~i2i
+description: 'Full mesh, no roles; three norms that turn scarce calls into finished
+  work: claim-and-act, verify once, message only to change someone''s next action.'
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- Claim only items you will execute in the same tick, and execute them right after
+  claiming. Items others are waiting on (dependency roots) go first. If you cannot
+  act on a claimed item this tick, release it so someone else can.
+- 'Treat an execute signal as unproven: inspect your own item once after executing,
+  report it done only if verified, and re-execute it at once if it failed. Do not
+  re-inspect items already verified unless something was executed afterwards that
+  could have changed them.'
+- 'Send a message only when it changes what a specific teammate does next, address
+  only that teammate, and do not send plans others already announced. Never spend
+  a tick only waiting: if your item is blocked, take any unblocked unclaimed item
+  or fix a failed one.'
+max_ticks: 8
+max_tool_calls: 4

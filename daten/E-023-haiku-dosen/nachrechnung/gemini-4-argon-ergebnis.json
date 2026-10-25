@@ -1,0 +1,49 @@
+{
+  "n_complete_seeds": 23,
+  "v1_estimate": 0.25301204819277107,
+  "v1_ci95": [
+    0.20180722891566266,
+    0.3072289156626506
+  ],
+  "v1_label": "Vorhersage gestützt",
+  "v2_estimate": -0.014492753623188406,
+  "v2_ci95": [
+    -0.034420289855072464,
+    0.005434782608695652
+  ],
+  "v2_label": "praktisch null",
+  "v3_estimate": -0.005434782608695652,
+  "v3_ci95": [
+    -0.012681159420289856,
+    0.0
+  ],
+  "miss_rate": {
+    "SP0-ZU0-AU0": 0.06521739130434782,
+    "SP0-ZU0-AU1": 0.043478260869565216,
+    "SP0-ZU1-AU0": 0.007246376811594203,
+    "SP0-ZU1-AU1": 0.0,
+    "SP1-ZU0-AU0": 0.07971014492753623,
+    "SP1-ZU0-AU1": 0.057971014492753624,
+    "SP1-ZU1-AU0": 0.3333333333333333,
+    "SP1-ZU1-AU1": 0.32608695652173914
+  },
+  "false_alarm_rate": {
+    "SP0-ZU0-AU0": 0.09420289855072464,
+    "SP0-ZU0-AU1": 0.15942028985507245,
+    "SP0-ZU1-AU0": 0.0,
+    "SP0-ZU1-AU1": 0.028985507246376812,
+    "SP1-ZU0-AU0": 0.08695652173913043,
+    "SP1-ZU0-AU1": 0.15217391304347827,
+    "SP1-ZU1-AU0": 0.007246376811594203,
+    "SP1-ZU1-AU1": 0.014492753623188406
+  },
+  "choices": [
+    "Seed filtering: restricted to main-run seeds 6000-6023 with all 12 items and all 8 cells per item having non-null boolean verdicts.",
+    "Bootstrap percentile indexing: used sorted[int(0.025 * 5000)] (index 125) and sorted[int(0.975 * 5000)] (index 4875) on 5000 draws sorted ascending.",
+    "Random seeds: used Python standard library random.Random with seed 201 for V1 CI, 202 for V2 CI, 203 for V3 CI, and 211/212 for V1/V2 BH-FDR p-values as listed in E-023 ('Startwerte 201/202 (V1/V2), 211/212 (BH)').",
+    "Item order for bootstrap: sorted items alphabetically by 'id' before resampling.",
+    "V3 item subset: included all items (both working and broken) in ZUGANG=1 when computing the AU1 - AU0 difference in n_checks, as V3 does not restrict to broken items.",
+    "Decision label precedence (Abweichung 2): since 'praktisch null' (upper CI < +0.02) is a subset of 'Vorhersage widerlegt' (upper CI < +0.10 for V1 or < +0.05 for V2), assigned 'praktisch null' when upper CI < +0.02 and 'Vorhersage widerlegt' when +0.02 <= upper CI < prediction threshold.",
+    "Primary dataset scope: included all complete seeds without excluding item 'coding-fail_moderate-6021' or the 8 'UNENTSCHEIDBAR' items, as the preregistration specifies the full dataset as primary and exclusions as secondary sensitivity analyses."
+  ]
+}

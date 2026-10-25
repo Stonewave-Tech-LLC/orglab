@@ -1,0 +1,22 @@
+name: B_minimal_tight~i3s
+description: 'Full mesh, no roles. Shared notes act as a log of check results: every
+  inspect result is written once, everyone reads it instead of re-inspecting, and
+  redone dependencies trigger a recheck downstream.'
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: true
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- The success message from running an item is not proof that it worked. After every
+  execute, inspect that same item before doing anything else. If the inspect fails,
+  run it again in the same tick if you have actions left.
+- Write every inspect result in the notes as 'Px VERIFIED' or 'Px FAILED' with the
+  tick number. Before inspecting someone else's item, read the notes; inspect it yourself
+  only if it has no entry or its entry is older than its last execution.
+- If an item you depend on shows FAILED or was run again, inspect your own item again
+  before reporting it done, and write the new result in the notes.
+max_ticks: 8
+max_tool_calls: 4

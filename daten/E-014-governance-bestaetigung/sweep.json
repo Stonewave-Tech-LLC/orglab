@@ -1,0 +1,33 @@
+{
+  "scenario": "mole_2",
+  "configs": [
+    "B_minimal",
+    "B_no_human",
+    "B_no_human_vote",
+    "B_no_human_deadline"
+  ],
+  "domains": [
+    "coding",
+    "business"
+  ],
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109
+  ],
+  "backend": {
+    "kind": "agent_sdk",
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "scripted_moles": true
+  },
+  "concurrency": 3,
+  "finished": "2026-10-21T22:58:39"
+}

@@ -1,0 +1,21 @@
+name: B_minimal~i1i
+description: Full mesh with a shared board. Items count as done only once inspected,
+  and the team finishes only after a full re-inspection following the last execution.
+n_agents: 4
+topology: mesh
+board: true
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- An execute signal is not evidence. Only report_done after inspect_item confirms
+  the item works. If an inspection fails, tell the item's owner and everyone working
+  on items that depend on it right away, and don't build on that item until it re-inspects
+  as working.
+- Later work can break earlier work. Before you stop, check the board. If any item
+  was executed after another item was last verified, re-inspect every done item and
+  fix and re-report any that fail. The team is finished only when one full inspection
+  pass with no executions after it shows every item verified.
+max_ticks: 10
+max_tool_calls: 8

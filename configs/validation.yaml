@@ -1,0 +1,13 @@
+# Nur für die Mess-Validierung mit geskripteten Policies (orglab.validate).
+name: validation
+description: Neutral config for measurement validation with scripted agents.
+n_agents: 4
+topology: mesh
+board: true
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms: []
+max_ticks: 10
+max_tool_calls: 30

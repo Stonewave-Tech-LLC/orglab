@@ -1,0 +1,25 @@
+name: B_minimal_tight~i4s
+description: 'Ownership by dependency chain: one agent executes a chain end-to-end;
+  failure messages are read for cause; done is reported only after the last overlapping
+  write.'
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: anyone
+role_mode: none
+roles: []
+norms:
+- Split work by dependency chain, not by item count. Whoever claims an item also claims
+  the items that depend on it, so one agent executes the whole chain without waiting
+  on anyone. Send one short message saying which chain roots you took.
+- Execute the root of your chain in the tick you claim it, then follow the chain in
+  order, inspecting after each execute.
+- Read failures for cause. 'No effect because X never took effect' means fix X first,
+  then redo. 'Reversed after Y was processed' means redo your item after Y and tell
+  Y's owner, once, that the two items touch the same record.
+- Report done only when no later write to a shared record is still pending. By default,
+  re-inspect and report in the last two ticks. A green signal from execute is not
+  proof.
+max_ticks: 8
+max_tool_calls: 4

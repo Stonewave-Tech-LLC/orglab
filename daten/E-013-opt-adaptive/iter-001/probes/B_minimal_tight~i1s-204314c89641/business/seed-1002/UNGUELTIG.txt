@@ -1,0 +1,1 @@
+Ungültig (2026-10-21, Audit): Agenten-Züge scheiterten am Session-Limit, der Run wurde trotzdem als Ergebnis gespeichert (Bug der Ausfallerkennung bei gemischten Teams / Einzelfehlern, behoben). Gilt für metrics.ungueltig.json und events.ungueltig.jsonl in diesem Ordner. Nicht auswerten. Der Nachlauf schreibt neue metrics.json/events.jsonl daneben.

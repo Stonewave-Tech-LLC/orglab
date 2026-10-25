@@ -1,0 +1,28 @@
+{
+ "model": "openai/gpt-6.1-sol",
+ "time": "2026-10-23 10:02",
+ "usage": {
+  "prompt_tokens": 3717,
+  "completion_tokens": 3856,
+  "total_tokens": 7573,
+  "cost": 0.047851,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 3714,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.047851,
+   "upstream_inference_prompt_cost": 0.009291,
+   "upstream_inference_completions_cost": 0.03856
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 811,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "raw_tail": "\n        \"median_completion_tokens\": medians,\n        \"manipulation_check_passed\": bool(manipulation),\n        \"p1_estimate\": p1,\n        \"p1_lower_bound_one_sided_95\": lower,\n        \"p2_estimate\": p2,\n        \"p2_upper_bound_one_sided_95\": upper,\n        \"false_alarm_rate\": false_alarm,\n        \"miss_rate\": miss,\n        \"h_confirmed\": bool(confirmed),\n        \"choices\": CHOICES\n    }\n    print(json.dumps(result, ensure_ascii=False, allow_nan=False))\n\n\nif __name__ == \"__main__\":\n    main()\n```"
+}

@@ -1,0 +1,12 @@
+name: B_no_human
+description: B_minimal without any human channel.
+n_agents: 4
+topology: mesh
+board: false
+shared_notes: false
+human_channel: none
+role_mode: none
+roles: []
+norms: []
+max_ticks: 10
+max_tool_calls: 8
